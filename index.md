@@ -7,7 +7,7 @@ layout: default
 carousel:
   - heading: "Because childhood cannot wait"
     body: "The earliest years make the biggest difference. Home-Start makes sure those years count, so no child's future is limited.<br><br>Donate here to support Home-Start Nottingham"
-    linkText: "Donate Now"
+    linkText: "Donate"
     link: "https://www.justgiving.com/homestartnottingham"
     image: "assets/uploads/img/hs4.jpg"
 
@@ -22,6 +22,18 @@ carousel:
     linkText: "Read More"
     link: "./parents/howCanWeSupport.html"
     image: "assets/uploads/img/hs2.jpg"
+
+features:
+  - statistic: "83"
+    description: "families supported last year"
+    image: "/assets/svg/smile.svg"
+  - statistic: "10,686"
+    description: "volunteer hours given to support families last year"
+    image: "/assets/svg/arrows.svg"
+  - statistic: "89% of parents"
+    description: "had support with mental health"
+    image: "/assets/svg/circles.svg"
+intro: "We're there for parents when they need us the most, because childhood can't wait"
 ---
 
 {% include carousel.html %}
