@@ -149,7 +149,7 @@ textarea {
 
 /*
 * Hide only visually, but have it available for screen readers:
-* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+* https://snook.ca/archives/html_and_assets/css/hiding-content-for-accessibility
 *
 * 1. For long content, line feeds are not interpreted as spaces and small width
 *    causes content to wrap 1 word per line:
@@ -238,7 +238,7 @@ textarea {
 /* ==========================================================================
    Print styles.
    Inlined to avoid the additional HTTP request:
-   https://www.phpied.com/delay-loading-your-print-css/
+   https://www.phpied.com/delay-loading-your-print-assets/css/
    ========================================================================== */
 
 @media print{
@@ -580,7 +580,7 @@ a.header-button {
 a.header-button:before,
 a.mobileHeaderButton:before {
   content: '';
-  background-image: url(../img/chevron-orange.png);
+  background-image: url(../uploads/img/chevron-orange.png);
   position: absolute;
   left: 15px;
   top: 50%;
@@ -601,7 +601,7 @@ a.mobileHeaderButton:before {
 a.header-button.donate:before,
 a.mobileHeaderButton.donate:before {
   content: '';
-  background-image: url(../img/smile-yellow.png);
+  background-image: url(../uploads/img/smile-yellow.png);
   position: absolute;
   left: 15px;
   top: 50%;
