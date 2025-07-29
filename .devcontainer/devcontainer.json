@@ -10,8 +10,15 @@
 		"ghcr.io/devcontainers/features/ruby": {
 			"version": "latest"
 		}
+	},
+	
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"sissel.shopify-liquid"
+			]
+		}
 	}
-
 	// 👇 Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
 

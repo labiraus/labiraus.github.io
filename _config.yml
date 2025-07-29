@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Labiraus Concepts
+title: Home-Start Nottingham
 email: oliver@labiraus.com
 description: >- # this means to ignore newlines until "baseurl:"
   An example home page hosted in github sites

@@ -1,0 +1,48 @@
+@media(max-width:875px) {
+  .headerMainOuterContainer {
+    position: fixed;
+  }
+  #header-logo{
+    margin-top: 10px;
+    margin-left: 10px;
+    height: 100px;
+  }
+
+  .headerLogoContainer {
+    padding-left: 20px;
+
+  }
+
+  .homefeaturecategory-homeboximpactstats .homeImpactWrapper>h2 {
+    font-size: 1.5em;
+    font-weight: 700;
+  }
+
+
+  .homefeaturecategory-homeboximpactstats td {
+    font-size: .7em;
+    font-weight: 700;
+  }
+
+  .footerTableLi {
+    padding-right: 10px;
+  }
+
+
+  .introHeader {
+    max-width: 780px;
+    padding-left: 20px;
+  }
+
+  .introHeaderfollowingImg {
+    max-width: 780px;
+    padding-left: 20px;
+  }
+  .faqSection {
+    margin-left: 20px;
+  }
+
+  .contentsBoxedGrouping {
+    padding-left: 20px;
+  }
+}

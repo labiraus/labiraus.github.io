@@ -1,0 +1,19 @@
+    {% for slide in page.carousel %}
+      <input class="carousel__activator" type="radio" name="carousel" id="slide{{ letters[forloop.index0] }}" {% if forloop.first %}checked="checked"{% endif %} />
+    {% endfor %}
+    {% for slide in page.carousel %}
+      {% assign nextindex = forloop.index0 | plus: 1 | modulo: page.carousel.size %}
+      {% assign previndex = forloop.index0 | minus: 1 %}
+      {% if previndex < 0 %}{% assign previndex = page.carousel.size | minus: 1 %}{% endif %}
+      <div class="carousel__controls">
+        <label class="carousel__control carousel__control--backward" for="slide{{ letters[previndex] }}"></label>
+        <label class="carousel__control carousel__control--forward" for="slide{{ letters[nextindex] }}"></label>
+      </div>
+    {% endfor %}
+
+    
+      <div class="carousel__indicators">
+        {% for slide in page.carousel %}
+          <label class="carousel__indicator" for="slide{{ letters[forloop.index0] }}"></label>
+        {% endfor %}
+      </div>

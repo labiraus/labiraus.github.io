@@ -1,0 +1,41 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <title>{{ page.title }} | {{ site.title }}</title>
+    <meta name="description"
+        content="Home-Start Nottingham is a local charity with a network of trained parent volunteers who support families with young children through their challenging times. We are there for parents when they need us the most because childhood can’t wait. ">
+    <meta name="keywords"
+        content="Home, Homestart, parent, family, families, children, child, charity, Nottingham, Nottinghamshire, volunteer, Rushcliffe, Gedling, Broxtowe, Ashfield, support, help" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="-1" />
+
+    <link rel="apple-touch-icon" href="./icons/icon.png">
+    <link rel="shortcut icon" href="./icons/favicon.png" />
+    <!-- Place favicon.ico in the root directory
+        <script src="https://kit.fontawesome.com/8c35daf5cb.js"></script>-->
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/navigation.css">
+    <link rel="stylesheet" href="./css/carousel.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/maxwidth1200.css">
+    <link rel="stylesheet" href="./css/maxwidth875.css">
+    <link rel="stylesheet" href="./css/maxwidth780.css">
+    <link rel="stylesheet" href="./css/maxwidth670.css">
+    <meta name="theme-color" content="#fafafa">
+</head>
+<body>
+    {% include nav.html %}
+    <main>
+        <!--[if IE]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+        {{ content }}
+
+    </main>
+    {% include footer.html %}
+</body>
+</html>

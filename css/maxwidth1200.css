@@ -1,0 +1,30 @@
+@media(max-width:1200px) {
+  .headerLogoContainer {
+    padding-left: 120px;
+
+  }
+
+  .ulHeadermobileButton a {
+    display: none;
+  }
+
+  .homeIntroWrapper {
+    margin-top: 0;
+    margin-bottom: 0
+  }
+
+  .introHeader {
+    max-width: 875px;
+    padding-left: 120px;
+  }
+
+  .introHeaderfollowingImg {
+    padding-left: 120px;
+    max-width: 875px;
+  }
+
+  .faqSection {
+    margin-left: 120px;
+  }
+
+}

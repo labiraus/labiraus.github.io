@@ -1,0 +1,162 @@
+@media(max-width:670px) {
+
+  #header-logo{
+    margin-top: 25px;
+    margin-left: 20px;
+    height: 70px;
+  }
+
+  .headerMainOuterContainer {
+    right: 0;
+    margin-right: 0;
+  }
+  .headerMediaContainer{
+    display: inline-flex;
+    margin-top: 10px;
+  }
+  .hsInlineBlock {
+    flex-direction: column;
+  }
+
+  .headerButtonsContainer {
+    margin-top: 18px;
+  }
+
+  ul.horizontalList li.ulHeaderButton {
+    display: none;
+  }
+  .ulHeadermobileButton a {
+    display: block;
+  }
+
+  .menuMain .topLevel a.mobileHeaderButton {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #ffa300;
+    color: #fff;
+    border: 0 solid #500778;
+    outline: 0;
+    border-radius: 2px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-weight: 400;
+    font-family: source sans pro, sans-serif;
+    text-transform: none;
+    line-height: 1.25;
+    width: 70%;
+    max-width: 220px;
+    margin-left: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    -webkit-transition: all .1s ease;
+    -o-transition: all .1s ease;
+    transition: all .1s ease;
+    text-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  .menuMain .topLevel a.mobileHeaderButton.donate {
+    background-color: #e35205;
+    color: #fff;
+    border-color: #e35205;
+  }
+
+
+  .headerButtons .header-button a {
+    color: inherit
+  }
+
+
+
+
+
+  .homeIntroWrapper {
+    padding: 1.2rem;
+    font-size: 1rem;
+  }
+  .homeIntro a.button {
+    font-size: 1rem;
+    padding: .5em 1em;
+  }
+
+  .downArrows {
+    padding-left: 42%;
+  }
+  .downArrowsSVG {
+    width: 75%;
+    height: auto;
+  }
+
+  .homefeaturecategory-homeboximpactstats {
+    padding: 0px;
+  }
+
+  .homefeaturecategory-homeboximpactstats .homeImpactWrapper {
+    padding: 0px;
+  }
+
+
+  .homefeaturecategory-homeboximpactstats td {
+    font-size: .8em;
+    font-weight: 700;
+  }
+
+  .homefeaturecategory-homeboximpactstats tr {
+    flex: none;
+  }
+
+  .staffContainer table{
+    width: 330px;
+    max-width: 330px !important;
+  }
+  .contenstStaticAsideCol3 {
+    display:none;
+
+  }
+
+  .footerTableUL {
+      display: block;
+  }
+
+  .footerLinks-header h2 {
+    font-weight: 700;
+    font-size: .7rem;
+  }
+
+  .footerTableLi {
+    padding-right: 10px;
+  }
+
+  .footerAnchor {
+    font-size: 0.5em;
+  }
+
+  .footerCompanyDetails {
+    text-align: center;
+    font-size: 0.5em;
+    font-weight: 400;
+  }
+
+  .introHeader {
+    max-width: 600px;
+    padding-left: 20px;
+  }
+  .introHeaderfollowingImg {
+    max-width: 600px;
+    padding-left: 20px;
+  }
+
+  .contentsBoxedGrouping {
+    padding-left: 20px;
+  }
+  .faqSection {
+    margin-left: 20px;
+  }
+}
+

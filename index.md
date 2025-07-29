@@ -1,0 +1,27 @@
+---
+# Feel free to add content and custom Front Matter to this file.
+# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+title: "Home-Start Nottingham"
+layout: default
+
+carousel:
+  - heading: "Because childhood cannot wait"
+    body: "The earliest years make the biggest difference. Home-Start makes sure those years count, so no child's future is limited.<br><br>Donate here to support Home-Start Nottingham"
+    linkText: "Donate Now"
+    link: "https://www.justgiving.com/homestartnottingham"
+    image: "img/hs4.jpg"
+
+  - heading: "How to volunteer"
+    body: "Find out how to volunteer for Home-Start Nottingham, whether you want to be a home visiting volunteer, a trustee, or a fundraiser."
+    linkText: "Read More"
+    link: "./volunteers/howToVolunteer.html"
+    image: "img/hs_6_small3.jpg"
+
+  - heading: "How can we support you"
+    body: "Being a parent has never been easy. It can be lonely, frustrating, heartbreaking and overwhelming. All parents struggle at one time or another. For some, the challenges can be greater. You are not alone."
+    linkText: "Read More"
+    link: "./parents/howCanWeSupport.html"
+    image: "img/hs2.jpg"
+---
+
+{% include carousel.html %}

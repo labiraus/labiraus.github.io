@@ -1,0 +1,64 @@
+{% assign letterstring = "a,b,c,d,e,f,g,h,i,j,k,l,m,n" %}
+{% assign letters = letterstring | split: ',' %}
+<div id="carousel">
+  <div class="carouselContainer">
+    <header class="headerWrapper carouselUsed">
+      <section class="carousel  hasCaption  carouselImageMultiple">
+        <ul class="carouselSlides" id="carouselSlides">
+          {% for slide in page.carousel %}
+            <li class="carouselSlide{% unless forloop.first %} hidden{% endunless %}">
+              <a href="{{ slide.link }}" class="carouselSlideTitle"><img src="{{ slide.image }}" alt="" /></a>
+              <div class="carouselDetailWrapper">
+                <div class="carouselSlideDetail">
+                  <svg class="carouselSlideDetailSVG" width="225" height="46" viewBox="0 0 225 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M37.3961 46H0.975498C0.139844 46 -0.277984 45.0242 0.209482 44.3273L34.1928 1.67273C35.0284 0.627273 36.2819 0 37.605 0H74.0256C74.8613 0 75.2791 0.975758 74.722 1.67273L40.8084 44.3273C39.9727 45.3727 38.7192 46 37.3961 46Z" fill="#FFA300"/>
+                    <path d="M37.3961 46H0.975498C0.139844 46 -0.277984 45.0242 0.209482 44.3273L34.1928 1.67273C35.0284 0.627273 36.2819 0 37.605 0H74.0256C74.8613 0 75.2791 0.975758 74.722 1.67273L40.8084 44.3273C39.9727 45.3727 38.7192 46 37.3961 46Z" fill="#FFA300"/>
+                    <path d="M37.3961 46H0.975498C0.139844 46 -0.277984 45.0242 0.209482 44.3273L34.1928 1.67273C35.0284 0.627273 36.2819 0 37.605 0H74.0256C74.8613 0 75.2791 0.975758 74.722 1.67273L40.8084 44.3273C39.9727 45.3727 38.7192 46 37.3961 46Z" fill="#FFA300"/>
+                    <path d="M87.3961 46H50.9755C50.1398 46 49.722 45.0242 50.2095 44.3273L84.1928 1.67273C85.0284 0.627273 86.2819 0 87.605 0H124.026C124.861 0 125.279 0.975758 124.722 1.67273L90.8084 44.3273C89.9727 45.3727 88.7192 46 87.3961 46Z" fill="#FFA300"/>
+                    <path d="M87.3961 46H50.9755C50.1398 46 49.722 45.0242 50.2095 44.3273L84.1928 1.67273C85.0284 0.627273 86.2819 0 87.605 0H124.026C124.861 0 125.279 0.975758 124.722 1.67273L90.8084 44.3273C89.9727 45.3727 88.7192 46 87.3961 46Z" fill="#FFA300"/>
+                    <path d="M87.3961 46H50.9755C50.1398 46 49.722 45.0242 50.2095 44.3273L84.1928 1.67273C85.0284 0.627273 86.2819 0 87.605 0H124.026C124.861 0 125.279 0.975758 124.722 1.67273L90.8084 44.3273C89.9727 45.3727 88.7192 46 87.3961 46Z" fill="#FFA300"/>
+                    <path d="M137.396 46H100.975C100.14 46 99.722 45.0242 100.209 44.3273L134.193 1.67273C135.028 0.627273 136.282 0 137.605 0H174.026C174.861 0 175.279 0.975758 174.722 1.67273L140.808 44.3273C139.973 45.3727 138.719 46 137.396 46Z" fill="#FFA300"/>
+                    <path d="M137.396 46H100.975C100.14 46 99.722 45.0242 100.209 44.3273L134.193 1.67273C135.028 0.627273 136.282 0 137.605 0H174.026C174.861 0 175.279 0.975758 174.722 1.67273L140.808 44.3273C139.973 45.3727 138.719 46 137.396 46Z" fill="#FFA300"/>
+                    <path d="M137.396 46H100.975C100.14 46 99.722 45.0242 100.209 44.3273L134.193 1.67273C135.028 0.627273 136.282 0 137.605 0H174.026C174.861 0 175.279 0.975758 174.722 1.67273L140.808 44.3273C139.973 45.3727 138.719 46 137.396 46Z" fill="#FFA300"/>
+                    <path d="M187.396 46H150.975C150.14 46 149.722 45.0242 150.209 44.3273L184.193 1.67273C185.028 0.627273 186.282 0 187.605 0H224.026C224.861 0 225.279 0.975758 224.722 1.67273L190.808 44.3273C189.973 45.3727 188.719 46 187.396 46Z" fill="#FFA300"/>
+                    <path d="M187.396 46H150.975C150.14 46 149.722 45.0242 150.209 44.3273L184.193 1.67273C185.028 0.627273 186.282 0 187.605 0H224.026C224.861 0 225.279 0.975758 224.722 1.67273L190.808 44.3273C189.973 45.3727 188.719 46 187.396 46Z" fill="#FFA300"/>
+                    <path d="M187.396 46H150.975C150.14 46 149.722 45.0242 150.209 44.3273L184.193 1.67273C185.028 0.627273 186.282 0 187.605 0H224.026C224.861 0 225.279 0.975758 224.722 1.67273L190.808 44.3273C189.973 45.3727 188.719 46 187.396 46Z" fill="#FFA300"/>
+                  </svg>
+                  <h2 class="carouselSlideHeading">
+                    <a href="{{ slide.link }}">{{ slide.heading }}</a>
+                  </h2>
+                  <a href="{{ slide.link }}">
+                    <p class="carouselSlideSummary">{{ slide.body }}
+                      <span class="readMore carouselSlideReadMore" onclick="window.location.href='{{ slide.link }}'">{{ slide.linkText }}</span>
+                    </p>
+                  </a>
+                </div>
+              </div>
+            </li>
+          {% endfor %}
+        </ul>
+    
+        <ul class="carouselButtons">
+          {% for slide in page.carousel %}
+            <li id="hc_{{ forloop.index0 }}"{% if forloop.first %} class="activeSlide"{% endif %}>
+              <a onclick="changeSlide('carouselSlides', 1, {{ forloop.index0 }})" href="#" class="button carouselButton"></a>
+            </li>
+          {% endfor %}
+        </ul>
+
+       <ul class="carouselControls">
+         <li><a href="javascript: changeSlide('carouselSlides', 1);" class="carouselControlNext">Next</a></li>
+         <li><a href="javascript: changeSlide('carouselSlides', -1);" class="carouselControlPrev">Prev</a></li>
+       </ul>
+      </section>
+    </header>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        defaultChangeMS = 5000;
+        intID = setInterval(function () {
+          changeSlide('carouselSlides',1);
+        }, defaultChangeMS);
+      });
+    </script>
+  </div>
+</div>
