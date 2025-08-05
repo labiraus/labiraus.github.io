@@ -1066,7 +1066,7 @@ max-width: 1000px;
 
 
 
-h1.outerBox {
+h1 {
 font-size: 2em;
 font-family: inherit;
 font-weight: 700;
@@ -1075,7 +1075,7 @@ text-transform: none;
 text-align: left;
 }
 
-h2.outerBox {
+h2.title {
 font-size: 1.5em;
 font-family: inherit;
 font-weight: 700;
