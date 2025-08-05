@@ -32,8 +32,17 @@ collections:
         name: "navigation"
         file: "_data/navigation.yml"
         fields:
-          - { label: Title, name: title, widget: string }
-          - { label: Body, name: body, widget: markdown }
+          - label: Menu
+            name: menu
+            widget: list
+            fields:
+              - { label: Parent, name: parent, widget: string }
+              - label: Items
+                name: items
+                widget: list
+                fields:
+                  - { label: Text, name: text, widget: string }
+                  - { label: Href, name: href, widget: string }
   - name: "pages"
     label: "Pages"
     files:
@@ -42,6 +51,9 @@ collections:
         file: "pages/index.md"
         fields:
           - { label: Title, name: title, widget: string }
+          - { label: Carousel, name: carousel, widget: list, fields: [{label: Heading, name: heading, widget: string}] }
+          - { label: Features, name: features, widget: list, fields: [{label: Statistic, name: statistic, widget: string}] }
+          - { label: Intro, name: intro, widget: string }
           - { label: Body, name: body, widget: markdown }
 
   - name: "reports"
