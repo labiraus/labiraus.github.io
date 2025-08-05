@@ -580,7 +580,7 @@ a.header-button {
 a.header-button:before,
 a.mobileHeaderButton:before {
   content: '';
-  background-image: url(../uploads/img/chevron-orange.png);
+  background-image: url(../uploads/chevron-orange.png);
   position: absolute;
   left: 15px;
   top: 50%;
@@ -601,7 +601,7 @@ a.mobileHeaderButton:before {
 a.header-button.donate:before,
 a.mobileHeaderButton.donate:before {
   content: '';
-  background-image: url(../uploads/img/smile-yellow.png);
+  background-image: url(../uploads/smile-yellow.png);
   position: absolute;
   left: 15px;
   top: 50%;
