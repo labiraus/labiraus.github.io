@@ -25,24 +25,22 @@ media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
 
 collections:
-  - name: "data"
-    label: "Data"
-    files:
-      - label: "Navigation"
-        name: "navigation"
-        file: "_data/navigation.yml"
+  - label: "Navigation"
+    name: "navigation"
+    file: "_data/navigation.yml"
+    fields:
+      - label: Menu
+        name: menu
+        widget: list
         fields:
-          - label: Menu
-            name: menu
+          - { label: Parent, name: parent, widget: string }
+          - label: Items
+            name: items
             widget: list
             fields:
-              - { label: Parent, name: parent, widget: string }
-              - label: Items
-                name: items
-                widget: list
-                fields:
-                  - { label: Text, name: text, widget: string }
-                  - { label: Href, name: href, widget: string }
+              - { label: Text, name: text, widget: string }
+              - { label: Href, name: href, widget: string }
+              
   - name: "pages"
     label: "Pages"
     files:
@@ -51,8 +49,22 @@ collections:
         file: "pages/index.md"
         fields:
           - { label: Title, name: title, widget: string }
-          - { label: Carousel, name: carousel, widget: list, fields: [{label: Heading, name: heading, widget: string}] }
-          - { label: Features, name: features, widget: list, fields: [{label: Statistic, name: statistic, widget: string}] }
+          - label: Carousel
+            name: carousel
+            widget: list
+            fields:
+              - { label: Heading, name: heading, widget: string }
+              - { label: Body, name: body, widget: text }
+              - { label: Link Text, name: linkText, widget: string }
+              - { label: Link, name: link, widget: string }
+              - { label: Image, name: image, widget: string }
+          - label: Features
+            name: features
+            widget: list
+            fields:
+              - { label: Statistic, name: statistic, widget: string }
+              - { label: Description, name: description, widget: string }
+              - { label: Image, name: image, widget: string }
           - { label: Intro, name: intro, widget: string }
           - { label: Body, name: body, widget: markdown }
 
