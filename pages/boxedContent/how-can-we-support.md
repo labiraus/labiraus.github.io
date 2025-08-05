@@ -1,5 +1,4 @@
 ---
-
 title: "How can we support"
 layout: boxed
 permalink: /support/howCanWeSupport
