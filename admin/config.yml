@@ -27,19 +27,22 @@ public_folder: "/assets/uploads"
 collections:
   - label: "Navigation"
     name: "navigation"
-    file: "_data/navigation.yml"
-    fields:
-      - label: Menu
-        name: menu
-        widget: list
+    files:
+      - label: "Navigation"
+        name: "navigation"
+        file: "_data/navigation.yml"
         fields:
-          - { label: Parent, name: parent, widget: string }
-          - label: Items
-            name: items
+          - label: Menu
+            name: menu
             widget: list
             fields:
-              - { label: Text, name: text, widget: string }
-              - { label: Href, name: href, widget: string }
+              - { label: Parent, name: parent, widget: string }
+              - label: Items
+                name: items
+                widget: list
+                fields:
+                  - { label: Text, name: text, widget: string }
+                  - { label: Href, name: href, widget: string }
               
   - name: "pages"
     label: "Pages"
