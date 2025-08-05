@@ -1,0 +1,47 @@
+<nav id="pageHeader" class="headerMainOuterContainer pageHeader">
+  <div class="headerLogoContainer">
+    <a href="/"><img src="/assets/img/hslogo.jpg" alt="Homestart Nottingham Logo" id="header-logo"></a>
+  </div>
+  <div class="headerButtonsContainer">
+    <ul class="headerButtons horizontalList">
+      <li class="ulHeadermobileButton"><a onclick="mobileClickFunction()" class="menuMainAlt">Menu</a></li>
+      <li class="ulHeaderButton"><a alt="Donate to Home-Start Nottingham" target="_blank"
+          href="fundraising/howToDonate.html" class="header-button donate">Donate</a></li>
+      <li class="ulHeaderButton"><a href="/aboutUs/contactUs.html" class="header-button">Contact Us</a></li>
+    </ul>
+  </div>
+
+  <div class="headerMediaContainer">
+    <ul class="socialIcons horizontalList">
+      <li><a class="instagram" alt="instagram" target="_blank"
+          href="https://www.instagram.com/homestartnottingham/"></a></li>
+      <li><a class="twitter" alt="Twitter" target="_blank" href="https://twitter.com/homestartnottm"></a></li>
+      <li><a class="facebook" alt="Facebook" target="_blank" href="https://www.facebook.com/homestartnottingham"></a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="headerNavigationContainer hideNav">
+    <nav id="menuMain" class="menuMain" role="navigation">
+      <div id="navbar">
+        <ul class="topLevel level1 mainNavBar">
+        {% for section in site.data.navigation.menu %}
+          <li class="level1 hasSubmenu">
+          <a role="menuitem">{{ section.parent }}</a>
+          <ul class="subMenu level2" aria-label="{{ section.parent }}">
+            {% for item in section.items %}
+            <li class="level2 menu1_1">
+              <a role="menuitem" href="{{ item.href }}">{{ item.text }}</a>
+            </li>
+            {% endfor %}
+          </ul>
+        </li>
+        {% endfor %}
+        <li class="mobileHeaderButtonLI"><a alt="Donate to Home-Start Nottingham" target="_blank"
+              href="https://www.justgiving.com/homestartnottingham" class="mobileHeaderButton donate">Donate</a></li>
+        <li class="mobileHeaderButtonLI"><a href="aboutUs/contactUs.html" class="mobileHeaderButton">Contact Us</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</nav>

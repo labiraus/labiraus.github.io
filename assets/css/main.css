@@ -580,7 +580,7 @@ a.header-button {
 a.header-button:before,
 a.mobileHeaderButton:before {
   content: '';
-  background-image: url(../uploads/chevron-orange.png);
+  background-image: url(../img/chevron-orange.png);
   position: absolute;
   left: 15px;
   top: 50%;
@@ -601,7 +601,7 @@ a.mobileHeaderButton:before {
 a.header-button.donate:before,
 a.mobileHeaderButton.donate:before {
   content: '';
-  background-image: url(../uploads/smile-yellow.png);
+  background-image: url(../img/smile-yellow.png);
   position: absolute;
   left: 15px;
   top: 50%;
@@ -1066,7 +1066,7 @@ max-width: 1000px;
 
 
 
-h1.title {
+h1 {
 font-size: 2em;
 font-family: inherit;
 font-weight: 700;
@@ -1075,7 +1075,7 @@ text-transform: none;
 text-align: left;
 }
 
-h2.title {
+h2 {
 font-size: 1.5em;
 font-family: inherit;
 font-weight: 700;
@@ -1084,7 +1084,7 @@ text-transform: none;
 text-align: left;
 }
 
-.introText {
+p {
 font-family: source sans pro,sans-serif;
 font-size: 0.9rem;
 font-weight: 400;

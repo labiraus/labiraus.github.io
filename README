@@ -29,7 +29,7 @@ This repo includes a `.devcontainer` configuration. When opened in VS Code, it a
 ### Editing Content
 - Pages and posts can be managed via DecapCMS (`/admin` route).
 - Navigation and other data are stored in `_data/`.
-- Static assets (images, SVGs, CSS, JS) are in the `assets/` folder.
+- Static assets (images, SVGs, CSS, JS) are in the `/assets/` folder.
 
 ## Useful Commands
 - **Install dependencies:**

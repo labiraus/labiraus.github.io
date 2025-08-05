@@ -10,19 +10,19 @@ carousel:
     body: "The earliest years make the biggest difference. Home-Start makes sure those years count, so no child's future is limited.<br><br>Donate here to support Home-Start Nottingham"
     linkText: "Donate"
     link: "https://www.justgiving.com/homestartnottingham"
-    image: "/assets/uploads/hs4.jpg"
+    image: "/assets/img/hs4.jpg"
 
   - heading: "How to volunteer"
     body: "Find out how to volunteer for Home-Start Nottingham, whether you want to be a home visiting volunteer, a trustee, or a fundraiser."
     linkText: "Read More"
     link: "./volunteers/howToVolunteer.html"
-    image: "/assets/uploads/hs_6_small3.jpg"
+    image: "/assets/img/hs_6_small3.jpg"
 
   - heading: "How can we support you"
     body: "Being a parent has never been easy. It can be lonely, frustrating, heartbreaking and overwhelming. All parents struggle at one time or another. For some, the challenges can be greater. You are not alone."
     linkText: "Read More"
     link: "./parents/howCanWeSupport.html"
-    image: "/assets/uploads/hs2.jpg"
+    image: "/assets/img/hs2.jpg"
 
 features:
   - statistic: "83"

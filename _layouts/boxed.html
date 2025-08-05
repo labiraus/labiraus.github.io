@@ -1,0 +1,20 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+{% include header.html %}
+<body>
+    {% include navigation.html %}
+    <!--[if IE]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+    <![endif]-->
+    <main>
+        <div class="outerBox">
+            <div class="introHeader">
+                {{ content }}
+            </div>
+            {% include boxedContent.html %}
+        </div>
+    </main>
+    {% include footer.html %}
+</body>
+</html>

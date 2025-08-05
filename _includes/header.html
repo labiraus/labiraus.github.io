@@ -1,47 +1,26 @@
-<nav id="pageHeader" class="headerMainOuterContainer pageHeader">
-  <div class="headerLogoContainer">
-    <a href="./index.html"><img src="./assets/uploads/hslogo.jpg" alt="Homestart Nottingham Logo" id="header-logo"></a>
-  </div>
-  <div class="headerButtonsContainer">
-    <ul class="headerButtons horizontalList">
-      <li class="ulHeadermobileButton"><a onclick="mobileClickFunction()" class="menuMainAlt">Menu</a></li>
-      <li class="ulHeaderButton"><a alt="Donate to Home-Start Nottingham" target="_blank"
-          href="fundraising/howToDonate.html" class="header-button donate">Donate</a></li>
-      <li class="ulHeaderButton"><a href="aboutUs/contactUs.html" class="header-button">Contact Us</a></li>
-    </ul>
-  </div>
+<head>
+    <meta charset="utf-8">
+    <title>{{ page.title }} | {{ site.title }}</title>
+    <meta name="description"
+        content="Home-Start Nottingham is a local charity with a network of trained parent volunteers who support families with young children through their challenging times. We are there for parents when they need us the most because childhood can’t wait. ">
+    <meta name="keywords"
+        content="Home, Homestart, parent, family, families, children, child, charity, Nottingham, Nottinghamshire, volunteer, Rushcliffe, Gedling, Broxtowe, Ashfield, support, help" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="-1" />
 
-  <div class="headerMediaContainer">
-    <ul class="socialIcons horizontalList">
-      <li><a class="instagram" alt="instagram" target="_blank"
-          href="https://www.instagram.com/homestartnottingham/"></a></li>
-      <li><a class="twitter" alt="Twitter" target="_blank" href="https://twitter.com/homestartnottm"></a></li>
-      <li><a class="facebook" alt="Facebook" target="_blank" href="https://www.facebook.com/homestartnottingham"></a>
-      </li>
-    </ul>
-  </div>
-
-  <div class="headerNavigationContainer hideNav">
-    <nav id="menuMain" class="menuMain" role="navigation">
-      <div id="navbar">
-        <ul class="topLevel level1 mainNavBar">
-        {% for section in site.data.navigation.menu %}
-          <li class="level1 hasSubmenu">
-          <a role="menuitem">{{ section.parent }}</a>
-          <ul class="subMenu level2" aria-label="{{ section.parent }}">
-            {% for item in section.items %}
-            <li class="level2 menu1_1">
-              <a role="menuitem" href="{{ item.href }}">{{ item.text }}</a>
-            </li>
-            {% endfor %}
-          </ul>
-        </li>
-        {% endfor %}
-        <li class="mobileHeaderButtonLI"><a alt="Donate to Home-Start Nottingham" target="_blank"
-              href="https://www.justgiving.com/homestartnottingham" class="mobileHeaderButton donate">Donate</a></li>
-        <li class="mobileHeaderButtonLI"><a href="aboutUs/contactUs.html" class="mobileHeaderButton">Contact Us</a></li>
-        </ul>
-      </div>
-    </nav>
-  </div>
-</nav>
+    <link rel="apple-touch-icon" href="/assets/icons/icon.png">
+    <link rel="shortcut icon" href="/assets/icons/favicon.png" />
+    <!-- Place favicon.ico in the root directory
+        <script src="https://kit.fontawesome.com/8c35daf5cb.js"></script>-->
+    <link rel="stylesheet" href="/assets/css/normalize.css">
+    <link rel="stylesheet" href="/assets/css/navigation.css">
+    <link rel="stylesheet" href="/assets/css/carousel.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/maxwidth1200.css">
+    <link rel="stylesheet" href="/assets/css/maxwidth875.css">
+    <link rel="stylesheet" href="/assets/css/maxwidth780.css">
+    <link rel="stylesheet" href="/assets/css/maxwidth670.css">
+    <meta name="theme-color" content="#fafafa">
+</head>

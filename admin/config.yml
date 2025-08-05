@@ -21,8 +21,8 @@ logo_url: https://decapbridge.com/decapcms-with-bridge.svg
 # Add site links in DecapCMS (optional)
 site_url: https://labiraus.com
 
-media_folder: "assets/uploads"
-public_folder: "/assets/uploads"
+media_folder: "/assets/img"
+public_folder: "/assets/img"
 
 collections:
   - label: "Navigation"
@@ -52,6 +52,7 @@ collections:
         file: "pages/index.md"
         fields:
           - { label: Title, name: title, widget: string }
+          - { label: Permalink, name: permalink, widget: string }
           - label: Carousel
             name: carousel
             widget: list
@@ -79,3 +80,22 @@ collections:
       - { label: Title, name: title, widget: string }
       - { label: Date, name: date, widget: datetime }
       - { label: File, name: file, widget: file }
+
+  - name: "boxedContent"
+    label: "Boxed Content Pages"
+    folder: "pages/boxedContent"
+    create: true
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Layout, name: layout, widget: string, default: "boxed" }
+      - { label: Permalink, name: permalink, widget: string }
+      - label: Boxed Content
+        name: boxedContent
+        widget: list
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Link, name: link, widget: string }
+          - { label: Image, name: image, widget: string }
+          - { label: Alt, name: alt, widget: string }
+          - { label: Text, name: text, widget: text }
+      - { label: Body, name: body, widget: markdown }
