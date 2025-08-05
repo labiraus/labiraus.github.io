@@ -1021,6 +1021,7 @@ line-height: 1.5;
 -webkit-box-shadow: none;
 box-shadow: none;
 display:block;
+margin-top: 150px;
 }
 
 .pageBodyTopImg {
@@ -1028,7 +1029,7 @@ width: 100%;
 max-width: 100%;
 margin-left: auto;
 margin-right: auto;
-margin-top: 125px;
+/* margin-top: 125px; */
 margin-bottom: 0;
 position: relative;
 height: auto;
@@ -1047,7 +1048,7 @@ height: auto;
 
 .introHeader {
 display: block;
-margin-top: 150px;
+/* margin-top: 150px; */
 padding-left: 150px;
 max-width: 1000px;
 }
