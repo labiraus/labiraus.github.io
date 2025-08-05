@@ -23,14 +23,14 @@ email: oliver@labiraus.com
 description: >- # this means to ignore newlines until "baseurl:"
   An example home page hosted in github sites
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://www.labiraus.com" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: thatoliguy
-github_username:  labiraus
+url: "https://www.labiraus.com" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 theme: minima
 plugins:
   - jekyll-feed
+include:
+  - pages
 
 # Exclude from processing.
 # The following items will not be processed, by default.

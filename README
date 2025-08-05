@@ -1,0 +1,49 @@
+# Home-Start Nottingham Website
+
+This repository contains the source code for the Home-Start Nottingham website, built with Jekyll and designed for easy content management via DecapCMS.
+
+## Features
+- Static site generated with Jekyll
+- DecapCMS integration for easy editing
+- Organized assets and data-driven navigation
+- Ready-to-use dev container for consistent development environment
+
+## Getting Started
+
+### Using the Dev Container
+This repo includes a `.devcontainer` configuration. When opened in VS Code, it automatically sets up:
+- Ruby, Node.js, npm, and Jekyll
+- Git and GitHub CLI
+- Docker CLI
+- All dependencies for local development
+
+### Running the Site Locally
+1. Open the repo in VS Code and use the dev container.
+2. In the terminal, run:
+   ```sh
+   bundle install
+   bundle exec jekyll serve
+   ```
+3. Visit [http://localhost:4000](http://localhost:4000) to view the site.
+
+### Editing Content
+- Pages and posts can be managed via DecapCMS (`/admin` route).
+- Navigation and other data are stored in `_data/`.
+- Static assets (images, SVGs, CSS, JS) are in the `assets/` folder.
+
+## Useful Commands
+- **Install dependencies:**
+  ```sh
+  bundle install
+  ```
+- **Start Jekyll server:**
+  ```sh
+  bundle exec jekyll serve
+  ```
+- **Build site for production:**
+  ```sh
+  bundle exec jekyll build
+  ```
+
+## Support
+For questions or support, contact [oliver@labiraus.com](mailto:oliver@labiraus.com).
