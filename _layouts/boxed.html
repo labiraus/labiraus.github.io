@@ -9,6 +9,12 @@
     <![endif]-->
     <main>
         <div class="outerBox">
+            {% if page.pageImage and page.pageImage != "" %}
+              <div>
+                <img class="pageBodyTopImg" src="{{ page.pageImage }}" />
+              </div>
+            {% endif %}
+            
             <div class="introHeader">
                 {{ content }}
             </div>

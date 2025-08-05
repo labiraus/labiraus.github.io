@@ -3,6 +3,7 @@
 title: "How can we support"
 layout: boxed
 permalink: /support/howCanWeSupport
+pageImage: ""
 
 boxedContent:
   - title: "Case studies"
