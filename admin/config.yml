@@ -44,8 +44,8 @@ collections:
                   - { label: Text, name: text, widget: string }
                   - { label: Href, name: href, widget: string }
               
-  - name: "pages"
-    label: "Pages"
+  - name: "home"
+    label: "Home"
     files:
       - label: "Home"
         name: "home"
@@ -72,15 +72,6 @@ collections:
           - { label: Intro, name: intro, widget: string }
           - { label: Body, name: body, widget: markdown }
 
-  - name: "reports"
-    label: "Reports"
-    folder: "_reports"
-    create: true
-    fields:
-      - { label: Title, name: title, widget: string }
-      - { label: Date, name: date, widget: datetime }
-      - { label: File, name: file, widget: file }
-
   - name: "boxedContent"
     label: "Boxed Content Pages"
     folder: "pages/boxedContent"
@@ -99,3 +90,12 @@ collections:
           - { label: Alt, name: alt, widget: string }
           - { label: Text, name: text, widget: text }
       - { label: Body, name: body, widget: markdown }
+
+  - name: "reports"
+    label: "Reports"
+    folder: "_reports"
+    create: true
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Date, name: date, widget: datetime }
+      - { label: File, name: file, widget: file }
