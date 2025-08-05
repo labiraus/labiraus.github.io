@@ -2,7 +2,7 @@
 title: Family Mentor Team
 layout: boxed
 permalink: /support/familyMentorTeam
-pageImage: /assets/img/hs-img-top2.jpg
+pageImage: /assets/img/hs-image-top2.jpg
 ---
 # Family Mentor Team
 
