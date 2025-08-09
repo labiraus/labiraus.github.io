@@ -92,8 +92,8 @@ collections:
           - { label: Text, name: text, widget: text }
       - { label: Body, name: body, widget: markdown }
 
-  - name: "contentontent"
-    label: "Boxed Content Pages"
+  - name: "content"
+    label: "Content Pages"
     folder: "pages/content"
     create: true
     fields:
@@ -103,8 +103,8 @@ collections:
       - { label: Page Image, name: pageImage, widget: string }
       - label: Data
         name: data
-        widget: raw
-        hint: "Enter YAML or JSON for the data section"
+        widget: code
+        default_language: yaml
       - { label: Body, name: body, widget: markdown }
 
   - name: "reports"
