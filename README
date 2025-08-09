@@ -38,7 +38,7 @@ This repo includes a `.devcontainer` configuration. When opened in VS Code, it a
   ```
 - **Start Jekyll server:**
   ```sh
-  bundle exec jekyll serve
+  bundle exec jekyll serve --incremental
   ```
 - **Build site for production:**
   ```sh

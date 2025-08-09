@@ -1021,7 +1021,7 @@ line-height: 1.5;
 -webkit-box-shadow: none;
 box-shadow: none;
 display:block;
-margin-top: 150px;
+margin-top: 125px;
 }
 
 .pageBodyTopImg {
@@ -1567,6 +1567,19 @@ background-color: #fff;
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
+}
+p:only-child em:only-child,
+p > em:only-child {
+  border-left: 5px solid #500778;
+  border-radius: 0;
+  padding: 8px;
+  text-align: center;
+  font-size: 1.2em;
+  line-height: 1.5;
+  color: #292b2c;
+  background-color: #f0f0f0;
+  font-style: italic;
+  display: block;
 }
 .boxededPara {
   border-left: 5px solid #500778;
