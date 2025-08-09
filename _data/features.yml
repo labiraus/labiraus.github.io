@@ -1,0 +1,10 @@
+features:
+  - statistic: "83"
+    description: "families supported last year"
+    image: "/assets/svg/smile.svg"
+  - statistic: "10,686"
+    description: "volunteer hours given to support families last year"
+    image: "/assets/svg/arrows.svg"
+  - statistic: "89% of parents"
+    description: "had support with mental health"
+    image: "/assets/svg/circles.svg"

@@ -1,0 +1,24 @@
+<div class="homeFeaturesWrapper">
+  <div class="homeFeatures2">
+    <section class="homefeaturecategory-homeboximpactstats">
+      <div class="homeImpactWrapper">
+        <h2>Our Impact</h2>
+        <table>
+          <tbody>
+          {% for feature in page.data %}
+          <tr>
+            <td>
+              <div>
+                <img src="{{ feature.image }}" alt="">
+              </div>
+              <h2>{{ feature.statistic }}</h2>
+            </td>
+            <td>{{ feature.description }}</td>
+          </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+        </div>
+    </section>
+  </div>
+</div>
