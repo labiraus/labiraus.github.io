@@ -23,10 +23,10 @@ site_url: https://labiraus.com
 
 media_folder: "/assets/img"
 public_folder: "/assets/img"
-
+  
 collections:
-  - label: "Data"
-    name: "data"
+  - name: "data"
+    label: "Data"
     files:
       - label: "Navigation"
         name: "navigation"
@@ -48,17 +48,25 @@ collections:
         name: features
         file: "_data/features.yml"
         fields:
-          - { label: Statistic, name: statistic, widget: string }
-          - { label: Description, name: description, widget: string }
-          - { label: Image, name: image, widget: string }
+          - label: Features
+            name: features
+            widget: list
+            fields:
+              - { label: Statistic, name: statistic, widget: string }
+              - { label: Description, name: description, widget: string }
+              - { label: Image, name: image, widget: string }
           
       - label: Impact
         name: impact
         file: "_data/impact.yml"
         fields:
-          - { label: Statistic, name: statistic, widget: string }
-          - { label: Description, name: description, widget: string }
-          - { label: Image, name: image, widget: string }
+          - label: Impact
+            name: impact
+            widget: list
+            fields:
+              - { label: Statistic, name: statistic, widget: string }
+              - { label: Description, name: description, widget: string }
+              - { label: Image, name: image, widget: string }
           
   - name: "home"
     label: "Home"
