@@ -25,8 +25,8 @@ media_folder: "/assets/img"
 public_folder: "/assets/img"
 
 collections:
-  - label: "Navigation"
-    name: "navigation"
+  - label: "Data"
+    name: "data"
     files:
       - label: "Navigation"
         name: "navigation"
@@ -44,6 +44,22 @@ collections:
                   - { label: Text, name: text, widget: string }
                   - { label: Href, name: href, widget: string }
               
+      - label: Features
+        name: features
+        file: "_data/features.yml"
+        fields:
+          - { label: Statistic, name: statistic, widget: string }
+          - { label: Description, name: description, widget: string }
+          - { label: Image, name: image, widget: string }
+          
+      - label: Impact
+        name: impact
+        file: "_data/impact.yml"
+        fields:
+          - { label: Statistic, name: statistic, widget: string }
+          - { label: Description, name: description, widget: string }
+          - { label: Image, name: image, widget: string }
+          
   - name: "home"
     label: "Home"
     files:
@@ -61,13 +77,6 @@ collections:
               - { label: Body, name: body, widget: text }
               - { label: Link Text, name: linkText, widget: string }
               - { label: Link, name: link, widget: string }
-              - { label: Image, name: image, widget: string }
-          - label: Features
-            name: features
-            widget: list
-            fields:
-              - { label: Statistic, name: statistic, widget: string }
-              - { label: Description, name: description, widget: string }
               - { label: Image, name: image, widget: string }
           - { label: Intro, name: intro, widget: string }
           - { label: Body, name: body, widget: markdown }
@@ -92,19 +101,16 @@ collections:
           - { label: Text, name: text, widget: text }
       - { label: Body, name: body, widget: markdown }
 
-  - name: "content"
-    label: "Content Pages"
-    folder: "pages/content"
+  - name: "general"
+    label: "General Pages"
+    folder: "pages/general"
     create: true
     fields:
       - { label: Title, name: title, widget: string }
       - { label: Layout, name: layout, widget: string, default: "boxed" }
       - { label: Permalink, name: permalink, widget: string }
       - { label: Page Image, name: pageImage, widget: string }
-      - label: Data
-        name: data
-        widget: code
-        default_language: yaml
+      - { label: Has Impact Box, name: hasImpact, widget: boolean }
       - { label: Body, name: body, widget: markdown }
 
   - name: "reports"

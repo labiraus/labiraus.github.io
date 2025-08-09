@@ -24,17 +24,6 @@ carousel:
     link: "./parents/howCanWeSupport.html"
     image: "/assets/img/hs2.jpg"
 
-features:
-  - statistic: "83"
-    description: "families supported last year"
-    image: "/assets/svg/smile.svg"
-  - statistic: "10,686"
-    description: "volunteer hours given to support families last year"
-    image: "/assets/svg/arrows.svg"
-  - statistic: "89% of parents"
-    description: "had support with mental health"
-    image: "/assets/svg/circles.svg"
-
 intro: "We're there for parents when they need us the most, because childhood can't wait"
 ---
 

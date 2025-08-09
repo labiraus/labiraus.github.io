@@ -1,0 +1,10 @@
+impact:
+  - statistic: "Over 3,500"
+    description: "support calls made to Aspley families since the start of COVID in March 2020"
+    image: "/assets/svg/smile.svg"
+  - statistic: "80% of families reported"
+    description: "at the end of support, that we've made a lot of impact in improving their child's communication skills"
+    image: "/assets/svg/arrows.svg"
+  - statistic: "72% of families reported"
+    description: "at the end of support, that we've made a lot of impact in improving their child's behaviour."
+    image: "/assets/svg/circles.svg"

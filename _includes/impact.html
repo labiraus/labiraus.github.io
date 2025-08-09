@@ -1,24 +1,28 @@
-<div class="homeFeaturesWrapper">
-  <div class="homeFeatures2">
-    <section class="homefeaturecategory-homeboximpactstats">
-      <div class="homeImpactWrapper">
-        <h2>Our Impact</h2>
-        <table>
-          <tbody>
-          {% for feature in page.data %}
-          <tr>
-            <td>
-              <div>
-                <img src="{{ feature.image }}" alt="">
-              </div>
-              <h2>{{ feature.statistic }}</h2>
-            </td>
-            <td>{{ feature.description }}</td>
-          </tr>
-          {% endfor %}
-          </tbody>
-        </table>
-        </div>
-    </section>
+<aside class="contenstStaticAsideCol3">
+  <div class="contenstStaticAsideDetail">
+    <div class="homeFeaturesWrapper">
+      <div class="homeFeatures2">
+        <section class="homefeaturecategory-homeboximpactstats">
+          <div class="homeImpactWrapper">
+            <h2>Our Impact</h2>
+            <table>
+              <tbody>
+              {% for impact in site.data.impact %}
+              <tr>
+                <td>
+                  <div>
+                    <img src="{{ impact.image }}" alt="">
+                  </div>
+                  <h2>{{ impact.statistic }}</h2>
+                </td>
+                <td>{{ impact.description }}</td>
+              </tr>
+              {% endfor %}
+              </tbody>
+            </table>
+            </div>
+        </section>
+      </div>
+    </div>
   </div>
-</div>
+</aside>
