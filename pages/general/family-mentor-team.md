@@ -1,6 +1,6 @@
 ---
 title: Family Mentor Team
-layout: column
+layout: default
 permalink: /support/familyMentorTeam
 pageImage: /assets/img/hs-image-top2.jpg
 hasImpact: true
