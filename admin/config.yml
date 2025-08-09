@@ -115,7 +115,7 @@ collections:
     create: true
     fields:
       - { label: Title, name: title, widget: string }
-      - { label: Layout, name: layout, widget: string, default: "boxed" }
+      - { label: Layout, name: layout, widget: string, default: "default" }
       - { label: Permalink, name: permalink, widget: string }
       - { label: Page Image, name: pageImage, widget: string }
       - { label: Has Impact Box, name: hasImpact, widget: boolean }

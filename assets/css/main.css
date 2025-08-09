@@ -1085,7 +1085,7 @@ text-transform: none;
 text-align: left;
 }
 
-p {
+.introText {
 font-family: source sans pro,sans-serif;
 font-size: 0.9rem;
 font-weight: 400;
