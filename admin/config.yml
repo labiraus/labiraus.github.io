@@ -67,7 +67,18 @@ collections:
               - { label: Statistic, name: statistic, widget: string }
               - { label: Description, name: description, widget: string }
               - { label: Image, name: image, widget: string }
-          
+
+      - label: Legal
+        name: legal
+        file: "_data/legal.yml"
+        fields:
+          - { label: Charity Number, name: charityNo, widget: string }
+          - { label: Company Number, name: companyNo, widget: string }
+          - { label: Address, name: address, widget: string }
+          - { label: Twitter, name: twitter, widget: string }
+          - { label: Instagram, name: instagram, widget: string }
+          - { label: Facebook, name: facebook, widget: string }
+
   - name: "home"
     label: "Home"
     files:
@@ -98,6 +109,7 @@ collections:
       - { label: Layout, name: layout, widget: string, default: "boxed" }
       - { label: Permalink, name: permalink, widget: string }
       - { label: Page Image, name: pageImage, widget: string }
+      - { label: Large Boxes, name: large, widget: boolean }
       - label: Boxed Content
         name: boxedContent
         widget: list

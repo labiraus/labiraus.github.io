@@ -20,20 +20,17 @@
 
     <div class="footerSocialIcons">
       <div class="socialIcons">
-        <a class="instagramFooter" alt="instagram" target="_blank"
-          href="https://www.instagram.com/homestartnottingham/"></a>
-        <a class="twitterFooter" alt="Twitter" target="_blank" href="https://twitter.com/homestartnottm"></a>
-        <a class="facebookFooter" alt="Facebook" target="_blank"
-          href="https://www.facebook.com/homestartnottingham"></a>
+        <a class="instagramFooter" alt="instagram" target="_blank" href="{{ site.data.legal.instagram }}"></a>
+        <a class="twitterFooter" alt="X" target="_blank" href="{{ site.data.legal.twitter }}"></a>
+        <a class="facebookFooter" alt="Facebook" target="_blank" href="{{ site.data.legal.facebook }}"></a>
       </div>
     </div>
 
     <div class="footerCompanyDetails">
-      <p>Home-Start Nottingham, registered charity no. 1097005.</p>
-      <p>Company limited by guarantee in England & Wales no. 4698694</p>
-      <p>Registered Office Suite 9, Arnold Business Centre, Brookfield Gardens, Arnold, Nottingham, NG5 7ER &copy; 2021
+      <p>Home-Start Nottingham, registered charity no. {{ site.data.legal.charityNo }}.</p>
+      <p>Company limited by guarantee in England & Wales no. {{ site.data.legal.companyNo }}</p>
+      <p>{{ site.data.legal.address }} &copy; {{ "now" | date: "%Y" }}
         Home-Start Nottingham</p>
-    </div>
   </div>
 </footer>
 

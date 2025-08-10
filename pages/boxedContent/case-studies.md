@@ -3,6 +3,7 @@ title: Support Case Studies
 layout: boxed
 permalink: /support/caseStudies
 pageImage: /assets/img/hs6_small.jpg
+large: false
 
 boxedContent:
   - title: Jane's story

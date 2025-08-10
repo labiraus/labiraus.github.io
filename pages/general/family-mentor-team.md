@@ -36,9 +36,8 @@ The family must be receiving Universal Plus, Universal Partnership or based on p
 
 Email: [aspleyinfo@hsn.org.uk](mailto:aspleyinfo@hsn.org.uk?subject=Website%20Enquiry)
 
-*"My Family Mentor is brilliant, she was there for me and supported me, it was not like talking to a professional she made me feel at ease, like a friend.
-She took time with me and my whole family..."*
+*"My Family Mentor is brilliant, she was there for me and supported me, it was not like talking to a professional she made me feel at ease, like a friend.<br>She took time with me and my whole family..."*
 
-*"I would recommend having a Family Mentor to anyone.  The support has been amazing..."*
+*"I would recommend having a Family Mentor to anyone. The support has been amazing..."*
 
 *"It has been amazing having a Family Mentor and sharing the first 4 years of my child's life with her.<br>The good the bad and the hilarious.<br>Knowing I could ask her anything without her judging me has been great.<br> She has given me some amazing tools and tips to being a fantastic parent that help me in years to come.  So thank you!..."*

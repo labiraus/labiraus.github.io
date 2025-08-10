@@ -3,6 +3,7 @@ title: How to volunteer
 layout: boxed
 permalink: /volunteers/howToVolunteer
 pageImage: ""
+large: true
 
 boxedContent:
   - title: "Home Visitor"

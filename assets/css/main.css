@@ -470,7 +470,7 @@ button:hover
 
 .socialIcons .twitter:before {
   margin: 18px 13px 2px 13px;
-  content: "\f099"
+  content: "\e61b";
 }
 
 .socialIcons .facebook:before {
@@ -864,7 +864,7 @@ a.mobileHeaderButton.donate:before {
 
 .twitterFooter:before {
   margin: 0px 13px 2px 13px;
-  content: "\f099";
+  content: "\e61b";
 }
 .facebookFooter:before {
   margin: 0px 13px 2px 13px;
@@ -1048,7 +1048,7 @@ height: auto;
 
 .introHeader {
 display: block;
-/* margin-top: 150px; */
+margin-top: 150px;
 padding-left: 150px;
 max-width: 1000px;
 }
@@ -1067,7 +1067,7 @@ max-width: 1000px;
 
 
 
-h1 {
+h1.title {
 font-size: 2em;
 font-family: inherit;
 font-weight: 700;
@@ -1076,7 +1076,7 @@ text-transform: none;
 text-align: left;
 }
 
-h2 {
+.outerBox h2 {
 font-size: 1.5em;
 font-family: inherit;
 font-weight: 700;
@@ -1361,7 +1361,7 @@ margin-inline-end: 0px;
 }
 
 .faqSection {
-margin-left: 80px;
+margin-left: 110px;
 margin-right: 20px;
 }
 

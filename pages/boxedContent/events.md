@@ -3,6 +3,7 @@ title: Events
 layout: boxed
 permalink: /news/events
 pageimage: ""
+large: true
 
 boxedContent:
   - title: Postcode Lottery funding

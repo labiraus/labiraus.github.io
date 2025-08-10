@@ -2,7 +2,7 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 title: "Home-Start Nottingham"
-layout: default
+layout: index
 permalink: /
 
 carousel:
@@ -26,7 +26,3 @@ carousel:
 
 intro: "We're there for parents when they need us the most, because childhood can't wait"
 ---
-
-{% include carousel.html %}
-{% include intro.html %}
-{% include features.html %}

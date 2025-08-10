@@ -5,7 +5,10 @@
       <a class="boxedContentAnchor" href="{{ content.link }}"><img class="boxedContentImg" src="{{ content.image }}" alt="{{ content.alt }}" loading="lazy"></a>
        <div class="boxedContentPostTextBoxNormal">
         <h2><a href="{{ content.link }}">{{ content.title }}</a></h2>
-        <a href="{{ content.link }}" class="boxedContentPostTextDetail">{{ content.text }}</a>
+        <a href="{{ content.link }}" class="{% if page.large %}boxedContentPostTextDetailLarge{% else %}boxedContentPostTextDetail{% endif %}">{{ content.text }}</a>
+        {% if content.linkText and content.linkText != "" %}
+        <p class="boxedeTextCenter"><a class="boxedeTextCenter" href="{{ content.link }}">{{ content.linkText }}</a></p>
+        {% endif %}
       </div>
     </span>
     {% endfor %}
