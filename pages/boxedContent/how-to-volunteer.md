@@ -1,6 +1,6 @@
 ---
 title: How to volunteer
-layout: boxedContent
+layout: boxed
 permalink: /volunteers/howToVolunteer
 pageImage: ""
 

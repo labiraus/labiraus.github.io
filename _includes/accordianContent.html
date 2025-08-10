@@ -1,0 +1,5 @@
+<ul class="faqSection">
+    {% for item in page.accordion %}
+        <li class="faqcontainer"><input id="accordion{{ forloop.index }}" type="checkbox" /><label class="accordian" for="accordion{{ forloop.index }}">{{ item.title }}</label><div class="panel">{{ item.content | markdownify }}</div></li>
+    {% endfor %}
+</ul>

@@ -2,7 +2,7 @@
 title: How can we support
 layout: boxed
 permalink: /support/howCanWeSupport
-pageImage: 
+pageImage: ""
 
 boxedContent:
   - title: Case studies

@@ -1,6 +1,6 @@
 ---
 title: Supporters
-layout: default
+layout: boxed
 permalink: /funderaising/supporters
 pageImage: /assets/img/hs_group_top_image.jpg
 hasImpact: false

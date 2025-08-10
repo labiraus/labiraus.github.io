@@ -1,10 +1,10 @@
 ---
-title: Case Studies
+title: Support Case Studies
 layout: boxed
 permalink: /support/caseStudies
 pageImage: /assets/img/hs6_small.jpg
-boxedContent:
 
+boxedContent:
   - title: Jane's story
     link: /_caseStudies/Case_Study_Jane.pdf
     image: /assets/img/box-image-5.jpg

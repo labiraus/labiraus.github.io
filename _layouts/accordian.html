@@ -1,0 +1,29 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+{% include header.html %}
+<body>
+  {% include navigation.html %}
+  <!--[if IE]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+  <main>
+    <div class="outerBox">
+      {% if page.pageImage and page.pageImage != "" %}
+        <div>
+          <img class="pageBodyTopImg" src="{{ page.pageImage }}" />
+        </div>
+      {% endif %}
+      
+      <div class="introHeader">
+        <h1 class="title">{{ page.title }}</h1>
+        <div class="introText">
+          {{ content }}
+        </div>
+      </div>
+      {% include accordianContent.html %}
+    </div>
+  </main>
+  {% include footer.html %}
+</body>
+</html>

@@ -110,6 +110,23 @@ collections:
           - { label: Link Text, name: linkText, widget: text }
       - { label: Body, name: body, widget: markdown }
 
+  - name: "accordianContent"
+    label: "Accordian Content Pages"
+    folder: "pages/accordianContent"
+    create: true
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Layout, name: layout, widget: string, default: "accordian" }
+      - { label: Permalink, name: permalink, widget: string }
+      - { label: Page Image, name: pageImage, widget: string }
+      - label: Accordian Content
+        name: accordianContent
+        widget: list
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Content, name: content, widget: string }
+      - { label: Body, name: body, widget: markdown }
+
   - name: "general"
     label: "General Pages"
     folder: "pages/general"
