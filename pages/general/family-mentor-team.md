@@ -5,7 +5,6 @@ permalink: /support/familyMentorTeam
 pageImage: /assets/img/hs-image-top2.jpg
 hasImpact: true
 ---
-# Family Mentor Team
 
 Our Family mentor team are dedicated to continue to deliver the successful Small Steps at Home programme after securing two years of initial funding to deliver SSAH to more families across Nottingham City.
 
