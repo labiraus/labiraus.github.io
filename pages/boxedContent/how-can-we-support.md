@@ -7,13 +7,13 @@ large: false
 
 boxedContent:
   - title: Case studies
-    link: ../support/referrersInfo.html
+    link: /support/referrersInfo.html
     image: /assets/img/box-image-1.jpg
     alt: supporting families - case studies
     text: Each year our volunteers work with local families, and every volunteer, parent and child has their own story
     
   - title: Referrers info
-    link: ../support/referrersInfo.html
+    link: /support/referrersInfo.html
     image: /assets/img/box-image-2.jpg
     alt: supporting families - referrers info
     text: The main focus of Home-Start Nottingham's work is to offer informal, friendly and confidential support to families in their own homes through carefully selected and prepared volunteers, who are parents themselves
