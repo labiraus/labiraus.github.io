@@ -235,18 +235,19 @@ body {
     width: 100%;
 }
 
+/* Taller iframe when expanded: aim to minimize internal scrolling.
+   Uses near-full viewport height with an upper cap for very tall screens. */
 .card.expanded-iframe .card-details iframe {
     display: block;
     width: 100%;
     max-width: 100%;
-    /* On desktop, use up to 75vh but no more than 1000px; on mobile, use 50vh */
-    height: min(75vh, 1000px);
+    height: min(135vh, 1250px);
     border: 0;
 }
 
 @media (max-width: 600px) {
     .card.expanded-iframe .card-details iframe {
-        height: min(50vh, 600px);
+        height: min(145vh, 1330px);
     }
 }
 

@@ -1,5 +1,4 @@
 <!doctype html>
-<html class="no-js" lang="en">
 
 {% include header.html %}
 
@@ -10,17 +9,31 @@
         <h1 class="visually-hidden">Donate</h1>
 
         <section class="flex-grid" aria-label="Featured donation options">
-            <!-- Card 1 -->
             <button class="card" type="button" aria-expanded="false" aria-controls="card-one-details">
                 <div class="card-media">
-                    <img src="/assets/img/box-image-9.jpg" alt="Sample image one" />
+                    <img src="/assets/img/box-image-5.jpg" alt="Sample image one" />
                     <div class="overlay">
-                        <h3 id="card-one-title">Paypal</h3>
-                        <p>Donate Online</p>
+                        <h3 id="card-one-title">Give as you Live</h3>
+                        <p>Donate once or regularly</p>
                     </div>
                 </div>
 
                 <div id="card-one-details" class="card-details" role="region" aria-labelledby="card-one-title" hidden>
+                    <iframe allow="payment; publickey-credentials-get"
+                        src="https://donate.giveasyoulive.com/donate?cid=563238&utm_source=charitytoolkit&utm_content=563238&utm_medium=charitydonatebutton&utm_campaign=CTDonateButton&bc=152f58&br=30&tc=w&wl=1"></iframe>
+                </div>
+            </button>
+
+            <button class="card" type="button" aria-expanded="false" aria-controls="card-two-details">
+                <div class="card-media">
+                    <img src="/assets/img/box-image-9.jpg" alt="Sample image two" />
+                    <div class="overlay">
+                        <h3 id="card-two-title">Paypal</h3>
+                        <p>Donate Online</p>
+                    </div>
+                </div>
+
+                <div id="card-two-details" class="card-details" role="region" aria-labelledby="card-two-title" hidden>
                     <form action="https://www.paypal.com/donate" method="post" target="_top">
                         <input type="hidden" name="hosted_button_id" value="Z668XEAQGXXAC" />
                         <input class="click" type="image"
@@ -31,17 +44,17 @@
                 </div>
             </button>
 
-            <!-- Card 2 -->
-            <button class="card" type="button" aria-expanded="false" aria-controls="card-two-details">
+            <button class="card" type="button" aria-expanded="false" aria-controls="card-three-details">
                 <div class="card-media">
-                    <img src="/assets/img/box-image-7.jpg" alt="Sample image two" />
+                    <img src="/assets/img/box-image-7.jpg" alt="Sample image three" />
                     <div class="overlay">
-                        <h3 id="card-two-title">Just Giving</h3>
+                        <h3 id="card-three-title">Just Giving</h3>
                         <p>Donate online with Just Giving</p>
                     </div>
                 </div>
 
-                <div id="card-two-details" class="card-details" role="region" aria-labelledby="card-two-title" hidden>
+                <div id="card-three-details" class="card-details" role="region" aria-labelledby="card-three-title"
+                    hidden>
                     <img class="donateImg" src="/assets/svg/JG_LOGO_PRIMARY_NEW.svg" alt="Donte via Just Giving"
                         loading="lazy">
                     <a class="button click" href="https://www.justgiving.com/homestartnottingham">
@@ -50,24 +63,6 @@
                 </div>
             </button>
 
-            <!-- Card 3 -->
-            <button class="card" type="button" aria-expanded="false" aria-controls="card-three-details">
-                <div class="card-media">
-                    <img src="/assets/img/box-image-5.jpg" alt="Sample image three" />
-                    <div class="overlay">
-                        <h3 id="card-three-title">Give as you Live</h3>
-                        <p>Donate once or regularly</p>
-                    </div>
-                </div>
-
-                <div id="card-three-details" class="card-details" role="region" aria-labelledby="card-three-title"
-                    hidden>
-                    <iframe allow="payment; publickey-credentials-get"
-                        src="https://donate.giveasyoulive.com/donate?cid=563238&utm_source=charitytoolkit&utm_content=563238&utm_medium=charitydonatebutton&utm_campaign=CTDonateButton&bc=152f58&br=30&tc=w&wl=1"></iframe>
-                </div>
-            </button>
-
-            <!-- Card 4 -->
             <button class="card" type="button" aria-expanded="false" aria-controls="card-four-details">
                 <div class="card-media">
                     <img src="/assets/img/box-image-4.jpg" alt="Sample image four" />
@@ -93,7 +88,6 @@
                 </div>
             </button>
 
-            <!-- Card 5 -->
             <button class="card" type="button" aria-expanded="false" aria-controls="card-five-details">
                 <div class="card-media">
                     <img src="/assets/img/box-image-3.jpg" alt="Sample image five" />
@@ -114,7 +108,6 @@
                 </div>
             </button>
 
-            <!-- Card 6 -->
             <button class="card" type="button" aria-expanded="false" aria-controls="card-six-details">
                 <div class="card-media">
                     <img src="/assets/img/box-image-1.jpg" alt="Sample image six" />
