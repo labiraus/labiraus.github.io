@@ -6,8 +6,8 @@
     <ul class="headerButtons horizontalList">
       <li class="ulHeadermobileButton"><a onclick="mobileClickFunction()" class="menuMainAlt">Menu</a></li>
       <li class="ulHeaderButton"><a alt="Donate to Home-Start Nottingham" target="_blank"
-          href="fundraising/howToDonate.html" class="header-button donate">Donate</a></li>
-      <li class="ulHeaderButton"><a href="/aboutUs/contactUs.html" class="header-button">Contact Us</a></li>
+          href="/fundraising/howToDonate" class="header-button donate">Donate</a></li>
+      <li class="ulHeaderButton"><a href="/aboutUs/contactUs" class="header-button">Contact Us</a></li>
     </ul>
   </div>
 
@@ -24,21 +24,22 @@
     <nav id="menuMain" class="menuMain" role="navigation">
       <div id="navbar">
         <ul class="topLevel level1 mainNavBar">
-        {% for section in site.data.navigation.menu %}
+          {% for section in site.data.navigation.menu %}
           <li class="level1 hasSubmenu">
-          <a role="menuitem">{{ section.parent }}</a>
-          <ul class="subMenu level2" aria-label="{{ section.parent }}">
-            {% for item in section.items %}
-            <li class="level2 menu1_1">
-              <a role="menuitem" href="{{ item.href }}">{{ item.text }}</a>
-            </li>
-            {% endfor %}
-          </ul>
-        </li>
-        {% endfor %}
-        <li class="mobileHeaderButtonLI"><a alt="Donate to Home-Start Nottingham" target="_blank"
-              href="https://www.justgiving.com/homestartnottingham" class="mobileHeaderButton donate">Donate</a></li>
-        <li class="mobileHeaderButtonLI"><a href="aboutUs/contactUs.html" class="mobileHeaderButton">Contact Us</a></li>
+            <a role="menuitem">{{ section.parent }}</a>
+            <ul class="subMenu level2" aria-label="{{ section.parent }}">
+              {% for item in section.items %}
+              <li class="level2 menu1_1">
+                <a role="menuitem" href="{{ item.href }}">{{ item.text }}</a>
+              </li>
+              {% endfor %}
+            </ul>
+          </li>
+          {% endfor %}
+          <li class="mobileHeaderButtonLI"><a alt="Donate to Home-Start Nottingham" target="_blank"
+              href="/fundraising/howToDonate" class="mobileHeaderButton donate">Donate</a></li>
+          <li class="mobileHeaderButtonLI"><a href="aboutUs/contactUs" class="mobileHeaderButton">Contact Us</a>
+          </li>
         </ul>
       </div>
     </nav>
