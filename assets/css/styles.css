@@ -70,6 +70,8 @@ body {
 
     /* 3 per row minus gaps */
     flex: 1 1 calc(33.333% - 16px);
+    min-width: 0;
+    /* prevent flex overflow */
 
     border-radius: 12px;
     overflow: hidden;
@@ -96,34 +98,38 @@ body {
     position: relative;
     border-radius: 12px 12px 0 0;
     overflow: hidden;
+    width: 100%;
 
-    /* Maintain a pleasant shape regardless of image sizes */
-    aspect-ratio: 4 / 3;
-    transition: height 300ms ease;
+    /* 300x225 aspect ratio = 4:3 = 75% */
+    padding-bottom: 75%;
+    height: 0;
+    transition: padding-bottom 300ms ease, height 300ms ease;
 }
 
 /* When card is expanded, show only bottom 100px of the media */
 .card[aria-expanded="true"] .card-media {
     height: 100px;
-    aspect-ratio: auto;
+    padding-bottom: 0;
 }
 
 /* Image fills the media area */
 .card-media img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    min-height: 100%;
-    /* ensure image always fills or exceeds container */
+    height: 100%;
     object-fit: cover;
-    object-position: center bottom;
-    /* anchor to bottom so bottom portion stays visible */
+    object-position: center;
     display: block;
     transition: object-position 300ms ease;
 }
 
 /* When expanded, keep image at original size but position to show bottom */
 .card[aria-expanded="true"] .card-media img {
-    min-height: 300px;
-    /* maintain original aspect for cropping, adjust based on your typical card width */
+    position: absolute;
+    height: auto;
+    min-height: 100%;
     object-position: center bottom;
 }
 
