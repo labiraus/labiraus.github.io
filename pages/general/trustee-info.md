@@ -26,11 +26,6 @@ We have vacancies for trustees to serve on our board, taking responsibility for 
 
 ## Current board of Trustees
 
-![Donate via easyfundraising](/assets/img/trustees.jpg)
-
-*not all Trustees present for this photograph
-
-
 | Role | Name |
 |------|------|
 | Co-Chair | Caroline Stephens |

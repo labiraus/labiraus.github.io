@@ -11,21 +11,23 @@ hasImpact: true
 | Role	| Name |
 | --- | --- |
 | Chief Executive Officer	| Jamie Wakefield |
-| Business Manager	| Sara Leivers |
 | Assistant Manager	| Marie Sheffield |
-| Co-ordinator	| Colleen Smith |
+| Business Manager	| Sara Leivers |
 | Co-ordinator	| Gail Tilley |
-| Co-ordinator	| Catherine Allsopp |
+| Team Leader - Co-ordinators	| Colleen Smith |
 | Co-ordinator	| Cesca Diamond |
+| Co-ordinator	| Catherine Allsopp |
 | Volunteering Development Co-ordinator	| Saffron Bradshaw |
+{: .staffContainer }
 
 ## Home-Start Nottingham Staff (not core)
 
 | Role	| Name |
 | --- | --- |
 | Family Mentor team leader	| Rachel Osborne |
-| Family Mentor	| Emma Rourke |
-| Family Mentor	| Anne Leivers |
+| Family Mentor	| Anne-Marie Leivers |
 | Family Mentor	| Sally Pugh |
+| Family Mentor	| Emma Rourke |
 | Family Mentor	| Haddy Badjie |
-| Family Mentor group worker	| Bola Smith |
+| Group worker	| Bolajoko Smith |
+{: .staffContainer }
