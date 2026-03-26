@@ -1,43 +1,65 @@
-function mobileClickFunction() {
-  if($('.menuMainAlt').hasClass('active')) {
-    // we have clicked the menu to hide the navigation and return button to menu display icon state
-    $('.menuMainAlt').removeClass('active');
-    $('.headerNavigationContainer').addClass('hideNav');
-    // also close any open submenu items
-    $('#menuNS').removeClass('isActiveNS');
-    $('#menuVOL').removeClass('isActiveVOL');
-    $('#menuFund').removeClass('isActiveFund');
-    $('#menuNews').removeClass('isActiveNews');
-    $('#menuAbout').removeClass('isActiveAbout');
+(function ($) {
+  var mobileMenuQuery = window.matchMedia('(max-width: 670px)');
 
+  function closeSubmenus(exceptItem) {
+    var itemsToClose = $('.hasSubmenu');
 
-  } else {
-    // we have closed the menu bar , hide the navigation and return button to menu display icon state
-    $('.menuMainAlt').addClass('active');
-    $('.headerNavigationContainer').removeClass('hideNav');
+    if (exceptItem && exceptItem.length) {
+      itemsToClose = itemsToClose.not(exceptItem);
+    }
+
+    itemsToClose.removeClass('is-open');
+    itemsToClose.find('.submenuToggle').attr('aria-expanded', 'false');
   }
-}
 
-function menuClickFunction(parm) {
-  console.log('xxxxxxxxxxxxxxxxxx ' , parm);
-  var level2idName = '#menu' + parm;
-  var level2ParmName = 'isActive' + parm;
-  //if it is a mobile menu click , expand / contract the level 2 elements
-   if($(level2idName).hasClass(level2ParmName)) {
-     $(level2idName).removeClass(level2ParmName);
-     $(level2idName).addClass('closed');
-     $('#menuNS').removeClass('isActiveNS');
-     $('#menuVOL').removeClass('isActiveVOL');
-     $('#menuFund').removeClass('isActiveFund');
-     $('#menuNews').removeClass('isActiveNews');
-     $('#menuAbout').removeClass('isActiveAbout');
-   } else {
-     $(level2idName).removeClass('closed');
-     $('#menuNS').removeClass('isActiveNS');
-     $('#menuVOL').removeClass('isActiveVOL');
-     $('#menuFund').removeClass('isActiveFund');
-     $('#menuNews').removeClass('isActiveNews');
-     $('#menuAbout').removeClass('isActiveAbout');
-     $(level2idName).addClass(level2ParmName);
-   }
-}
+  function syncNavigationState() {
+    if (mobileMenuQuery.matches) {
+      if (!$('.menuMainAlt').hasClass('active')) {
+        $('.headerNavigationContainer').addClass('hideNav');
+      }
+      return;
+    }
+
+    $('.headerNavigationContainer').removeClass('hideNav');
+    $('.menuMainAlt').removeClass('active').attr('aria-expanded', 'false');
+    closeSubmenus();
+  }
+
+  $(function () {
+    $('.menuMainAlt').on('click', function () {
+      if (!mobileMenuQuery.matches) {
+        return;
+      }
+
+      var isOpen = $(this).hasClass('active');
+      $(this).toggleClass('active', !isOpen);
+      $(this).attr('aria-expanded', String(!isOpen));
+      $('.headerNavigationContainer').toggleClass('hideNav', isOpen);
+
+      if (isOpen) {
+        closeSubmenus();
+      }
+    });
+
+    $('.submenuToggle').on('click', function () {
+      if (!mobileMenuQuery.matches) {
+        return;
+      }
+
+      var menuItem = $(this).closest('.hasSubmenu');
+      var isOpen = menuItem.hasClass('is-open');
+
+      closeSubmenus(menuItem);
+      menuItem.toggleClass('is-open', !isOpen);
+      $(this).attr('aria-expanded', String(!isOpen));
+    });
+
+    if (typeof mobileMenuQuery.addEventListener === 'function') {
+      mobileMenuQuery.addEventListener('change', syncNavigationState);
+    } else if (typeof mobileMenuQuery.addListener === 'function') {
+      mobileMenuQuery.addListener(syncNavigationState);
+    }
+
+    syncNavigationState();
+  });
+})(jQuery);

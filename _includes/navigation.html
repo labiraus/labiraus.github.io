@@ -4,7 +4,9 @@
   </div>
   <div class="headerButtonsContainer">
     <ul class="headerButtons horizontalList">
-      <li class="ulHeadermobileButton"><a onclick="mobileClickFunction()" class="menuMainAlt">Menu</a></li>
+      <li class="ulHeadermobileButton">
+        <button type="button" class="menuMainAlt" aria-expanded="false" aria-controls="menuMain">Menu</button>
+      </li>
       <li class="ulHeaderButton"><a alt="Donate to Home-Start Nottingham" target="_blank"
           href="/fundraising/howToDonate" class="header-button donate">Donate</a></li>
       <li class="ulHeaderButton"><a href="/aboutUs/contactUs" class="header-button">Contact Us</a></li>
@@ -26,8 +28,15 @@
         <ul class="topLevel level1 mainNavBar">
           {% for section in site.data.navigation.menu %}
           <li class="level1 hasSubmenu">
-            <a role="menuitem">{{ section.parent }}</a>
-            <ul class="subMenu level2" aria-label="{{ section.parent }}">
+            <button
+              type="button"
+              class="submenuToggle"
+              aria-expanded="false"
+              aria-controls="submenu-{{ forloop.index }}"
+            >
+              {{ section.parent }}
+            </button>
+            <ul class="subMenu level2" id="submenu-{{ forloop.index }}" aria-label="{{ section.parent }}">
               {% for item in section.items %}
               <li class="level2 menu1_1">
                 <a role="menuitem" href="{{ item.href }}">{{ item.text }}</a>

@@ -21,12 +21,21 @@
   position: relative
 }
 
+.menuMain .submenuToggle {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  width: auto;
+  text-align: left;
+}
+
 .menuMain .topLevel {
   font-family: source sans pro, sans-serif;
   text-transform: none
 }
 
-.menuMain .topLevel a {
+.menuMain .topLevel a,
+.menuMain .topLevel button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: inline-block;
@@ -52,7 +61,7 @@ ul.topLevel {
   position:absolute;
 }
 
-.menuMain .topLevel li.level1>a {
+.menuMain .topLevel li.level1>.submenuToggle {
   color: #500778;
   font-family: source sans pro, sans-serif;
   font-size: 1.1em;
@@ -64,19 +73,19 @@ ul.topLevel {
   background-color: transparent
 }
 
-.menuMain .topLevel li.level1:hover>a {
+.menuMain .topLevel li.level1:hover>.submenuToggle {
   color: #e35205;
   background-color: transparent
 }
 
-li.level1.hasSubmenu>a:after {
+li.level1.hasSubmenu>.submenuToggle:after {
   display: inline-block;
   content: '\f078';
   color: #500778;
   margin-left: 10px;
 }
 
-li.level1.hasSubmenu:hover>a:after {
+li.level1.hasSubmenu:hover>.submenuToggle:after {
   display: inline-block;
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
@@ -85,7 +94,7 @@ li.level1.hasSubmenu:hover>a:after {
   color: #e35205
 }
 
-li.hasSubmenu a:after {
+li.hasSubmenu .submenuToggle:after {
   font-family: fontawesome;
   font-size: .875em;
   -webkit-box-flex: 1;
@@ -138,14 +147,15 @@ li.level1.hasSubmenu:hover>.subMenu.level2 {
     padding-right: 15px
   }
 
-  .menuMain .topLevel li.level1>a {
+  .menuMain .topLevel li.level1>.submenuToggle {
     font-size: .9em;
     font-weight: 600;
     padding-left: 15px;
     padding-right: 15px;
   }
 
-  .menuMain .topLevel a {
+  .menuMain .topLevel a,
+.menuMain .topLevel button {
     font-size: .9em;
     font-weight: 600;
   }
@@ -197,14 +207,15 @@ li.level1.hasSubmenu:hover>.subMenu.level2 {
   .headerNavigationContainer {
     top: 86px;
   }
-  .menuMain .topLevel li.level1>a {
+  .menuMain .topLevel li.level1>.submenuToggle {
     font-size: .8em;
     font-weight: 600;
     padding-left: 10px;
     padding-right: 10px;
   }
 
-  .menuMain .topLevel a {
+  .menuMain .topLevel a,
+.menuMain .topLevel button {
     font-size: .8em;
     font-weight: 600;
   }
@@ -291,7 +302,12 @@ li.level1.hasSubmenu:hover>.subMenu.level2 {
       display: block;
   }
 
-  .menuMain .topLevel a {
+  .menuMain .submenuToggle {
+    width: 100%;
+  }
+
+  .menuMain .topLevel a,
+.menuMain .topLevel button {
     display: -webkit-box;
     display: -ms-flexbox;
     display: inline-block;
@@ -310,14 +326,13 @@ li.level1.hasSubmenu:hover>.subMenu.level2 {
   }
 
   ul.topLevel {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin: 0 auto;
-    position:absolute;
+    display: block;
+    margin: 0;
+    position: relative;
+    width: 100%;
   }
 
-  .menuMain .topLevel li.level1>a {
+  .menuMain .topLevel li.level1>.submenuToggle {
     color: #fff;
     font-family: source sans pro, sans-serif;
     font-size: 1rem;
@@ -328,11 +343,11 @@ li.level1.hasSubmenu:hover>.subMenu.level2 {
     background-color: #500778;
   }
 
-  .menuMain .topLevel li.level1:hover>a {
+  .menuMain .topLevel li.level1:hover>.submenuToggle {
     color: #fff;
   }
 
-  li.level1.hasSubmenu>a:after {
+  li.level1.hasSubmenu>.submenuToggle:after {
     display: inline-block;
     content: '\f078';
     color: #fff;
@@ -340,7 +355,7 @@ li.level1.hasSubmenu:hover>.subMenu.level2 {
     right: 20px;
   }
 
-  li.level1.hasSubmenu:hover>a:after {
+  li.level1.hasSubmenu:hover>.submenuToggle:after {
     -webkit-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
@@ -348,7 +363,7 @@ li.level1.hasSubmenu:hover>.subMenu.level2 {
     color: #fff;
   }
 
-  li.hasSubmenu a:after {
+  li.hasSubmenu .submenuToggle:after {
     font-family: fontawesome;
     font-size: .875em;
     -webkit-box-flex: 1;
@@ -380,66 +395,11 @@ li.level1.hasSubmenu:hover>.subMenu.level2 {
     display: none;
   }
 
-  li.level1.hasSubmenu>.subMenu.level2 {
-    display: none;
-  }
-  li.level1.hasSubmenu.closed>.subMenu.level2 {
-    display: none;
-  }
-
-  li.level1.hasSubmenu.isActiveVOL>.subMenu.level2 {
+  li.level1.hasSubmenu.is-open>.subMenu.level2 {
     display: block;
   }
 
-  li.level1.hasSubmenu.isActiveNS>.subMenu.level2 {
-    display: block;
-  }
-
-  li.level1.hasSubmenu.isActiveFund>.subMenu.level2 {
-    display: block;
-  }
-
-  li.level1.hasSubmenu.isActiveNews>.subMenu.level2 {
-    display: block;
-  }
-
-  li.level1.hasSubmenu.isActiveAbout>.subMenu.level2 {
-    display: block;
-  }
-
-  li.level1.hasSubmenu.isActiveVOL>a:after {
-    -webkit-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    transform: rotate(180deg);
-    transition: all .3s ease;
-    color: #fff;
-  }
-
-  li.level1.hasSubmenu.isActiveNS>a:after {
-    -webkit-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    transform: rotate(180deg);
-    transition: all .3s ease;
-    color: #fff;
-  }
-
-  li.level1.hasSubmenu.isActiveFund>a:after {
-    -webkit-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    transform: rotate(180deg);
-    transition: all .3s ease;
-    color: #fff;
-  }
-
-  li.level1.hasSubmenu.isActiveNews>a:after {
-    -webkit-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    transform: rotate(180deg);
-    transition: all .3s ease;
-    color: #fff;
-  }
-
-  li.level1.hasSubmenu.isActiveAbout>a:after {
+  li.level1.hasSubmenu.is-open>.submenuToggle:after {
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     transform: rotate(180deg);
