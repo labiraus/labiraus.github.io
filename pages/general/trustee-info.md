@@ -31,16 +31,17 @@ We have vacancies for trustees to serve on our board, taking responsibility for 
 *not all Trustees present for this photograph
 
 
-| Role            | Name               |
-|-----------------|--------------------|
-| Co-Chair        | Caroline Stephens  |
-| Co-Chair        | Clare Howling      |
-| Treasurer       | Iqra Zafar         |
-| Company Secretary | Sara Leivers     |
-| Trustee         | Annalise Haggar    |
-| Trustee         | Heather Roberts    |
-| Trustee         | Jude Burgess       |
-| Trustee         | Peter Hunt         |
-| Trustee         | Bob Paton          |
-| Trustee         | Helen Green        |
+| Role | Name |
+|------|------|
+| Co-Chair | Caroline Stephens |
+| Co-Chair | Clare Howling |
+| Treasurer | Iqra Zafar |
+| Company Secretary | Sara Leivers |
+| Trustee | Annalise Haggar |
+| Trustee | Heather Roberts |
+| Trustee | Jude Burgess |
+| Trustee | Peter Hunt |
+| Trustee | Bob Paton |
+| Trustee | Helen Green |
+{: .staffContainer }
 

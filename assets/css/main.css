@@ -1477,6 +1477,50 @@ h1.title {
   color: white;
 }
 
+table.staffContainer {
+  clear: both;
+  float: left;
+  display: table;
+  width: 440px;
+  max-width: 440px !important;
+  border-color: #E05206;
+  border-style: solid;
+  border-spacing: 0px;
+  margin-bottom: 30px;
+}
+
+table.staffContainer th {
+  background-color: #E05206;
+  color: white;
+}
+
+table.staffContainer th:first-child {
+  border-right: 2px solid white;
+}
+
+table.staffContainer th:last-child {
+  border-left: 2px solid white;
+}
+
+table.staffContainer tbody tr {
+  display: table-row;
+  border-color: #E05206;
+  border-style: solid;
+}
+
+table.staffContainer td {
+  border: 2px solid #E05206;
+  padding-left: 15px;
+}
+
+table.staffContainer td:first-child {
+  font-weight: bold;
+}
+
+table.staffContainer td:last-child {
+  font-weight: normal;
+}
+
 .th1 {
   border-right: 2px solid white;
 }
