@@ -7,7 +7,7 @@ large: false
 
 boxedContent:
   - title: Case studies
-    link: /support/referrersInfo.html
+    link: /support/caseStudies.html
     image: /assets/img/box-image-1.jpg
     alt: supporting families - case studies
     text: Each year our volunteers work with local families, and every volunteer, parent and child has their own story
