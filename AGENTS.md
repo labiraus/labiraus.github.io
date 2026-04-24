@@ -39,6 +39,11 @@ This repo should visually align with `https://www.home-start.org.uk/` while pres
 - Desktop menu items with children should show a down arrow.
 - Desktop submenus should stay hidden until hover or focus.
 - Desktop submenus should open on hover and keyboard focus, not only on click.
+- When the header can no longer fit cleanly on one horizontal row, switch to a hamburger-triggered drawer instead of allowing the navigation to wrap awkwardly.
+- Mobile or compact navigation should slide in from the right in a Home-Start-UK-style off-canvas panel rather than dropping inline beneath the header.
+- In drawer mode, keep the primary `Get help` and `Donate` CTAs at the top and the social links at the bottom, using Nottingham's own social URLs.
+- In drawer mode, keep the close control on the far right and use the Home-Start-style yellow `Get help` variant instead of the desktop purple version.
+- In drawer mode, treat the CTA stack and close control as one aligned top row so the close button is vertically centered against the CTA block.
 - Mobile navigation should remain toggle-driven and touch-friendly.
 - Navigation should feel close to the national site: simple, quick to scan, and unobtrusive when closed.
 
@@ -79,6 +84,7 @@ This repo should visually align with `https://www.home-start.org.uk/` while pres
 - Standard content pages should use a strong hero and readable content area.
 - Donation pages should keep the existing donation methods and endpoints while adopting the refreshed visual system.
 - Resource collections such as reports and case studies should stay document-driven and render as clean download cards or lists.
+- Use Font Awesome brand icons for social media links instead of custom inline vector icon drawings.
 
 ## CMS And Structure Rules
 
