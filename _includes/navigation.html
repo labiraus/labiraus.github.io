@@ -1,16 +1,5 @@
 {% assign current_url = page.url | replace: '.html', '' %}
 <header class="site-header">
-  <div class="site-header__utility">
-    <div class="site-header__utility-inner">
-      <p>Compassionate, confidential support for families across Nottingham and Nottinghamshire.</p>
-      <ul class="utility-links" aria-label="Social links">
-        <li><a href="{{ site.data.legal.instagram }}" target="_blank" rel="noopener">Instagram</a></li>
-        <li><a href="{{ site.data.legal.facebook }}" target="_blank" rel="noopener">Facebook</a></li>
-        <li><a href="{{ site.data.legal.twitter }}" target="_blank" rel="noopener">X</a></li>
-      </ul>
-    </div>
-  </div>
-
   <div class="site-header__main">
     <a class="site-brand" href="{{ '/' | relative_url }}">
       <span class="site-brand__mark">
@@ -34,7 +23,7 @@
               {% assign section_is_active = true %}
             {% endif %}
           {% endfor %}
-          <details class="site-nav__group{% if section_is_active %} is-active{% endif %}">
+          <details class="site-nav__group{% if section_is_active %} is-active{% endif %}" data-nav-group>
             <summary>{{ section.parent }}</summary>
             <ul>
               {% for item in section.items %}
