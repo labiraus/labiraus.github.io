@@ -17,6 +17,14 @@
       return window.matchMedia("(min-width: 1081px)").matches;
     }
 
+    function closeDesktopGroups(exceptGroup) {
+      navGroups.forEach(function (group) {
+        if (group === exceptGroup) return;
+        group.classList.remove("is-open");
+        group.open = false;
+      });
+    }
+
     navGroups.forEach(function (group) {
       const summary = group.querySelector("summary");
       if (!summary) return;
@@ -29,6 +37,8 @@
 
       group.addEventListener("mouseenter", function () {
         if (!isDesktop()) return;
+        closeDesktopGroups(group);
+        group.open = true;
         group.classList.add("is-open");
       });
 
@@ -40,6 +50,8 @@
 
       group.addEventListener("focusin", function () {
         if (!isDesktop()) return;
+        closeDesktopGroups(group);
+        group.open = true;
         group.classList.add("is-open");
       });
 
