@@ -103,6 +103,11 @@
 
     panel.addEventListener("click", function (event) {
       if (!isDrawerMode()) return;
+      if (event.target.closest("[data-nav-close]")) {
+        setMenuState(false);
+        toggle.focus();
+        return;
+      }
       if (!event.target.closest("a")) return;
 
       setMenuState(false);

@@ -20,9 +20,12 @@ This repo should visually align with `https://www.home-start.org.uk/` while pres
 
 ## Layout Rules
 
-- Prefer full-width and full-bleed sections over an artificially narrow page shell.
-- Use generous gutters, but do not constrain the whole site to a tight centered column.
-- Homepage splash imagery should span the full browser width.
+- Use the national-site rhythm of wide contained content shells rather than either a narrow blog column or edge-to-edge text. As a baseline, content areas should feel close to `85%` width with a broad desktop max width.
+- Reserve full-bleed treatment for the outer section background or hero framing, not for long text columns.
+- Homepage splash imagery should feel nearly full width, with the image inset from the viewport edge in the same way as the national site rather than flush to the browser chrome.
+- Homepage hero imagery must not underlap or visually collide with the opening text panel; reserve clear layout space for the copy block.
+- The homepage hero should follow the national site pattern: a large inset rounded image with visible gap around it, plus an overlaid text card on desktop rather than a side-by-side split.
+- On tablet and mobile widths, the homepage hero should step down like the national site by letting the text card sit beneath the image instead of forcing a cramped overlay.
 - Keep the design bright, open, and lightweight rather than dense, boxed, or shadow-heavy.
 - Avoid reintroducing the old rotating carousel. The homepage should use a static hero plus supporting promo sections.
 
@@ -54,21 +57,23 @@ This repo should visually align with `https://www.home-start.org.uk/` while pres
 - The header `Donate` button should be a yellow pill with dark text and a purple circular chevron icon on the right.
 - Those header CTA icons should use the same full circular proportions as the live Home-Start UK header assets rather than reduced custom icon sizing.
 - On hover and focus, those two header CTAs should invert into the alternate Home-Start UK state rather than switching to a generic darkened fill.
+- General site buttons should use the Home-Start-style orange pill treatment with purple text by default, with purple outline or inverse variants only where the surrounding section demands it.
 - Avoid inventing custom CTA treatments when there is already a clear Home-Start UK equivalent.
 
 ## Colour Rules
 
 - Use white or near-white as the default page background.
-- Keep the palette close to the national site: orange and yellow support tones, purple and magenta accents, and light warm neutral surfaces.
-- Prefer bright, optimistic colour blocking over muted pink-grey custom palettes.
+- Keep the palette close to the national site: deep purple for headings and strong sections, orange for primary actions and highlights, and pale lilac for secondary surfaces.
+- Avoid reintroducing yellow page gradients or warm cream washes as a dominant site background treatment.
+- Prefer pale lilac panels over beige or peach panels when a soft surface treatment is needed.
 - Use accent colours deliberately. Do not let the whole site collapse into a single flat brand wash.
 
 ## Typography Rules
 
 - Typography should feel warm, human, and close to the national site rather than generic app UI.
+- Use `Source Sans 3` as the working typeface across the site to stay visually close to the live Home-Start styling.
 - Keep headings clear and expressive, with good contrast and generous spacing.
 - Keep body copy highly readable and content-first.
-- Header CTAs may use `Source Sans 3` to stay visually close to the national button treatment.
 
 ## Imagery Rules
 
@@ -82,6 +87,7 @@ This repo should visually align with `https://www.home-start.org.uk/` while pres
 - Prefer semantic cards, bands, split sections, accessible accordions, and styled download lists over legacy tables and brittle one-off markup.
 - The homepage should follow this broad rhythm: hero, secondary promo cards, impact band, support or volunteer or fundraising promos, key links or resources, then closing CTA/footer prompt.
 - Standard content pages should use a strong hero and readable content area.
+- Cards and panels should rely on borders and surface colour more than shadows. The live Home-Start style is comparatively flat and crisp.
 - Donation pages should keep the existing donation methods and endpoints while adopting the refreshed visual system.
 - Resource collections such as reports and case studies should stay document-driven and render as clean download cards or lists.
 - Use Font Awesome brand icons for social media links instead of custom inline vector icon drawings.

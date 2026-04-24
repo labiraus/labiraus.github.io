@@ -21,18 +21,20 @@ layout: base
 {% capture contact_summary %}{{ contact_page.content | markdownify | replace: '<br>', ' ' | replace: '<br/>', ' ' | replace: '<br />', ' ' | strip_html | strip_newlines | replace: '  ', ' ' | truncate: 150 }}{% endcapture %}
 
 <section class="home-hero">
-  <div class="home-hero__content">
-    <p class="eyebrow">Home-Start Nottingham</p>
-    <h1>{{ hero_slide.heading }}</h1>
-    <p class="home-hero__lede">{{ hero_slide.body | replace: '<br>', ' ' | replace: '<br/>', ' ' | replace: '<br />', ' ' | strip_html | replace: '  ', ' ' }}</p>
-    <div class="button-row">
-      <a class="button" href="/support/howCanWeSupport">Get help</a>
-      <a class="button button--secondary" href="{{ hero_slide.link }}">{{ hero_slide.linkText | default: 'Donate' }}</a>
-    </div>
-    <p class="home-hero__note">{{ page.intro }}</p>
-  </div>
   <div class="home-hero__media">
     <img src="{{ hero_slide.image }}" alt="Home-Start Nottingham families and volunteers" loading="eager">
+  </div>
+  <div class="home-hero__content">
+    <div class="home-hero__card">
+      <p class="eyebrow">Home-Start Nottingham</p>
+      <h1>{{ hero_slide.heading }}</h1>
+      <p class="home-hero__lede">{{ hero_slide.body | replace: '<br>', ' ' | replace: '<br/>', ' ' | replace: '<br />', ' ' | strip_html | replace: '  ', ' ' }}</p>
+      <div class="button-row">
+        <a class="button" href="/support/howCanWeSupport">Get help</a>
+        <a class="button button--secondary" href="{{ hero_slide.link }}">{{ hero_slide.linkText | default: 'Donate' }}</a>
+      </div>
+      <p class="home-hero__note">{{ page.intro }}</p>
+    </div>
   </div>
 </section>
 
