@@ -2,7 +2,7 @@
 title: Our corporate partners
 layout: default
 permalink: /fundraising/corporatePartners
-pageImage: /assets/img/hs_group_top_img_.jpg
+pageImage: /assets/img/hs_group_top_img.jpg
 hasImpact: true
 ---
 
@@ -10,7 +10,7 @@ Home-Start Nottingham is proud to receive the support of companies from across t
 
 ## [John Lewis Partnership](https://www.johnlewispartnership.co.uk)
 
-[![Coroprate Sponsors John Lewis](/assets/img/johnLewisLogo.jpg)](https://www.johnlewispartnership.co.uk)
+[![Coroprate Sponsors John Lewis](/assets/img/johnLewisLogo.png)](https://www.johnlewispartnership.co.uk)
 
 The John Lewis Partnership is the UK’s largest employee owned business and parent company of our two cherished retail brands - John Lewis & Partners and Waitrose & Partners, which are owned in Trust by over 80,000 Partners.
 
@@ -20,7 +20,7 @@ For a 12-month partnership unlike no other - John Lewis and Waitrose are committ
 
 ## [White Stuff](https://www.whitestuff.com/our-foundation/)
 
-[![White Stuff Logo](/assets/img/whiteStuff:ogo.jpg)](https://www.whitestuff.com)
+[![White Stuff Logo](/assets/img/whiteStuffLogo.jpg)](https://www.whitestuff.com)
 
 Coroprate Sponsors White Stuff
 

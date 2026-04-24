@@ -21,6 +21,6 @@
 		}
 	},
 	"postCreateCommand": {
-		"git": "git config --global --add safe.directory /workspaces/evolve-infra"
+		"git": "git config --global --add safe.directory /workspaces/labiraus"
 	}
 }

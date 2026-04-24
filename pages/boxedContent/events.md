@@ -2,7 +2,7 @@
 title: Events
 layout: boxed
 permalink: /news/events
-pageimage: ""
+pageImage: ""
 large: true
 
 boxedContent:

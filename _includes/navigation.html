@@ -1,56 +1,57 @@
-<nav id="pageHeader" class="headerMainOuterContainer pageHeader">
-  <div class="headerLogoContainer">
-    <a href="/"><img src="/assets/img/hslogo.jpg" alt="Homestart Nottingham Logo" id="header-logo"></a>
-  </div>
-  <div class="headerButtonsContainer">
-    <ul class="headerButtons horizontalList">
-      <li class="ulHeadermobileButton">
-        <button type="button" class="menuMainAlt" aria-expanded="false" aria-controls="menuMain">Menu</button>
-      </li>
-      <li class="ulHeaderButton"><a alt="Donate to Home-Start Nottingham" target="_blank"
-          href="/fundraising/howToDonate" class="header-button donate">Donate</a></li>
-      <li class="ulHeaderButton"><a href="/aboutUs/contactUs" class="header-button">Contact Us</a></li>
-    </ul>
+{% assign current_url = page.url | replace: '.html', '' %}
+<header class="site-header">
+  <div class="site-header__utility">
+    <div class="site-header__utility-inner">
+      <p>Compassionate, confidential support for families across Nottingham and Nottinghamshire.</p>
+      <ul class="utility-links" aria-label="Social links">
+        <li><a href="{{ site.data.legal.instagram }}" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="{{ site.data.legal.facebook }}" target="_blank" rel="noopener">Facebook</a></li>
+        <li><a href="{{ site.data.legal.twitter }}" target="_blank" rel="noopener">X</a></li>
+      </ul>
+    </div>
   </div>
 
-  <div class="headerMediaContainer">
-    <ul class="socialIcons horizontalList">
-      <li><a class="instagram" alt="instagram" target="_blank" href="{{ site.data.legal.instagram }}"></a></li>
-      <li><a class="twitter" alt="Twitter" target="_blank" href="{{ site.data.legal.twitter }}"></a></li>
-      <li><a class="facebook" alt="Facebook" target="_blank" href="{{ site.data.legal.facebook }}"></a>
-      </li>
-    </ul>
-  </div>
+  <div class="site-header__main">
+    <a class="site-brand" href="{{ '/' | relative_url }}">
+      <span class="site-brand__mark">
+        <img src="{{ '/assets/img/hslogo.jpg' | relative_url }}" alt="Home-Start Nottingham logo">
+      </span>
+      <span class="site-brand__text">
+        <strong>Home-Start Nottingham</strong>
+        <span>Because childhood can’t wait.</span>
+      </span>
+    </a>
 
-  <div class="headerNavigationContainer hideNav">
-    <nav id="menuMain" class="menuMain" role="navigation">
-      <div id="navbar">
-        <ul class="topLevel level1 mainNavBar">
-          {% for section in site.data.navigation.menu %}
-          <li class="level1 hasSubmenu">
-            <button
-              type="button"
-              class="submenuToggle"
-              aria-expanded="false"
-              aria-controls="submenu-{{ forloop.index }}"
-            >
-              {{ section.parent }}
-            </button>
-            <ul class="subMenu level2" id="submenu-{{ forloop.index }}" aria-label="{{ section.parent }}">
+    <button class="site-header__toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+
+    <div class="site-header__panel" id="site-nav" data-nav-panel>
+      <nav class="site-nav" aria-label="Primary">
+        {% for section in site.data.navigation.menu %}
+          {% assign section_is_active = false %}
+          {% for item in section.items %}
+            {% assign item_url = item.href | replace: '.html', '' %}
+            {% if current_url == item_url %}
+              {% assign section_is_active = true %}
+            {% endif %}
+          {% endfor %}
+          <details class="site-nav__group{% if section_is_active %} is-active{% endif %}">
+            <summary>{{ section.parent }}</summary>
+            <ul>
               {% for item in section.items %}
-              <li class="level2 menu1_1">
-                <a role="menuitem" href="{{ item.href }}">{{ item.text }}</a>
-              </li>
+                {% assign item_url = item.href | replace: '.html', '' %}
+                <li>
+                  <a href="{{ item.href }}"{% if current_url == item_url %} aria-current="page"{% endif %}>{{ item.text }}</a>
+                </li>
               {% endfor %}
             </ul>
-          </li>
-          {% endfor %}
-          <li class="mobileHeaderButtonLI"><a alt="Donate to Home-Start Nottingham" target="_blank"
-              href="/fundraising/howToDonate" class="mobileHeaderButton donate">Donate</a></li>
-          <li class="mobileHeaderButtonLI"><a href="/aboutUs/contactUs" class="mobileHeaderButton">Contact Us</a>
-          </li>
-        </ul>
+          </details>
+        {% endfor %}
+      </nav>
+
+      <div class="site-header__actions">
+        <a class="button" href="/fundraising/howToDonate.html">Donate</a>
+        <a class="button button--secondary" href="/aboutUs/contactUs">Contact us</a>
       </div>
-    </nav>
+    </div>
   </div>
-</nav>
+</header>

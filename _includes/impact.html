@@ -1,28 +1,15 @@
-<aside class="contenstStaticAsideCol3">
-  <div class="contenstStaticAsideDetail">
-    <div class="homeFeaturesWrapper">
-      <div class="homeFeatures2">
-        <section class="homefeaturecategory-homeboximpactstats">
-          <div class="homeImpactWrapper">
-            <h2>Our Impact</h2>
-            <table>
-              <tbody>
-              {% for impact in site.data.impact %}
-              <tr>
-                <td>
-                  <div>
-                    <img src="{{ impact.image }}" alt="">
-                  </div>
-                  <h2>{{ impact.statistic }}</h2>
-                </td>
-                <td>{{ impact.description }}</td>
-              </tr>
-              {% endfor %}
-              </tbody>
-            </table>
-            </div>
-        </section>
-      </div>
+<aside class="impact-rail" aria-labelledby="impact-rail-heading">
+  <div class="impact-rail__inner">
+    <p class="eyebrow">Our impact</p>
+    <h2 id="impact-rail-heading">How local support changes lives.</h2>
+    <div class="impact-rail__cards">
+      {% for impact in site.data.impact %}
+        <article class="impact-card">
+          <img src="{{ impact.image }}" alt="" loading="lazy">
+          <strong>{{ impact.statistic }}</strong>
+          <p>{{ impact.description }}</p>
+        </article>
+      {% endfor %}
     </div>
   </div>
 </aside>

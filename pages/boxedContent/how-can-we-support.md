@@ -19,7 +19,7 @@ boxedContent:
     text: The main focus of Home-Start Nottingham's work is to offer informal, friendly and confidential support to families in their own homes through carefully selected and prepared volunteers, who are parents themselves
 
   - title: Families Info
-    link: group.html
+    link: /support/familiesInfo.html
     image: /assets/img/box-image-3.jpg
     alt: supporting families - families information
     text: If you are a parent with at least one child under the age of eight then Home-Start Nottingham may be able to help you
@@ -29,6 +29,12 @@ boxedContent:
     image: /assets/img/box-image-4.jpg
     alt: supporting families - Small steps big changes
     text: Home-Start Nottingham delivers the Family Mentor Service as part of the Small Steps, Big  Changes programme.
+
+  - title: Groups
+    link: /support/groups.html
+    image: /assets/img/box-image-5.jpg
+    alt: supporting families - groups
+    text: Home-Start Nottingham offers various groups for children and parents to develop their skills and build social connections.
 ---
 
 Being a parent has never been easy. It can be lonely, frustrating, heartbreaking and overwhelming. All parents struggle at one time or another. For some, the challenges can be greater. You are not alone.

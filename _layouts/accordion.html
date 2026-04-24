@@ -1,0 +1,19 @@
+---
+layout: base
+---
+
+{% include page-hero.html image=page.pageImage %}
+
+<section class="page-section">
+  <div class="content-shell">
+    <article class="prose prose--wide">
+      {{ content }}
+    </article>
+  </div>
+
+  {% if page.accordion and page.accordion.size > 0 %}
+    <div class="content-shell">
+      {% include accordion-content.html items=page.accordion %}
+    </div>
+  {% endif %}
+</section>

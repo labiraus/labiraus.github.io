@@ -1,39 +1,16 @@
-<!doctype html>
-<html class="no-js" lang="">
+---
+layout: base
+---
 
-{% include header.html %}
-<body>
-  {% include navigation.html %}
-    <main class="outerBox">
-        <!--[if IE]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-        <![endif]-->
-    {% if page.pageImage and page.pageImage != "" %}
-      <div>
-        <img class="pageBodyTopImg" src="{{ page.pageImage }}" />
-      </div>
-      <div class="introHeaderfollowingImg">
-        <h1 class="title">{{ page.title }}</h1>
-      </div>
-    {% endif %}
+{% include page-hero.html image=page.pageImage %}
+
+<section class="page-section">
+  <div class="content-shell{% if page.hasImpact %} content-shell--with-aside{% endif %}">
+    <article class="prose">
+      {{ content }}
+    </article>
     {% if page.hasImpact %}
-      <div class="contentsBoxedGrouping">
-        <div class="contentsStaticTextWrapper">
-            <div class="contentStaticTextCol1">
-              {{ content }}
-            </div>
-            {% include impact.html %}
-        </div>
-      </div>
-    {% else %}
-      <div class="introHeader">
-        <h1 class="title">{{ page.title }}</h1>
-        <div class="introText">
-          {{ content }}
-        </div>
-      </div>
+      {% include impact.html %}
     {% endif %}
-    </main>
-    {% include footer.html %}
-</body>
-</html>
+  </div>
+</section>

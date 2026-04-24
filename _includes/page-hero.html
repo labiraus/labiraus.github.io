@@ -1,0 +1,36 @@
+{% assign hero_image = include.image | default: page.pageImage %}
+{% assign summary = include.summary %}
+{% assign current_url = page.url | replace: '.html', '' %}
+{% assign first_segment = current_url | split: '/' | slice: 1, 1 | first %}
+{% assign section_name = '' %}
+{% case first_segment %}
+  {% when 'support' %}
+    {% assign section_name = 'Support families' %}
+  {% when 'volunteers' %}
+    {% assign section_name = 'Volunteers' %}
+  {% when 'fundraising' %}
+    {% assign section_name = 'Fundraising' %}
+  {% when 'news' %}
+    {% assign section_name = 'News' %}
+  {% when 'aboutUs' %}
+    {% assign section_name = 'About us' %}
+{% endcase %}
+<section class="page-hero{% if hero_image and hero_image != '' %} page-hero--with-image{% endif %}">
+  <div class="content-shell page-hero__inner">
+    <div class="page-hero__copy">
+      {% include breadcrumbs.html %}
+      {% if section_name != '' %}
+        <p class="eyebrow">{{ section_name }}</p>
+      {% endif %}
+      <h1>{{ page.title }}</h1>
+      {% if summary and summary != '' %}
+        <p class="page-hero__summary">{{ summary }}</p>
+      {% endif %}
+    </div>
+    {% if hero_image and hero_image != '' %}
+      <div class="page-hero__media">
+        <img src="{{ hero_image }}" alt="" loading="eager">
+      </div>
+    {% endif %}
+  </div>
+</section>

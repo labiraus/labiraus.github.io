@@ -5,17 +5,16 @@ permalink: /fundraising/fundraiseForUs
 pageImage: /assets/img/hs4_small.jpg
 hasImpact: true
 ---
-
-## Because you can help us change a child's life
+## Because you can help change a child's life
 
 The emotional, physical and psychological cost for children experiencing tragedy, hardship and neglect is immense and can last a lifetime.
 
 The need for our work is acute and growing. In the UK right now:
 
-- 6 million children live in severe poverty.
-- 93,000 children live in care – an increase of 10,000 in 10 years.
-- 1 in 10 children aged between 5 and 16 struggle with their mental health.
-- 2 million children are regular witnesses to severe forms of domestic violence.
+* 6 million children live in severe poverty.
+* 93,000 children live in care – an increase of 10,000 in 10 years.
+* 1 in 10 children aged between 5 and 16 struggle with their mental health.
+* 2 million children are regular witnesses to severe forms of domestic violence.
 
 ## We want to see a society in which every parent has the support they need to give their children the best possible start in life.
 
@@ -28,4 +27,3 @@ When children face severe illness, or disability when their mother has postnatal
 ## Ways to help us:
 
 You can make a donation or take part in a challenge to run, cycle or trek and ask your friends and family to sponsor you. Or you can get your business involved or run your own event.
-

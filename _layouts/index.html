@@ -1,14 +1,158 @@
-<!doctype html>
-<html class="no-js" lang="">
+---
+layout: base
+---
 
-{% include header.html %}
+{% assign hero_slide = page.carousel | first %}
+{% assign support_page = site.pages | where_exp: "item", "item.permalink == '/support/howCanWeSupport'" | first %}
+{% assign volunteer_page = site.pages | where_exp: "item", "item.permalink == '/volunteers/howToVolunteer'" | first %}
+{% assign fundraising_page = site.pages | where_exp: "item", "item.permalink == '/fundraising/fundraiseForUs'" | first %}
+{% assign accounts_page = site.pages | where_exp: "item", "item.permalink == '/news/accountsAndReports'" | first %}
+{% assign events_page = site.pages | where_exp: "item", "item.permalink == '/news/events'" | first %}
+{% assign case_studies_page = site.pages | where_exp: "item", "item.permalink == '/support/caseStudies'" | first %}
+{% assign contact_page = site.pages | where_exp: "item", "item.permalink == '/aboutUs/contactUs'" | first %}
+{% assign first_event_card = events_page.boxedContent | first %}
 
-<body>
-  {% include navigation.html %}
-  {% include carousel.html %}
-  {% include intro.html %}
-  {% include features.html %}
-  {% include footer.html %}
-</body>
+{% capture support_summary %}{{ support_page.content | markdownify | replace: '<br>', ' ' | replace: '<br/>', ' ' | replace: '<br />', ' ' | strip_html | strip_newlines | replace: '  ', ' ' | truncate: 180 }}{% endcapture %}
+{% capture volunteer_summary %}{{ volunteer_page.content | markdownify | replace: '<br>', ' ' | replace: '<br/>', ' ' | replace: '<br />', ' ' | strip_html | strip_newlines | replace: '  ', ' ' | truncate: 180 }}{% endcapture %}
+{% capture fundraising_summary %}{{ fundraising_page.content | markdownify | replace: '<br>', ' ' | replace: '<br/>', ' ' | replace: '<br />', ' ' | strip_html | strip_newlines | replace: '  ', ' ' | truncate: 180 }}{% endcapture %}
+{% capture accounts_summary %}{{ accounts_page.content | markdownify | replace: '<br>', ' ' | replace: '<br/>', ' ' | replace: '<br />', ' ' | strip_html | strip_newlines | replace: '  ', ' ' | truncate: 150 }}{% endcapture %}
+{% capture events_summary %}{{ first_event_card.text | markdownify | replace: '<br>', ' ' | replace: '<br/>', ' ' | replace: '<br />', ' ' | strip_html | strip_newlines | replace: '  ', ' ' | truncate: 150 }}{% endcapture %}
+{% capture case_studies_summary %}{{ case_studies_page.content | markdownify | replace: '<br>', ' ' | replace: '<br/>', ' ' | replace: '<br />', ' ' | strip_html | strip_newlines | replace: '  ', ' ' | truncate: 150 }}{% endcapture %}
+{% capture contact_summary %}{{ contact_page.content | markdownify | replace: '<br>', ' ' | replace: '<br/>', ' ' | replace: '<br />', ' ' | strip_html | strip_newlines | replace: '  ', ' ' | truncate: 150 }}{% endcapture %}
 
-</html>
+<section class="home-hero">
+  <div class="home-hero__content">
+    <p class="eyebrow">Home-Start Nottingham</p>
+    <h1>{{ hero_slide.heading }}</h1>
+    <p class="home-hero__lede">{{ hero_slide.body | replace: '<br>', ' ' | replace: '<br/>', ' ' | replace: '<br />', ' ' | strip_html | replace: '  ', ' ' }}</p>
+    <div class="button-row">
+      <a class="button" href="{{ hero_slide.link }}">{{ hero_slide.linkText | default: 'Donate now' }}</a>
+      <a class="button button--secondary" href="/aboutUs">About us</a>
+    </div>
+    <p class="home-hero__note">{{ page.intro }}</p>
+  </div>
+  <div class="home-hero__media">
+    <img src="{{ hero_slide.image }}" alt="Home-Start Nottingham families and volunteers" loading="eager">
+  </div>
+</section>
+
+{% if page.carousel.size > 1 %}
+  <section class="page-section page-section--tight">
+    <div class="content-shell">
+      <div class="promo-grid promo-grid--compact">
+        {% for slide in page.carousel offset:1 %}
+          <article class="promo-card">
+            <img src="{{ slide.image }}" alt="" loading="lazy">
+            <div class="promo-card__body">
+              <p class="eyebrow">Quick link</p>
+              <h2>{{ slide.heading }}</h2>
+              <p>{{ slide.body | replace: '<br>', ' ' | replace: '<br/>', ' ' | replace: '<br />', ' ' | strip_html | replace: '  ', ' ' | truncate: 150 }}</p>
+              <a class="text-link" href="{{ slide.link }}">{{ slide.linkText }}</a>
+            </div>
+          </article>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+{% endif %}
+
+<section class="impact-band" aria-labelledby="impact-heading">
+  <div class="content-shell">
+    <div class="section-heading section-heading--light">
+      <p class="eyebrow">Local impact</p>
+      <h2 id="impact-heading">Our positive impact makes a real difference to families across Nottingham and Nottinghamshire.</h2>
+    </div>
+    <div class="stat-grid">
+      {% for feature in site.data.features %}
+        <article class="stat-card">
+          <img src="{{ feature.image }}" alt="" loading="lazy">
+          <strong>{{ feature.statistic }}</strong>
+          <p>{{ feature.description }}</p>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="page-section">
+  <div class="content-shell">
+    <div class="section-heading">
+      <p class="eyebrow">Support in Nottingham</p>
+      <h2>Find the right next step for your family, your time, or your support.</h2>
+    </div>
+    <div class="promo-grid">
+      <article class="promo-card promo-card--feature">
+        <img src="/assets/img/hs2.jpg" alt="Home-Start Nottingham support for families" loading="lazy">
+        <div class="promo-card__body">
+          <p class="eyebrow">Support families</p>
+          <h3>How can we support?</h3>
+          <p>{{ support_summary }}</p>
+          <a class="text-link" href="/support/howCanWeSupport">Find support</a>
+        </div>
+      </article>
+      <article class="promo-card promo-card--feature">
+        <img src="/assets/img/hs_6_small3.jpg" alt="Home-Start Nottingham volunteers" loading="lazy">
+        <div class="promo-card__body">
+          <p class="eyebrow">Volunteers</p>
+          <h3>Volunteer with us</h3>
+          <p>{{ volunteer_summary }}</p>
+          <a class="text-link" href="/volunteers/howToVolunteer">Explore volunteering</a>
+        </div>
+      </article>
+      <article class="promo-card promo-card--feature">
+        <img src="/assets/img/fundraise.jpg" alt="Home-Start Nottingham fundraising" loading="lazy">
+        <div class="promo-card__body">
+          <p class="eyebrow">Fundraising</p>
+          <h3>Fundraise and donate</h3>
+          <p>{{ fundraising_summary }}</p>
+          <a class="text-link" href="/fundraising/fundraiseForUs">Support our work</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="page-section page-section--muted">
+  <div class="content-shell">
+    <div class="section-heading">
+      <p class="eyebrow">Useful links</p>
+      <h2>Explore stories, resources, events, and ways to get in touch.</h2>
+    </div>
+    <div class="link-grid">
+      <a class="link-card" href="/support/caseStudies">
+        <span class="link-card__eyebrow">Family voices</span>
+        <strong>Support case studies</strong>
+        <span>{{ case_studies_summary }}</span>
+      </a>
+      <a class="link-card" href="/news/events">
+        <span class="link-card__eyebrow">Latest activity</span>
+        <strong>Events and fundraising news</strong>
+        <span>{{ events_summary }}</span>
+      </a>
+      <a class="link-card" href="/news/accountsAndReports">
+        <span class="link-card__eyebrow">Transparency</span>
+        <strong>Accounts and reports</strong>
+        <span>{{ accounts_summary }}</span>
+      </a>
+      <a class="link-card" href="/aboutUs/contactUs">
+        <span class="link-card__eyebrow">Talk to us</span>
+        <strong>Contact Home-Start Nottingham</strong>
+        <span>{{ contact_summary }}</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="content-shell cta-band__inner">
+    <div>
+      <p class="eyebrow">Because childhood can’t wait</p>
+      <h2>{{ page.intro }}</h2>
+      <p>{{ content | markdownify | strip_html | strip_newlines | replace: '  ', ' ' }}</p>
+    </div>
+    <div class="button-row">
+      <a class="button" href="/fundraising/howToDonate.html">Donate</a>
+      <a class="button button--secondary" href="/volunteers/howToVolunteer">Volunteer</a>
+    </div>
+  </div>
+</section>

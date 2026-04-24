@@ -6,7 +6,7 @@ pageImage: /assets/img/staff_new.jpg
 hasImpact: true
 ---
 
-## Home-Start Nottingham Core Staff
+## Home-Start Nottingham Staff
 
 | Role	| Name |
 | --- | --- |
@@ -14,16 +14,10 @@ hasImpact: true
 | Assistant Manager	| Marie Sheffield |
 | Business Manager	| Sara Leivers |
 | Co-ordinator	| Gail Tilley |
-| Team Leader - Co-ordinators	| Colleen Smith |
+| Co-ordinator	| Colleen Smith |
 | Co-ordinator	| Cesca Diamond |
 | Co-ordinator	| Catherine Allsopp |
 | Volunteering Development Co-ordinator	| Saffron Bradshaw |
-{: .staffContainer }
-
-## Home-Start Nottingham Staff (not core)
-
-| Role	| Name |
-| --- | --- |
 | Family Mentor team leader	| Rachel Osborne |
 | Family Mentor	| Anne-Marie Leivers |
 | Family Mentor	| Sally Pugh |

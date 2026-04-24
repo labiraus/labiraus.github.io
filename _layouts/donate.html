@@ -1,132 +1,119 @@
-<!doctype html>
+---
+layout: base
+---
 
-{% include header.html %}
+{% include page-hero.html image='/assets/img/fundraise.jpg' summary='Support local families in whichever way works for you, from one-off gifts to everyday fundraising and practical giving.' %}
 
-<body>
-    {% include navigation.html %}
+<section class="page-section">
+  <div class="content-shell">
+    <div class="donation-grid" data-donation-grid>
+      <article class="donation-card">
+        <button class="donation-card__toggle" type="button" aria-expanded="false" aria-controls="donation-giveasyoulive">
+          <span class="donation-card__media">
+            <img src="/assets/img/box-image-5.jpg" alt="Volunteer meeting with a family" loading="lazy">
+          </span>
+          <span class="donation-card__copy">
+            <span class="donation-card__kicker">Online giving</span>
+            <strong>Give as you Live</strong>
+            <span>Donate once or set up a regular gift to support Home-Start Nottingham.</span>
+          </span>
+        </button>
+        <div id="donation-giveasyoulive" class="donation-card__panel" hidden>
+          <iframe title="Donate via Give as you Live" allow="payment; publickey-credentials-get" src="https://donate.giveasyoulive.com/donate?cid=563238&utm_source=charitytoolkit&utm_content=563238&utm_medium=charitydonatebutton&utm_campaign=CTDonateButton&bc=152f58&br=30&tc=w&wl=1"></iframe>
+        </div>
+      </article>
 
-    <main class="wrap outerBox">
-        <h1 class="visually-hidden">Donate</h1>
+      <article class="donation-card">
+        <button class="donation-card__toggle" type="button" aria-expanded="false" aria-controls="donation-paypal">
+          <span class="donation-card__media">
+            <img src="/assets/img/box-image-9.jpg" alt="Parent and child smiling together" loading="lazy">
+          </span>
+          <span class="donation-card__copy">
+            <span class="donation-card__kicker">Quick donation</span>
+            <strong>PayPal</strong>
+            <span>Give online using PayPal and scan the QR code if that is easier for you.</span>
+          </span>
+        </button>
+        <div id="donation-paypal" class="donation-card__panel" hidden>
+          <form action="https://www.paypal.com/donate" method="post" target="_top" class="donation-card__actions">
+            <input type="hidden" name="hosted_button_id" value="Z668XEAQGXXAC">
+            <input type="image" src="https://www.paypalobjects.com/en_GB/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button">
+          </form>
+          <img class="donation-card__qr" src="/assets/svg/qrcode.svg" alt="QR code for PayPal donations" loading="lazy">
+        </div>
+      </article>
 
-        <section class="flex-grid" aria-label="Featured donation options">
-            <button class="card" type="button" aria-expanded="false" aria-controls="card-one-details">
-                <div class="card-media">
-                    <img src="/assets/img/box-image-5.jpg" alt="Sample image one" />
-                    <div class="overlay">
-                        <h3 id="card-one-title">Give as you Live</h3>
-                        <p>Donate once or regularly</p>
-                    </div>
-                </div>
+      <article class="donation-card">
+        <button class="donation-card__toggle" type="button" aria-expanded="false" aria-controls="donation-justgiving">
+          <span class="donation-card__media">
+            <img src="/assets/img/box-image-7.jpg" alt="Supporters outdoors together" loading="lazy">
+          </span>
+          <span class="donation-card__copy">
+            <span class="donation-card__kicker">Fundraising page</span>
+            <strong>JustGiving</strong>
+            <span>Give online via our JustGiving page and support current local fundraising efforts.</span>
+          </span>
+        </button>
+        <div id="donation-justgiving" class="donation-card__panel" hidden>
+          <img class="donation-card__brand" src="/assets/svg/JG_LOGO_PRIMARY_NEW.svg" alt="JustGiving logo" loading="lazy">
+          <a class="button" href="https://www.justgiving.com/homestartnottingham">Donate via JustGiving</a>
+        </div>
+      </article>
 
-                <div id="card-one-details" class="card-details" role="region" aria-labelledby="card-one-title" hidden>
-                    <iframe allow="payment; publickey-credentials-get"
-                        src="https://donate.giveasyoulive.com/donate?cid=563238&utm_source=charitytoolkit&utm_content=563238&utm_medium=charitydonatebutton&utm_campaign=CTDonateButton&bc=152f58&br=30&tc=w&wl=1"></iframe>
-                </div>
-            </button>
+      <article class="donation-card">
+        <button class="donation-card__toggle" type="button" aria-expanded="false" aria-controls="donation-bank">
+          <span class="donation-card__media">
+            <img src="/assets/img/box-image-4.jpg" alt="Families at a Home-Start group" loading="lazy">
+          </span>
+          <span class="donation-card__copy">
+            <span class="donation-card__kicker">Offline giving</span>
+            <strong>Bank or cheque</strong>
+            <span>Donate directly or send a cheque, and add Gift Aid where you can.</span>
+          </span>
+        </button>
+        <div id="donation-bank" class="donation-card__panel" hidden>
+          <p>Donations can be made to Home-Start Nottingham by paying directly to our bank. Please contact us for bank details.</p>
+          <p>You can also send a cheque to Home-Start Nottingham, Suite 9, Arnold Business Centre, Brookfield Gardens, Arnold, Nottingham, NG5 7ER.</p>
+          <p>Whichever way you donate, please do not forget Gift Aid.</p>
+          <div class="resource-links">
+            <a class="resource-link" href="/assets/documents/Gift_Aid.docx">Gift Aid form (Word)</a>
+            <a class="resource-link" href="/assets/documents/Gift_aid.pdf">Gift Aid form (PDF)</a>
+          </div>
+        </div>
+      </article>
 
-            <button class="card" type="button" aria-expanded="false" aria-controls="card-two-details">
-                <div class="card-media">
-                    <img src="/assets/img/box-image-9.jpg" alt="Sample image two" />
-                    <div class="overlay">
-                        <h3 id="card-two-title">Paypal</h3>
-                        <p>Donate Online</p>
-                    </div>
-                </div>
+      <article class="donation-card">
+        <button class="donation-card__toggle" type="button" aria-expanded="false" aria-controls="donation-recycle">
+          <span class="donation-card__media">
+            <img src="/assets/img/box-image-3.jpg" alt="Family support resources" loading="lazy">
+          </span>
+          <span class="donation-card__copy">
+            <span class="donation-card__kicker">Everyday support</span>
+            <strong>Recycle4Charity</strong>
+            <span>Recycle used ink cartridges and turn them into funding for local families.</span>
+          </span>
+        </button>
+        <div id="donation-recycle" class="donation-card__panel" hidden>
+          <a class="button" href="http://www.recycle4charity.co.uk/Register/C143181" target="_blank" rel="noopener">Visit Recycle4Charity</a>
+        </div>
+      </article>
 
-                <div id="card-two-details" class="card-details" role="region" aria-labelledby="card-two-title" hidden>
-                    <form action="https://www.paypal.com/donate" method="post" target="_top">
-                        <input type="hidden" name="hosted_button_id" value="Z668XEAQGXXAC" />
-                        <input class="click" type="image"
-                            src="https://www.paypalobjects.com/en_GB/i/btn/btn_donateCC_LG.gif" border="0" name="submit"
-                            title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-                        <img class="donateImg" src="/assets/svg/qrcode.svg" alt="Donate via paypal" loading="lazy">
-                    </form>
-                </div>
-            </button>
-
-            <button class="card" type="button" aria-expanded="false" aria-controls="card-three-details">
-                <div class="card-media">
-                    <img src="/assets/img/box-image-7.jpg" alt="Sample image three" />
-                    <div class="overlay">
-                        <h3 id="card-three-title">Just Giving</h3>
-                        <p>Donate online with Just Giving</p>
-                    </div>
-                </div>
-
-                <div id="card-three-details" class="card-details" role="region" aria-labelledby="card-three-title"
-                    hidden>
-                    <img class="donateImg" src="/assets/svg/JG_LOGO_PRIMARY_NEW.svg" alt="Donte via Just Giving"
-                        loading="lazy">
-                    <a class="button click" href="https://www.justgiving.com/homestartnottingham">
-                        Click to Donate to Home-Start Nottingham.
-                    </a>
-                </div>
-            </button>
-
-            <button class="card" type="button" aria-expanded="false" aria-controls="card-four-details">
-                <div class="card-media">
-                    <img src="/assets/img/box-image-4.jpg" alt="Sample image four" />
-                    <div class="overlay">
-                        <h3 id="card-four-title">Bank & Cheque</h3>
-                        <p>Don't forget gift aid!</p>
-                    </div>
-                </div>
-
-                <div id="card-four-details" class="card-details" role="region" aria-labelledby="card-four-title" hidden>
-                    <h3 class="hs-sub-header-orange">Donations can be made to Home-Start Nottingham by:</h3>
-                    <p>a. Paying direct to our bank (please contact us for bank details).</p>
-                    <p>b. Sending a cheque to Home-Start Nottingham at Suite 9, Arnold Business Centre, Brookfield
-                        Gardens, Nottingham, NG5 7ER</p>
-                    <p>Whichever way you donate, please don't forget Gift Aid!
-                        <a href="/assets/documents/Gift_Aid.docx"><img
-                                style="height:40px!important;width:40px!important" src="/assets/icons/word.png"
-                                alt="Gift Aid Word Doc" loading="lazy"></a>
-                        <a href="/assets/documents/Gift_aid.pdf"><img
-                                style="margin-left: 20px;height:40px!important;width:40px!important"
-                                src="/assets/icons/pdf2.png" alt="Gift Aid PDF" loading="lazy"></a>
-                    </p>
-                </div>
-            </button>
-
-            <button class="card" type="button" aria-expanded="false" aria-controls="card-five-details">
-                <div class="card-media">
-                    <img src="/assets/img/box-image-3.jpg" alt="Sample image five" />
-                    <div class="overlay">
-                        <h3 id="card-five-title">Recycle 4 Charity</h3>
-                        <p>Recycle used ink cartridges</p>
-                    </div>
-                </div>
-
-                <div id="card-five-details" class="card-details" role="region" aria-labelledby="card-five-title" hidden>
-                    <div class="recycle-box">
-                        <a class="recycle-link" href="http://www.recycle4charity.co.uk/Register/C143181" target="_blank"
-                            rel="noopener">
-                            <p class="recycle-heading">Recycle used ink cartridges to help!</p>
-                            <p class="recycle-cta">Visit Recycle4Charity.co.uk »</p>
-                        </a>
-                    </div>
-                </div>
-            </button>
-
-            <button class="card" type="button" aria-expanded="false" aria-controls="card-six-details">
-                <div class="card-media">
-                    <img src="/assets/img/box-image-1.jpg" alt="Sample image six" />
-                    <div class="overlay">
-                        <h3 id="card-six-title">Cashback</h3>
-                        <p>Earn Home-Start Nottingham cashback</p>
-                    </div>
-                </div>
-
-                <div id="card-six-details" class="card-details" role="region" aria-labelledby="card-six-title" hidden>
-                    <a href="https://www.easyfundraising.org.uk/causes/hsnottingham/"><img src="/assets/img/efLogo.png"
-                            alt="Donate via easyfundraising" loading="lazy"></a>
-
-                </div>
-            </button>
-        </section>
-    </main>
-
-    {% include footer.html %}
-</body>
-
-</html>
+      <article class="donation-card">
+        <button class="donation-card__toggle" type="button" aria-expanded="false" aria-controls="donation-cashback">
+          <span class="donation-card__media">
+            <img src="/assets/img/box-image-1.jpg" alt="Home-Start family activity" loading="lazy">
+          </span>
+          <span class="donation-card__copy">
+            <span class="donation-card__kicker">Shop and support</span>
+            <strong>Easyfundraising</strong>
+            <span>Raise cashback for Home-Start Nottingham while shopping online.</span>
+          </span>
+        </button>
+        <div id="donation-cashback" class="donation-card__panel" hidden>
+          <img class="donation-card__brand donation-card__brand--small" src="/assets/img/efLogo.png" alt="easyfundraising logo" loading="lazy">
+          <a class="button" href="https://www.easyfundraising.org.uk/causes/hsnottingham/">Raise cashback with easyfundraising</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>

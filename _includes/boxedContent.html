@@ -1,16 +1,48 @@
-<div class="contentsBoxedGrouping">
-  <div class="contentBoxDetailWrapper">
-    {% for content in page.boxedContent %}
-    <span class="boxedContent">
-      <a class="boxedContentAnchor" href="{{ content.link }}"><img class="boxedContentImg" src="{{ content.image }}" alt="{{ content.alt }}" loading="lazy"></a>
-       <div class="boxedContentPostTextBoxNormal">
-        <h2><a href="{{ content.link }}">{{ content.title }}</a></h2>
-        <a href="{{ content.link }}" class="{% if page.large %}boxedContentPostTextDetailLarge{% else %}boxedContentPostTextDetail{% endif %}">{{ content.text }}</a>
-        {% if content.linkText and content.linkText != "" %}
-        <p class="boxedeTextCenter"><a class="boxedeTextCenter" href="{{ content.link }}">{{ content.linkText }}</a></p>
+{% assign items = include.items | default: page.boxedContent %}
+{% assign large_cards = include.large | default: page.large %}
+<div class="card-grid{% if large_cards %} card-grid--large{% endif %}">
+  {% for content in items %}
+    {% assign has_link = false %}
+    {% if content.link and content.link != "" %}
+      {% assign has_link = true %}
+    {% endif %}
+    {% assign display_title = content.title %}
+    {% if display_title == nil or display_title == "" %}
+      {% assign display_title = content.alt %}
+    {% endif %}
+    <article class="content-card{% if has_link == false %} content-card--static{% endif %}">
+      {% if has_link %}
+        <a class="content-card__media" href="{{ content.link }}">
+          <img src="{{ content.image }}" alt="{{ content.alt }}" loading="lazy">
+        </a>
+      {% else %}
+        <div class="content-card__media">
+          <img src="{{ content.image }}" alt="{{ content.alt }}" loading="lazy">
+        </div>
+      {% endif %}
+      <div class="content-card__body">
+        {% if display_title and display_title != "" %}
+          <h2>{% if has_link %}<a href="{{ content.link }}">{{ display_title }}</a>{% else %}{{ display_title }}{% endif %}</h2>
+        {% endif %}
+        {% if content.text and content.text != "" %}
+          <div class="content-card__text">{{ content.text | markdownify }}</div>
+        {% endif %}
+        {% if has_link %}
+          {% assign action_label = content.linkText %}
+          {% if action_label == nil or action_label == "" %}
+            {% if content.link contains '.pdf' %}
+              {% assign action_label = 'Download PDF' %}
+            {% elsif content.link contains 'http' %}
+              {% assign action_label = 'Read more' %}
+            {% else %}
+              {% assign action_label = 'Read more' %}
+            {% endif %}
+          {% endif %}
+          <a class="text-link" href="{{ content.link }}">{{ action_label }}</a>
+        {% elsif content.linkText and content.linkText != "" %}
+          <p class="content-card__meta">{{ content.linkText }}</p>
         {% endif %}
       </div>
-    </span>
-    {% endfor %}
-  </div>
+    </article>
+  {% endfor %}
 </div>

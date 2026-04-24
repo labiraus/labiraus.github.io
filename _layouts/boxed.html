@@ -1,34 +1,19 @@
-<!doctype html>
-<html class="no-js" lang="">
+---
+layout: base
+---
 
-{% include header.html %}
-<body>
-  {% include navigation.html %}
-  <!--[if IE]>
-      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-  <![endif]-->
-  <main class="outerBox">
-    {% if page.pageImage and page.pageImage != "" %}
-    <div>
-      <img class="pageBodyTopImg" src="{{ page.pageImage }}" />
-    </div>
-    <div class="introHeaderfollowingImg">
-      <h1 class="title">{{ page.title }}</h1>
-    <div class="introText">
+{% include page-hero.html image=page.pageImage %}
+
+<section class="page-section">
+  <div class="content-shell">
+    <article class="prose prose--wide">
       {{ content }}
-    </div>
-    </div>
-    {% else %}    
-    <div class="introHeader">
-      <h1 class="title">{{ page.title }}</h1>
-      <div class="introText">
-        {{ content }}
-      </div>
-    </div>
-    {% endif %}
+    </article>
+  </div>
 
-    {% include boxedContent.html %}
-  </main>
-  {% include footer.html %}
-</body>
-</html>
+  {% if page.boxedContent and page.boxedContent.size > 0 %}
+    <div class="content-shell">
+      {% include boxedContent.html items=page.boxedContent large=page.large %}
+    </div>
+  {% endif %}
+</section>

@@ -1,30 +1,26 @@
+{% assign page_title = page.title | default: site.title %}
+{% if page_title == site.title %}
+  {% assign full_title = site.title %}
+{% else %}
+  {% assign full_title = page_title | append: ' | ' | append: site.title %}
+{% endif %}
+{% capture description_source %}
+  {% if page.intro %}
+    {{ page.intro }}
+  {% else %}
+    {{ page.content | markdownify | strip_html | strip_newlines | replace: '  ', ' ' | truncate: 160 }}
+  {% endif %}
+{% endcapture %}
 <head>
-    <meta charset="utf-8">
-    <title>{{ site.title }}</title>
-    <meta name="description"
-        content="Home-Start Nottingham is a local charity with a network of trained parent volunteers who support families with young children through their challenging times. We are there for parents when they need us the most because childhood can’t wait. ">
-    <meta name="keywords"
-        content="Home, Homestart, parent, family, families, children, child, charity, Nottingham, Nottinghamshire, volunteer, Rushcliffe, Gedling, Broxtowe, Ashfield, support, help" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="-1" />
-
-    <link rel="apple-touch-icon" href="/assets/icons/icon.png">
-    <link rel="shortcut icon" href="/favicon.png" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
-        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="/assets/css/normalize.css">
-    <link rel="stylesheet" href="/assets/css/navigation.css">
-    <link rel="stylesheet" href="/assets/css/carousel.css">
-    <link rel="stylesheet" href="/assets/css/accordian.css">
-    <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="stylesheet" href="/assets/css/styles.css">
-    <link rel="stylesheet" href="/assets/css/maxwidth1200.css">
-    <link rel="stylesheet" href="/assets/css/maxwidth875.css">
-    <link rel="stylesheet" href="/assets/css/maxwidth780.css">
-    <link rel="stylesheet" href="/assets/css/maxwidth670.css">
-    <meta name="theme-color" content="#fafafa">
-    <script defer src="/assets/js/donate.js"></script>
+  <meta charset="utf-8">
+  <title>{{ full_title }}</title>
+  <meta name="description" content="{{ description_source | default: site.description | strip }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#d22456">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,600;6..72,700&display=swap" rel="stylesheet">
+  <link rel="apple-touch-icon" href="{{ '/assets/icons/icon.png' | relative_url }}">
+  <link rel="shortcut icon" href="{{ '/favicon.png' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
 </head>

@@ -1,42 +1,41 @@
-<footer class="outer-footer">
-  <div class="inner-footer">
-    <div class="footerLinks">
-      <div class="footerLinks-header">
-        <h2>Helpful links</h2>
-      </div>
-      <div class="footerLinks-table">
-        <ul class="footerTableUL">
-          <li class="footerTableLi"><a href="/support/howCanWeSupport.html" class="footerAnchor">How can we support ?</a>
-          </li>
-          <li class="footerTableLi"><a href="/fundraising/fundraiseForUs.html" class="footerAnchor">Fundraising</a></li>
-          <li class="footerTableLi"><a href="/fundraising/howToDonate.html" class="footerAnchor">How to Donate</a></li>
-          <li class="footerTableLi"><a href="/news/events.html" class="footerAnchor">Events</a></li>
-          <li class="footerTableLi"><a href="/aboutUs/aboutUs.html" class="footerAnchor">about us</a></li>
-          <li class="footerTableLi"><a href="/aboutUs/privacyNotice.html" class="footerAnchor">Privacy and Cookies</a>
-          </li>
-        </ul>
-      </div>
+<footer class="site-footer">
+  <div class="content-shell site-footer__grid">
+    <div class="site-footer__intro">
+      <p class="eyebrow">Home-Start Nottingham</p>
+      <h2>Local family support, rooted in the Home-Start network.</h2>
+      <p>We work alongside families with young children through challenging times, offering compassionate support that builds confidence, connection, and brighter futures.</p>
     </div>
 
-    <div class="footerSocialIcons">
-      <div class="socialIcons">
-        <a class="instagramFooter" alt="instagram" target="_blank" href="{{ site.data.legal.instagram }}"></a>
-        <a class="twitterFooter" alt="X" target="_blank" href="{{ site.data.legal.twitter }}"></a>
-        <a class="facebookFooter" alt="Facebook" target="_blank" href="{{ site.data.legal.facebook }}"></a>
-      </div>
+    <div>
+      <h3>Explore</h3>
+      <ul class="footer-links">
+        <li><a href="/support/howCanWeSupport">How can we support?</a></li>
+        <li><a href="/volunteers/howToVolunteer">How to volunteer</a></li>
+        <li><a href="/fundraising/fundraiseForUs">Fundraise for us</a></li>
+        <li><a href="/fundraising/howToDonate.html">How to donate</a></li>
+        <li><a href="/news/accountsAndReports">Accounts and reports</a></li>
+        <li><a href="/aboutUs/contactUs">Contact us</a></li>
+      </ul>
     </div>
 
-    <div class="footerCompanyDetails">
-      <p>Home-Start Nottingham, registered charity no. {{ site.data.legal.charityNo }}.</p>
-      <p>Company limited by guarantee in England & Wales no. {{ site.data.legal.companyNo }}</p>
-      <p>{{ site.data.legal.address }} &copy; {{ "now" | date: "%Y" }}
-        Home-Start Nottingham</p>
+    <div>
+      <h3>Contact</h3>
+      <address class="site-footer__address">
+        {{ site.data.legal.address }}<br>
+        Charity no. {{ site.data.legal.charityNo }}<br>
+        Company no. {{ site.data.legal.companyNo }}
+      </address>
+      <ul class="footer-links footer-links--inline">
+        <li><a href="{{ site.data.legal.instagram }}" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="{{ site.data.legal.facebook }}" target="_blank" rel="noopener">Facebook</a></li>
+        <li><a href="{{ site.data.legal.twitter }}" target="_blank" rel="noopener">X</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="site-footer__legal">
+    <div class="content-shell">
+      <p>&copy; {{ "now" | date: "%Y" }} Home-Start Nottingham. Part of the Home-Start network.</p>
+    </div>
   </div>
 </footer>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="/assets/js/vendor/modernizr-2.6.2.min.js"></script>
-<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
-<script src="/assets/js/plugins.js"></script>
-<script src="/assets/js/carousel.js"></script>
-<script src="/assets/js/navigation.js"></script>

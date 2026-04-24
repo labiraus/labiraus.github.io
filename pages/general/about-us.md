@@ -1,7 +1,7 @@
 ---
 title: About Us
 layout: default
-permalink: /aboutUs/aboutUs
+permalink: /aboutUs
 pageImage: /assets/img/staff_new.jpg
 hasImpact: true
 ---

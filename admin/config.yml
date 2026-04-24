@@ -122,17 +122,17 @@ collections:
           - { label: Link Text, name: linkText, widget: text }
       - { label: Body, name: body, widget: markdown }
 
-  - name: "accordianContent"
-    label: "Accordian Content Pages"
-    folder: "pages/accordianContent"
+  - name: "accordionContent"
+    label: "Accordion Content Pages"
+    folder: "pages/accordionContent"
     create: true
     fields:
       - { label: Title, name: title, widget: string }
-      - { label: Layout, name: layout, widget: string, default: "accordian" }
+      - { label: Layout, name: layout, widget: string, default: "accordion" }
       - { label: Permalink, name: permalink, widget: string }
       - { label: Page Image, name: pageImage, widget: string }
-      - label: Accordian Content
-        name: accordianContent
+      - label: Accordion Content
+        name: accordion
         widget: list
         fields:
           - { label: Title, name: title, widget: string }

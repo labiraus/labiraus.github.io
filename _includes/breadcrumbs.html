@@ -1,0 +1,37 @@
+{% assign current_url = include.url | default: page.url | replace: '.html', '' %}
+{% assign first_segment = current_url | split: '/' | slice: 1, 1 | first %}
+{% assign section_name = '' %}
+{% case first_segment %}
+  {% when 'support' %}
+    {% assign section_name = 'Support families' %}
+  {% when 'volunteers' %}
+    {% assign section_name = 'Volunteers' %}
+  {% when 'fundraising' %}
+    {% assign section_name = 'Fundraising' %}
+  {% when 'news' %}
+    {% assign section_name = 'News' %}
+  {% when 'aboutUs' %}
+    {% assign section_name = 'About us' %}
+{% endcase %}
+{% assign current_label = page.title %}
+{% for section in site.data.navigation.menu %}
+  {% for item in section.items %}
+    {% assign item_url = item.href | replace: '.html', '' %}
+    {% if item_url == current_url %}
+      {% assign current_label = item.text %}
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+{% if current_url != '/' and current_url != '/404' %}
+  <nav class="breadcrumbs" aria-label="Breadcrumb">
+    <a href="{{ '/' | relative_url }}">Home</a>
+    {% if section_name != '' %}
+      <span>/</span>
+      <span>{{ section_name }}</span>
+    {% endif %}
+    {% if current_label and current_label != section_name %}
+      <span>/</span>
+      <span>{{ current_label }}</span>
+    {% endif %}
+  </nav>
+{% endif %}

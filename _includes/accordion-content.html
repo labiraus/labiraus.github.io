@@ -1,0 +1,11 @@
+{% assign items = include.items | default: page.accordion %}
+<div class="accordion-list">
+  {% for item in items %}
+    <details class="accordion-item">
+      <summary>{{ item.title }}</summary>
+      <div class="accordion-item__panel">
+        {{ item.content | markdownify }}
+      </div>
+    </details>
+  {% endfor %}
+</div>
