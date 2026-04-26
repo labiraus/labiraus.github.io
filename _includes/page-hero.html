@@ -1,5 +1,6 @@
 {% assign hero_image = include.image | default: page.pageImage %}
 {% assign summary = include.summary %}
+{% assign hero_variant = include.variant | default: page.heroVariant %}
 {% assign current_url = page.url | replace: '.html', '' %}
 {% assign first_segment = current_url | split: '/' | slice: 1, 1 | first %}
 {% assign section_name = '' %}
@@ -15,7 +16,7 @@
   {% when 'aboutUs' %}
     {% assign section_name = 'About us' %}
 {% endcase %}
-<section class="page-hero{% if hero_image and hero_image != '' %} page-hero--with-image{% endif %}">
+<section class="page-hero{% if hero_image and hero_image != '' %} page-hero--with-image{% endif %}{% if hero_variant and hero_variant != '' %} page-hero--{{ hero_variant }}{% endif %}">
   <div class="content-shell page-hero__inner">
     <div class="page-hero__copy">
       {% include breadcrumbs.html %}
