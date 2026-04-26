@@ -20,13 +20,15 @@ This repo should visually align with `https://www.home-start.org.uk/` while pres
 
 ## Layout Rules
 
-- Use the national-site rhythm of wide contained content shells rather than either a narrow blog column or edge-to-edge text. As a baseline, content areas should feel close to `85%` width with a broad desktop max width.
+- Use the national-site rhythm of wide contained content shells rather than either a narrow blog column or edge-to-edge text. Normal page content should use the shared page-width variable.
+- Use a separate near-full-width media variable for homepage and banner hero images so they keep the same small viewport gap as the national site.
 - Reserve full-bleed treatment for the outer section background or hero framing, not for long text columns.
 - Homepage splash imagery should feel nearly full width, with the image inset from the viewport edge in the same way as the national site rather than flush to the browser chrome.
 - Homepage hero imagery must not underlap or visually collide with the opening text panel; reserve clear layout space for the copy block.
 - The homepage hero should follow the national site pattern: a large inset rounded image with visible gap around it, plus an overlaid text card on desktop rather than a side-by-side split.
 - On tablet and mobile widths, the homepage hero should step down like the national site by letting the text card sit beneath the image instead of forcing a cramped overlay.
 - For interior pages intentionally following the national `about-us` banner treatment, use a near-full-width rounded hero image with a separate pale-lilac title card beneath it rather than a side-by-side image/text split.
+- On those `about-us`-style banner pages, the first main content or intro block immediately under the hero should also sit in a pale-lilac rounded panel.
 - Keep the design bright, open, and lightweight rather than dense, boxed, or shadow-heavy.
 - Avoid reintroducing the old rotating carousel. The homepage should use a static hero plus supporting promo sections.
 
@@ -34,8 +36,10 @@ This repo should visually align with `https://www.home-start.org.uk/` while pres
 
 - Keep the site brand on the left.
 - Align the rest of the header bar to the right.
+- The visible header bar should be a viewport-width band with a pale surface, thin border, `margin: 0`, and `1rem 1.5rem` internal padding to match the reference site's broad header band.
 - Do not add a separate social or utility strip above the main header unless explicitly requested.
 - The logo or brand mark must not be cropped by rounded containers or overflow clipping.
+- When using Nottingham's square local logo asset, match the reference header logo height: roughly `80px` on desktop and `60px` in compact states.
 - Use a clean, national-site-inspired header rhythm with clear spacing and compact utility actions.
 
 ## Navigation Rules

@@ -17,6 +17,8 @@
   --radius-medium: 15px;
   --radius-small: 8px;
   --content-width: 100rem;
+  --page-width: min(calc(100% - 2.5%), var(--content-width));
+  --wide-media-width: min(calc(100% - 2.5%), 120rem);
   --gutter: clamp(1.25rem, 2vw, 2rem);
 }
 
@@ -28,6 +30,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 body {
@@ -37,6 +40,7 @@ body {
   line-height: 1.5;
   color: var(--color-ink);
   background: var(--color-surface);
+  overflow-x: clip;
 }
 
 img {
@@ -90,7 +94,7 @@ iframe {
 }
 
 .content-shell {
-  width: min(85%, var(--content-width));
+  width: var(--page-width);
   margin: 0 auto;
 }
 
@@ -164,15 +168,26 @@ iframe {
 .site-header {
   position: sticky;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 50;
-  background: rgba(246, 242, 248, 0.96);
-  border-bottom: 0;
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  padding: 0;
+  background: var(--color-surface-muted);
+  border: 1px solid var(--color-border);
   box-shadow: none;
 }
 
 .site-header__main {
-  width: min(85%, var(--content-width));
-  margin: 0 auto;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
 }
 
 .utility-links,
@@ -195,7 +210,7 @@ iframe {
   display: flex;
   gap: 1rem;
   align-items: center;
-  padding: 1rem 0;
+  padding: 1rem 1.5rem;
 }
 
 .site-brand {
@@ -206,9 +221,9 @@ iframe {
 }
 
 .site-brand__mark {
-  width: clamp(4.75rem, 6vw, 6rem);
+  width: 5rem;
   height: auto;
-  flex: 0 0 auto;
+  flex: 0 0 5rem;
   border-radius: 0;
   overflow: visible;
   background: transparent;
@@ -918,7 +933,7 @@ body.nav-open .site-header--drawer .site-header__toggle {
 
 .home-hero__content {
   grid-area: 1 / 1;
-  width: min(85%, 100rem);
+  width: var(--page-width);
   margin: 0 auto;
   padding: clamp(1.25rem, 2vw, 2rem) 0;
 }
@@ -968,7 +983,7 @@ body.nav-open .site-header--drawer .site-header__toggle {
 
 .home-hero__media {
   grid-area: 1 / 1;
-  width: min(97.5%, 120rem);
+  width: var(--wide-media-width);
   margin: 0 auto;
 }
 
@@ -1032,13 +1047,14 @@ body.nav-open .site-header--drawer .site-header__toggle {
 
 .page-hero--banner .page-hero__inner {
   display: block;
-  width: 100%;
+  width: var(--wide-media-width);
   max-width: none;
+  margin: 0 auto;
 }
 
 .page-hero--banner .page-hero__media {
-  width: min(97.5%, 120rem);
-  margin: 0 auto;
+  width: 100%;
+  margin: 0;
 }
 
 .page-hero--banner .page-hero__media::before {
@@ -1053,7 +1069,7 @@ body.nav-open .site-header--drawer .site-header__toggle {
 }
 
 .page-hero--banner .page-hero__copy {
-  width: min(85%, 62.5rem);
+  width: min(calc(100% - 2.5%), 62.5rem);
   margin: 2rem auto 0;
   padding: 2rem 3rem;
   background: var(--color-surface-muted);
@@ -1066,6 +1082,19 @@ body.nav-open .site-header--drawer .site-header__toggle {
 
 .page-hero--banner .page-hero__copy h1 {
   margin-bottom: 0;
+}
+
+.page-hero--banner + .page-section {
+  padding-top: 0;
+}
+
+.page-hero--banner + .page-section > .content-shell:first-child .prose {
+  position: relative;
+  max-width: 62.5rem;
+  margin: 2rem auto 3rem;
+  padding: 3rem;
+  border-radius: 20px;
+  background: var(--color-surface-muted);
 }
 
 .breadcrumbs {
@@ -1654,6 +1683,10 @@ body.nav-open .site-header--drawer .site-header__toggle {
   .page-hero--banner .page-hero__copy {
     padding: 1.75rem 2rem;
   }
+
+  .page-hero--banner + .page-section > .content-shell:first-child .prose {
+    padding: 2rem;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -1668,7 +1701,7 @@ body.nav-open .site-header--drawer .site-header__toggle {
   }
 
   .home-hero__content {
-    width: min(85%, 100rem);
+    width: var(--page-width);
     margin: 2.5rem auto 0;
     padding: 0;
   }
@@ -1678,7 +1711,7 @@ body.nav-open .site-header--drawer .site-header__toggle {
   }
 
   .home-hero__media {
-    width: min(97.5%, 120rem);
+    width: var(--wide-media-width);
   }
 
   .home-hero__media img {
@@ -1687,6 +1720,11 @@ body.nav-open .site-header--drawer .site-header__toggle {
 }
 
 @media (max-width: 720px) {
+  .site-brand__mark {
+    width: 3.75rem;
+    flex-basis: 3.75rem;
+  }
+
   .site-brand__text strong {
     font-size: 1.4rem;
   }
@@ -1707,6 +1745,10 @@ body.nav-open .site-header--drawer .site-header__toggle {
   .page-hero--banner .page-hero__copy {
     width: min(calc(100% - 2rem), 62.5rem);
     margin-top: 1.5rem;
+    padding: 1.5rem;
+  }
+
+  .page-hero--banner + .page-section > .content-shell:first-child .prose {
     padding: 1.5rem;
   }
 

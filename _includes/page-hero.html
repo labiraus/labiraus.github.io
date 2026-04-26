@@ -18,6 +18,11 @@
 {% endcase %}
 <section class="page-hero{% if hero_image and hero_image != '' %} page-hero--with-image{% endif %}{% if hero_variant and hero_variant != '' %} page-hero--{{ hero_variant }}{% endif %}">
   <div class="content-shell page-hero__inner">
+    {% if hero_variant == 'banner' and hero_image and hero_image != '' %}
+      <div class="page-hero__media">
+        <img src="{{ hero_image }}" alt="" loading="eager">
+      </div>
+    {% endif %}
     <div class="page-hero__copy">
       {% include breadcrumbs.html %}
       {% if section_name != '' %}
@@ -28,7 +33,7 @@
         <p class="page-hero__summary">{{ summary }}</p>
       {% endif %}
     </div>
-    {% if hero_image and hero_image != '' %}
+    {% if hero_variant != 'banner' and hero_image and hero_image != '' %}
       <div class="page-hero__media">
         <img src="{{ hero_image }}" alt="" loading="eager">
       </div>
