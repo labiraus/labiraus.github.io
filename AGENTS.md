@@ -36,10 +36,13 @@ This repo should visually align with `https://www.home-start.org.uk/` while pres
 
 - Keep the site brand on the left.
 - Align the rest of the header bar to the right.
-- The visible header bar should be a viewport-width band with a pale surface, thin border, `margin: 0`, and `1rem 1.5rem` internal padding to match the reference site's broad header band.
+- The visible header bar should be a viewport-width band with the exact Home-Start pale lilac surface (`#F6F2F8`), no visible boxed border, `margin: 0`, and `1rem 1.5rem` internal padding to match the reference site's broad header band.
+- The area immediately below the header should fade out from the same pale lilac surface where possible, matching the reference site's hero/header handoff rather than creating a hard lilac-to-white cut.
+- Keep the base `.site-header__main` width, layout, and padding declarations in one CSS rule so DevTools clearly shows the intended full-width header row. Only drawer-specific overrides should be separate.
 - Do not add a separate social or utility strip above the main header unless explicitly requested.
 - The logo or brand mark must not be cropped by rounded containers or overflow clipping.
 - When using Nottingham's square local logo asset, match the reference header logo height: roughly `80px` on desktop and `60px` in compact states.
+- Use the transparent PNG version of the Nottingham logo in the header so it sits directly on the pale lilac Home-Start surface without a white square.
 - Use a clean, national-site-inspired header rhythm with clear spacing and compact utility actions.
 
 ## Navigation Rules
@@ -48,6 +51,8 @@ This repo should visually align with `https://www.home-start.org.uk/` while pres
 - Desktop submenus should stay hidden until hover or focus.
 - Desktop submenus should open on hover and keyboard focus, not only on click.
 - When the header can no longer fit cleanly on one horizontal row, switch to a hamburger-triggered drawer instead of allowing the navigation to wrap awkwardly.
+- In compact drawer mode, keep `Get help` and `Donate` visible in the header beside the hamburger as primary actions, while also keeping them at the top of the opened drawer.
+- In compact drawer mode, include the slim orange Home-Start divider between the visible header CTA group and the hamburger control.
 - Mobile or compact navigation should slide in from the right in a Home-Start-UK-style off-canvas panel rather than dropping inline beneath the header.
 - In drawer mode, keep the primary `Get help` and `Donate` CTAs at the top and the social links at the bottom, using Nottingham's own social URLs.
 - In drawer mode, keep the close control on the far right and use the Home-Start-style yellow `Get help` variant instead of the desktop purple version.
