@@ -8,20 +8,20 @@ carousel:
       those years count, so no child's future is limited.<br><br>Donate here to
       support Home-Start Nottingham
     linkText: Donate
-    link: /fundraising/howToDonate
+    link: /howToDonate
     image: /assets/img/hs4.jpg
   - heading: How to volunteer
     body: Find out how to volunteer for Home-Start Nottingham, whether you want to
       be a home visiting volunteer, an interpreter, a trustee, or a fundraiser.
     linkText: Read More
-    link: /volunteers/howToVolunteer.html
+    link: /howToVolunteer
     image: /assets/img/hs_6_small3.jpg
   - heading: How can we support you
     body: Being a parent has never been easy. It can be lonely, frustrating,
       heartbreaking and overwhelming. All parents struggle at one time or
       another. For some, the challenges can be greater. You are not alone.
     linkText: Read More
-    link: /support/howCanWeSupport.html
+    link: /howCanWeSupport
     image: /assets/img/hs2.jpg
 intro: We're there for parents when they need us the most, because childhood
   can't wait

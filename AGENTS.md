@@ -47,18 +47,25 @@ This repo should visually align with `https://www.home-start.org.uk/` while pres
 
 ## Navigation Rules
 
-- Desktop menu items with children should show a down arrow.
-- Desktop submenus should stay hidden until hover or focus.
-- Desktop submenus should open on hover and keyboard focus, not only on click.
-- When the header can no longer fit cleanly on one horizontal row, switch to a hamburger-triggered drawer instead of allowing the navigation to wrap awkwardly.
-- In compact drawer mode, keep `Get help` and `Donate` visible in the header beside the hamburger as primary actions, while also keeping them at the top of the opened drawer.
-- In compact drawer mode, include the slim orange Home-Start divider between the visible header CTA group and the hamburger control.
-- Mobile or compact navigation should slide in from the right in a Home-Start-UK-style off-canvas panel rather than dropping inline beneath the header.
+- Use a desktop-first navigation pattern: at full width, show the section headers and CTA buttons in the header bar rather than hiding them behind the hamburger.
+- Desktop menu items with children should show a down arrow and open their dropdowns on hover, click, and keyboard focus.
+- Desktop dropdowns should stay hidden until hover, click, or focus, and should close when focus or pointer leaves the menu group, Escape is pressed, or the user clicks outside the navigation.
+- Desktop menu headings should use a Home-Start-style purple underline that animates from left to right on hover, focus, open, and active states rather than a rounded pill background or orange bar.
+- Desktop dropdown panels should sit directly against the menu heading with no dead hover gap, and should use a deep-purple background with white submenu links.
+- Switch to the Home-Start UK right-hand drawer menu only when the navigation row would wrap or overflow, or at tablet/mobile widths.
+- In drawer mode, keep the orange circular hamburger trigger visible at the far right of the header, with no visible text label.
+- In drawer mode, keep `Get help` and `Donate` visible in the header beside the hamburger as primary actions, while also keeping them at the top of the opened drawer.
+- In drawer mode, include the slim orange Home-Start divider between the visible header CTA group and the hamburger control.
+- The drawer should slide in from the right as a deep-purple off-canvas panel, around `25rem` wide on desktop and `90vw` on smaller screens.
+- Drawer top-level rows should be bold white accordion rows with a chevron indicator and an orange left accent bar on active, hover, focus, and open states.
+- Drawer submenu rows should sit on a subtler translucent purple surface, use white text, and repeat the orange left accent treatment for current, hover, and focus states.
 - In drawer mode, keep the primary `Get help` and `Donate` CTAs at the top and the social links at the bottom, using Nottingham's own social URLs.
 - In drawer mode, keep the close control on the far right and use the Home-Start-style yellow `Get help` variant instead of the desktop purple version.
 - In drawer mode, treat the CTA stack and close control as one aligned top row so the close button is vertically centered against the CTA block.
-- Mobile navigation should remain toggle-driven and touch-friendly.
+- Drawer navigation should remain toggle-driven, keyboard-accessible, and touch-friendly.
 - Navigation should feel close to the national site: simple, quick to scan, and unobtrusive when closed.
+- Page URLs should stay flat and should not include the top-level navigation/header section as a path prefix. Preserve the menu hierarchy in `_data/navigation.yml` and breadcrumbs instead of URL folders.
+- Breadcrumbs should follow the reference style: a compact magenta ordered list showing the navigation section and current page, with slash separators and no leading `Home` crumb.
 
 ## Button Rules
 
@@ -101,6 +108,7 @@ This repo should visually align with `https://www.home-start.org.uk/` while pres
 - Donation pages should keep the existing donation methods and endpoints while adopting the refreshed visual system.
 - Resource collections such as reports and case studies should stay document-driven and render as clean download cards or lists.
 - Use Font Awesome brand icons for social media links instead of custom inline vector icon drawings.
+- The footer should follow the reference pattern: a separate rounded purple footer panel for navigation/social content, a labelled `Find us on social media` section, and a distinct credits/legal strip outside the purple panel.
 
 ## CMS And Structure Rules
 
@@ -112,9 +120,10 @@ This repo should visually align with `https://www.home-start.org.uk/` while pres
 ## Accessibility And Responsive Rules
 
 - Maintain semantic landmarks, heading order, keyboard navigation, and visible focus states.
-- Desktop hover interactions must still work for keyboard users via focus behavior.
+- Desktop hover dropdown interactions must also work for keyboard users via focus behavior.
+- Drawer accordion interactions must work for mouse, touch, keyboard, Escape-to-close, and overlay-click dismissal.
 - Respect reduced-motion expectations and avoid unnecessary animation.
-- Check the header, hero, dropdowns, cards, and footer at mobile, tablet, and desktop widths whenever they change.
+- Check the header, hero, drawer menus, cards, and footer at mobile, tablet, and desktop widths whenever they change.
 
 ## Self-Learning And Maintenance
 

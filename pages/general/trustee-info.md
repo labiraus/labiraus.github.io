@@ -1,7 +1,7 @@
 ---
 title: Do you want to become a Trustee?
 layout: default
-permalink: /volunteers/trusteeInfo
+permalink: /trusteeInfo
 pageImage: /assets/img/hs6_small.jpg
 hasImpact: true
 ---

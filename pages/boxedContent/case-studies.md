@@ -1,7 +1,7 @@
 ---
 title: Support Case Studies
 layout: boxed
-permalink: /support/caseStudies
+permalink: /caseStudies
 pageImage: /assets/img/hs6_small.jpg
 heroVariant: banner
 large: false

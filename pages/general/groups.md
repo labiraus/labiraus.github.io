@@ -1,7 +1,7 @@
 ---
 title: Groups
 layout: default
-permalink: /support/groups
+permalink: /groups
 pageImage: /assets/img/group_photo.jpg
 hasImpact: false
 

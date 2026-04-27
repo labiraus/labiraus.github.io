@@ -1,7 +1,7 @@
 ---
 title: Events
 layout: boxed
-permalink: /news/events
+permalink: /events
 pageImage: ""
 large: true
 

@@ -1,7 +1,7 @@
 ---
 title: Contact Us
 layout: default
-permalink: /aboutUs/contactUs
+permalink: /contactUs
 pageImage:
 hasImpact: true
 ---

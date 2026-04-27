@@ -1,7 +1,7 @@
 ---
 title: Privacy Notice
 layout: default
-permalink: /aboutUs/privacyNotice
+permalink: /privacyNotice
 pageImage: /assets/img/staff_xmas.jpg
 hasImpact: true
 ---

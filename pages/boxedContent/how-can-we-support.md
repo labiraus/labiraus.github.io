@@ -1,37 +1,37 @@
 ---
 title: How can we support
 layout: boxed
-permalink: /support/howCanWeSupport
+permalink: /howCanWeSupport
 pageImage: ""
 large: false
 
 boxedContent:
   - title: Case studies
-    link: /support/caseStudies.html
+    link: /caseStudies
     image: /assets/img/box-image-1.jpg
     alt: supporting families - case studies
     text: Each year our volunteers work with local families, and every volunteer, parent and child has their own story
     
   - title: Referrers info
-    link: /support/referrersInfo.html
+    link: /referrersInfo
     image: /assets/img/box-image-2.jpg
     alt: supporting families - referrers info
     text: The main focus of Home-Start Nottingham's work is to offer informal, friendly and confidential support to families in their own homes through carefully selected and prepared volunteers, who are parents themselves
 
   - title: Families Info
-    link: /support/familiesInfo.html
+    link: /familiesInfo
     image: /assets/img/box-image-3.jpg
     alt: supporting families - families information
     text: If you are a parent with at least one child under the age of eight then Home-Start Nottingham may be able to help you
 
   - title: Family Mentor Team
-    link: familyMentorTeam.html
+    link: /familyMentorTeam
     image: /assets/img/box-image-4.jpg
     alt: supporting families - Small steps big changes
     text: Home-Start Nottingham delivers the Family Mentor Service as part of the Small Steps, Big  Changes programme.
 
   - title: Groups
-    link: /support/groups.html
+    link: /groups
     image: /assets/img/box-image-5.jpg
     alt: supporting families - groups
     text: Home-Start Nottingham offers various groups for children and parents to develop their skills and build social connections.

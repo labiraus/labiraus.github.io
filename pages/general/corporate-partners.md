@@ -1,7 +1,7 @@
 ---
 title: Our corporate partners
 layout: default
-permalink: /fundraising/corporatePartners
+permalink: /corporatePartners
 pageImage: /assets/img/hs_group_top_img.jpg
 hasImpact: true
 ---

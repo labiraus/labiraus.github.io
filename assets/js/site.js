@@ -9,11 +9,27 @@
     const nav = document.querySelector(".site-nav");
     const actions = document.querySelector(".site-header__actions");
     const navGroups = document.querySelectorAll("[data-nav-group]");
+    const drawerBreakpoint = 1080;
 
     if (!header || !toggle || !panel || !nav) return;
 
     function isDrawerMode() {
       return header.classList.contains("site-header--drawer");
+    }
+
+    function setGroupOpen(group, shouldOpen) {
+      const summary = group.querySelector("summary");
+      group.open = shouldOpen;
+      group.classList.toggle("is-open", shouldOpen);
+      if (summary) {
+        summary.setAttribute("aria-expanded", String(shouldOpen));
+      }
+    }
+
+    function closeAllGroups() {
+      navGroups.forEach(function (group) {
+        setGroupOpen(group, false);
+      });
     }
 
     function setMenuState(shouldOpen) {
@@ -32,45 +48,72 @@
       if (toggleLabel) {
         toggleLabel.textContent = isOpen ? "Close" : "Menu";
       }
+
+      if (!isOpen) {
+        closeAllGroups();
+      } else if (closeButton) {
+        window.requestAnimationFrame(function () {
+          closeButton.focus();
+        });
+      }
+    }
+
+    function setDrawerMode(shouldUseDrawer) {
+      const isChangingMode = isDrawerMode() !== shouldUseDrawer;
+
+      header.classList.toggle("site-header--drawer", shouldUseDrawer);
+
+      if (!shouldUseDrawer || isChangingMode) {
+        setMenuState(false);
+      }
     }
 
     function measureNeedsDrawer() {
-      if (window.innerWidth <= 1080) return true;
+      if (window.innerWidth <= drawerBreakpoint) return true;
+
+      const wasDrawer = isDrawerMode();
+      const wasMenuOpen = panel.classList.contains("is-open");
+      const wasOverlayOpen = overlay ? overlay.classList.contains("is-open") : false;
+      const wasToggleActive = toggle.classList.contains("is-active");
+      const wasBodyOpen = document.body.classList.contains("nav-open");
 
       header.classList.remove("site-header--drawer");
       panel.classList.remove("is-open");
-      document.body.classList.remove("nav-open");
       toggle.classList.remove("is-active");
-      toggle.setAttribute("aria-expanded", "false");
-      toggle.setAttribute("aria-label", "Open menu");
+      document.body.classList.remove("nav-open");
 
       if (overlay) {
         overlay.classList.remove("is-open");
       }
 
-      if (toggleLabel) {
-        toggleLabel.textContent = "Menu";
+      closeAllGroups();
+
+      const main = header.querySelector(".site-header__main");
+      const firstGroup = navGroups[0];
+      const firstGroupTop = firstGroup ? firstGroup.getBoundingClientRect().top : 0;
+      const navWrapped = Array.from(navGroups).some(function (group) {
+        return Math.abs(group.getBoundingClientRect().top - firstGroupTop) > 4;
+      });
+      const mainOverflow = main ? main.scrollWidth > main.clientWidth + 2 : false;
+      const panelOverflow = panel.scrollWidth > panel.clientWidth + 2;
+      const navOverflow = nav.scrollWidth > nav.clientWidth + 2;
+      const actionsWrapped = actions ? actions.getBoundingClientRect().height > 54 : false;
+      const panelWrapped = panel.getBoundingClientRect().height > 90;
+
+      header.classList.toggle("site-header--drawer", wasDrawer);
+      panel.classList.toggle("is-open", wasMenuOpen);
+      toggle.classList.toggle("is-active", wasToggleActive);
+      document.body.classList.toggle("nav-open", wasBodyOpen);
+
+      if (overlay) {
+        overlay.classList.toggle("is-open", wasOverlayOpen);
       }
 
-      const groups = Array.from(navGroups);
-      const firstTop = groups[0] ? groups[0].getBoundingClientRect().top : 0;
-      const navWrapped = groups.some(function (group) {
-        return Math.abs(group.getBoundingClientRect().top - firstTop) > 4;
-      });
-      const actionsWrapped = actions ? actions.getBoundingClientRect().height > 54 : false;
-      const panelTall = panel.getBoundingClientRect().height > 76;
-
-      return navWrapped || actionsWrapped || panelTall;
+      return navWrapped || mainOverflow || panelOverflow || navOverflow || actionsWrapped || panelWrapped;
     }
 
     function updateNavigationMode() {
-      const shouldUseDrawer = measureNeedsDrawer();
-
-      header.classList.toggle("site-header--drawer", shouldUseDrawer);
-
-      if (!shouldUseDrawer) {
-        setMenuState(false);
-      }
+      setDrawerMode(measureNeedsDrawer());
     }
 
     toggle.addEventListener("click", function () {
@@ -90,19 +133,34 @@
     if (overlay) {
       overlay.addEventListener("click", function () {
         setMenuState(false);
+        if (isDrawerMode()) {
+          toggle.focus();
+        }
       });
     }
 
     document.addEventListener("keydown", function (event) {
       if (event.key !== "Escape") return;
-      if (toggle.getAttribute("aria-expanded") !== "true") return;
 
-      setMenuState(false);
-      toggle.focus();
+      if (toggle.getAttribute("aria-expanded") === "true") {
+        setMenuState(false);
+        toggle.focus();
+        return;
+      }
+
+      closeAllGroups();
+    });
+
+    document.addEventListener("click", function (event) {
+      if (isDrawerMode()) return;
+      if (nav.contains(event.target)) return;
+
+      closeAllGroups();
     });
 
     panel.addEventListener("click", function (event) {
       if (!isDrawerMode()) return;
+
       if (event.target.closest("[data-nav-close]")) {
         setMenuState(false);
         toggle.focus();
@@ -113,65 +171,54 @@
       setMenuState(false);
     });
 
-    function isDesktop() {
-      return !isDrawerMode();
-    }
-
-    function closeDesktopGroups(exceptGroup) {
-      navGroups.forEach(function (group) {
-        if (group === exceptGroup) return;
-        group.classList.remove("is-open");
-        group.open = false;
-      });
-    }
-
     navGroups.forEach(function (group) {
       const summary = group.querySelector("summary");
       if (!summary) return;
 
+      summary.setAttribute("aria-expanded", String(group.open));
+
       summary.addEventListener("click", function (event) {
-        if (isDesktop()) {
+        if (!isDrawerMode()) {
           event.preventDefault();
+          closeAllGroups();
+          setGroupOpen(group, true);
           return;
         }
 
         window.requestAnimationFrame(function () {
+          setGroupOpen(group, group.open);
           if (!group.open) return;
 
           navGroups.forEach(function (otherGroup) {
             if (otherGroup === group) return;
-            otherGroup.classList.remove("is-open");
-            otherGroup.open = false;
+            setGroupOpen(otherGroup, false);
           });
         });
       });
 
       group.addEventListener("mouseenter", function () {
-        if (!isDesktop()) return;
-        closeDesktopGroups(group);
-        group.open = true;
-        group.classList.add("is-open");
+        if (isDrawerMode()) return;
+        closeAllGroups();
+        setGroupOpen(group, true);
       });
 
       group.addEventListener("mouseleave", function () {
-        if (!isDesktop()) return;
-        group.classList.remove("is-open");
-        group.open = false;
+        if (isDrawerMode()) return;
+        setGroupOpen(group, false);
       });
 
       group.addEventListener("focusin", function () {
-        if (!isDesktop()) return;
-        closeDesktopGroups(group);
-        group.open = true;
-        group.classList.add("is-open");
+        if (isDrawerMode()) return;
+        closeAllGroups();
+        setGroupOpen(group, true);
       });
 
       group.addEventListener("focusout", function () {
-        if (!isDesktop()) return;
+        if (isDrawerMode()) return;
+
         window.requestAnimationFrame(function () {
           if (!group.contains(document.activeElement)) {
-            group.classList.remove("is-open");
-            group.open = false;
+            setGroupOpen(group, false);
           }
         });
       });
@@ -190,7 +237,6 @@
       });
     }
 
-    setMenuState(false);
     updateNavigationMode();
     window.addEventListener("resize", scheduleNavigationUpdate);
     window.addEventListener("load", scheduleNavigationUpdate);

@@ -1,7 +1,7 @@
 ---
 title: Why fundraise for us?
 layout: default
-permalink: /fundraising/fundraiseForUs
+permalink: /fundraiseForUs
 pageImage: /assets/img/hs4_small.jpg
 hasImpact: true
 ---

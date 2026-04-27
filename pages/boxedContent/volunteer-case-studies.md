@@ -1,7 +1,7 @@
 ---
 title: Volunteer Case Studies
 layout: boxed
-permalink: /volunteers/caseStudies
+permalink: /volunteerCaseStudies
 pageImage: /assets/img/hs6_small.jpg
 large: false
 

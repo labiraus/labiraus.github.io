@@ -1,7 +1,7 @@
 ---
 title: How to volunteer
 layout: boxed
-permalink: /volunteers/howToVolunteer
+permalink: /howToVolunteer
 pageImage: ""
 large: true
 

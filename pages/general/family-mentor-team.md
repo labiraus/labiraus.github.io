@@ -1,7 +1,7 @@
 ---
 title: Family Mentor Team
 layout: default
-permalink: /support/familyMentorTeam
+permalink: /familyMentorTeam
 pageImage: /assets/img/hs-image-top2.jpg
 hasImpact: true
 ---

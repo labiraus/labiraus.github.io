@@ -1,7 +1,7 @@
 ---
 title: Accounts And Reports
 layout: default
-permalink: /news/accountsAndReports
+permalink: /accountsAndReports
 pageImage: /assets/img/hs_group_top_img.jpg
 hasImpact: true
 ---

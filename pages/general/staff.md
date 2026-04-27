@@ -1,7 +1,7 @@
 ---
 title: Staff
 layout: default
-permalink: /aboutUs/staff
+permalink: /staff
 pageImage: /assets/img/staff_new.jpg
 hasImpact: true
 ---

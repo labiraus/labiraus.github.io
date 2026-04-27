@@ -1,7 +1,7 @@
 ---
 title: Referrers Info
 layout: accordion
-permalink: /support/referrersInfo
+permalink: /referrersInfo
 pageImage: /assets/img/hs6_small.jpg
 hasImpact: false
 

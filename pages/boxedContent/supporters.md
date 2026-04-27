@@ -1,7 +1,7 @@
 ---
 title: Supporters
 layout: boxed
-permalink: /fundraising/supporters
+permalink: /supporters
 pageImage: /assets/img/hs_group_top_img.jpg
 hasImpact: false
 large: false

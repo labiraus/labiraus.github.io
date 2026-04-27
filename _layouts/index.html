@@ -3,13 +3,13 @@ layout: base
 ---
 
 {% assign hero_slide = page.carousel | first %}
-{% assign support_page = site.pages | where_exp: "item", "item.permalink == '/support/howCanWeSupport'" | first %}
-{% assign volunteer_page = site.pages | where_exp: "item", "item.permalink == '/volunteers/howToVolunteer'" | first %}
-{% assign fundraising_page = site.pages | where_exp: "item", "item.permalink == '/fundraising/fundraiseForUs'" | first %}
-{% assign accounts_page = site.pages | where_exp: "item", "item.permalink == '/news/accountsAndReports'" | first %}
-{% assign events_page = site.pages | where_exp: "item", "item.permalink == '/news/events'" | first %}
-{% assign case_studies_page = site.pages | where_exp: "item", "item.permalink == '/support/caseStudies'" | first %}
-{% assign contact_page = site.pages | where_exp: "item", "item.permalink == '/aboutUs/contactUs'" | first %}
+{% assign support_page = site.pages | where_exp: "item", "item.permalink == '/howCanWeSupport'" | first %}
+{% assign volunteer_page = site.pages | where_exp: "item", "item.permalink == '/howToVolunteer'" | first %}
+{% assign fundraising_page = site.pages | where_exp: "item", "item.permalink == '/fundraiseForUs'" | first %}
+{% assign accounts_page = site.pages | where_exp: "item", "item.permalink == '/accountsAndReports'" | first %}
+{% assign events_page = site.pages | where_exp: "item", "item.permalink == '/events'" | first %}
+{% assign case_studies_page = site.pages | where_exp: "item", "item.permalink == '/caseStudies'" | first %}
+{% assign contact_page = site.pages | where_exp: "item", "item.permalink == '/contactUs'" | first %}
 {% assign first_event_card = events_page.boxedContent | first %}
 
 {% capture support_summary %}{{ support_page.content | markdownify | replace: '<br>', ' ' | replace: '<br/>', ' ' | replace: '<br />', ' ' | strip_html | strip_newlines | replace: '  ', ' ' | truncate: 180 }}{% endcapture %}
@@ -30,7 +30,7 @@ layout: base
       <h1>{{ hero_slide.heading }}</h1>
       <p class="home-hero__lede">{{ hero_slide.body | replace: '<br>', ' ' | replace: '<br/>', ' ' | replace: '<br />', ' ' | strip_html | replace: '  ', ' ' }}</p>
       <div class="button-row">
-        <a class="button" href="/support/howCanWeSupport">Get help</a>
+        <a class="button" href="/howCanWeSupport">Get help</a>
         <a class="button button--secondary" href="{{ hero_slide.link }}">{{ hero_slide.linkText | default: 'Donate' }}</a>
       </div>
       <p class="home-hero__note">{{ page.intro }}</p>
@@ -91,7 +91,7 @@ layout: base
           <p class="eyebrow">Support families</p>
           <h3>How can we support?</h3>
           <p>{{ support_summary }}</p>
-          <a class="text-link" href="/support/howCanWeSupport">Find support</a>
+          <a class="text-link" href="/howCanWeSupport">Find support</a>
         </div>
       </article>
       <article class="promo-card promo-card--feature promo-card--peach">
@@ -100,7 +100,7 @@ layout: base
           <p class="eyebrow">Volunteers</p>
           <h3>Volunteer with us</h3>
           <p>{{ volunteer_summary }}</p>
-          <a class="text-link" href="/volunteers/howToVolunteer">Explore volunteering</a>
+          <a class="text-link" href="/howToVolunteer">Explore volunteering</a>
         </div>
       </article>
       <article class="promo-card promo-card--feature promo-card--rose">
@@ -109,7 +109,7 @@ layout: base
           <p class="eyebrow">Fundraising</p>
           <h3>Fundraise and donate</h3>
           <p>{{ fundraising_summary }}</p>
-          <a class="text-link" href="/fundraising/fundraiseForUs">Support our work</a>
+          <a class="text-link" href="/fundraiseForUs">Support our work</a>
         </div>
       </article>
     </div>
@@ -121,7 +121,7 @@ layout: base
     <p class="eyebrow">Family voices</p>
     <blockquote>“When I was really struggling with the circumstances I found myself in, my volunteer made me feel that I was not alone.”</blockquote>
     <p class="quote-band__attribution">Family supported by Home-Start Nottingham</p>
-    <a class="text-link" href="/support/caseStudies">Read local case studies</a>
+    <a class="text-link" href="/caseStudies">Read local case studies</a>
   </div>
 </section>
 
@@ -132,22 +132,22 @@ layout: base
       <h2>Explore stories, resources, events, and ways to get in touch.</h2>
     </div>
     <div class="link-grid">
-      <a class="link-card" href="/support/caseStudies">
+      <a class="link-card" href="/caseStudies">
         <span class="link-card__eyebrow">Family voices</span>
         <strong>Support case studies</strong>
         <span>{{ case_studies_summary }}</span>
       </a>
-      <a class="link-card" href="/news/events">
+      <a class="link-card" href="/events">
         <span class="link-card__eyebrow">Latest activity</span>
         <strong>Events and fundraising news</strong>
         <span>{{ events_summary }}</span>
       </a>
-      <a class="link-card" href="/news/accountsAndReports">
+      <a class="link-card" href="/accountsAndReports">
         <span class="link-card__eyebrow">Transparency</span>
         <strong>Accounts and reports</strong>
         <span>{{ accounts_summary }}</span>
       </a>
-      <a class="link-card" href="/aboutUs/contactUs">
+      <a class="link-card" href="/contactUs">
         <span class="link-card__eyebrow">Talk to us</span>
         <strong>Contact Home-Start Nottingham</strong>
         <span>{{ contact_summary }}</span>
@@ -164,8 +164,8 @@ layout: base
       <p>{{ content | markdownify | strip_html | strip_newlines | replace: '  ', ' ' }}</p>
     </div>
     <div class="button-row">
-      <a class="button" href="/fundraising/howToDonate.html">Donate</a>
-      <a class="button button--secondary" href="/volunteers/howToVolunteer">Volunteer</a>
+      <a class="button" href="/howToDonate">Donate</a>
+      <a class="button button--secondary" href="/howToVolunteer">Volunteer</a>
     </div>
   </div>
 </section>

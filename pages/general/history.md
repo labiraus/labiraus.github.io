@@ -1,7 +1,7 @@
 ---
 title: History
 layout: default
-permalink: /aboutUs/history
+permalink: /history
 pageImage: /assets/img/staff_xmas.jpg
 hasImpact: true
 ---
