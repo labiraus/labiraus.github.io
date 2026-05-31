@@ -105,6 +105,7 @@ This repo should visually align with `https://www.home-start.org.uk/` while pres
 - The homepage should follow this broad rhythm: hero, secondary promo cards, impact band, support or volunteer or fundraising promos, key links or resources, then closing CTA/footer prompt.
 - Standard content pages should use a strong hero and readable content area.
 - Cards and panels should rely on borders and surface colour more than shadows. The live Home-Start style is comparatively flat and crisp.
+- Impact side panels should keep Nottingham-owned impact facts, with generous padding, centered text, and larger graphic icons inside pale-lilac Home-Start-style surfaces.
 - Donation pages should keep the existing donation methods and endpoints while adopting the refreshed visual system.
 - Resource collections such as reports and case studies should stay document-driven and render as clean download cards or lists.
 - Use Font Awesome brand icons for social media links instead of custom inline vector icon drawings.

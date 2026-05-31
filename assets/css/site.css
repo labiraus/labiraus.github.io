@@ -1450,20 +1450,63 @@ body.nav-open .site-header--drawer .site-header__compact-actions {
 }
 
 .impact-rail__inner {
+  padding: clamp(1.75rem, 2vw, 2.25rem);
   border-radius: var(--radius-medium);
   background: var(--color-surface-muted);
   color: var(--color-ink);
   border: 1px solid var(--color-border);
+  text-align: center;
 }
 
 .impact-rail__cards {
   display: grid;
-  gap: 1rem;
+  gap: 1.25rem;
 }
 
 .impact-card {
   background: rgba(255, 255, 255, 0.75);
   border-color: rgba(37, 35, 45, 0.08);
+}
+
+.impact-rail__inner h2 {
+  margin: 0 0 1.5rem;
+  color: var(--color-primary);
+  font-size: clamp(1.65rem, 2.2vw, 2.15rem);
+  line-height: 1.12;
+}
+
+.impact-rail__inner .eyebrow {
+  margin-bottom: 0.5rem;
+}
+
+.impact-rail .impact-card {
+  display: grid;
+  justify-items: center;
+  padding: clamp(1.35rem, 2vw, 1.75rem) clamp(1.1rem, 2vw, 1.5rem);
+  text-align: center;
+  background: var(--color-white);
+}
+
+.impact-rail .impact-card img {
+  width: clamp(4.5rem, 5.5vw, 5.5rem);
+  height: clamp(4.5rem, 5.5vw, 5.5rem);
+  margin-bottom: 1.15rem;
+  object-fit: contain;
+}
+
+.impact-rail .impact-card strong {
+  max-width: 14rem;
+  margin: 0 auto 0.65rem;
+  color: var(--color-primary);
+  font-size: clamp(1.65rem, 2.4vw, 2.2rem);
+}
+
+.impact-rail .impact-card p {
+  max-width: 18rem;
+  margin: 0 auto;
+  color: var(--color-ink);
+  font-size: 1.05rem;
+  line-height: 1.55;
 }
 
 .card-grid {
