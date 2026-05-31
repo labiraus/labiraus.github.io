@@ -257,9 +257,11 @@
         toggles.forEach(function (otherToggle) {
           const panelId = otherToggle.getAttribute("aria-controls");
           const panel = panelId ? document.getElementById(panelId) : null;
+          const card = otherToggle.closest(".donation-card");
           const shouldOpen = otherToggle === toggle ? !isOpen : false;
 
           otherToggle.setAttribute("aria-expanded", String(shouldOpen));
+          if (card) card.classList.toggle("donation-card--open", shouldOpen);
           if (panel) panel.hidden = !shouldOpen;
         });
       });

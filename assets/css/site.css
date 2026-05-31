@@ -1697,6 +1697,18 @@ body.nav-open .site-header--drawer .site-header__compact-actions {
 
 .donation-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+}
+
+.donation-card--open {
+  grid-column: 1 / -1;
+  background: var(--color-surface-muted);
+}
+
+.donation-card--open .donation-card__toggle {
+  display: grid;
+  grid-template-columns: minmax(16rem, 0.45fr) 1fr;
+  align-items: stretch;
 }
 
 .donation-card__toggle {
@@ -1742,6 +1754,12 @@ body.nav-open .site-header--drawer .site-header__compact-actions {
 
 .donation-card__panel {
   border-top: 1px solid rgba(37, 35, 45, 0.08);
+}
+
+.donation-card__panel iframe {
+  display: block;
+  height: min(145vh, 1330px);
+  min-height: 46rem;
 }
 
 .donation-card__actions {
@@ -2057,6 +2075,15 @@ body.nav-open .site-header--drawer .site-header__compact-actions {
   .stat-grid,
   .donation-grid {
     grid-template-columns: 1fr;
+  }
+
+  .donation-card--open .donation-card__toggle {
+    grid-template-columns: 1fr;
+  }
+
+  .donation-card__panel iframe {
+    height: min(155vh, 1400px);
+    min-height: 50rem;
   }
 
   .page-section,
