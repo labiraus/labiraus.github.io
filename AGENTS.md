@@ -27,7 +27,7 @@ This repo should visually align with `https://www.home-start.org.uk/` while pres
 - Homepage hero imagery must not underlap or visually collide with the opening text panel; reserve clear layout space for the copy block.
 - The homepage hero should follow the national site pattern: a large inset rounded image with visible gap around it, plus an overlaid text card on desktop rather than a side-by-side split.
 - On tablet and mobile widths, the homepage hero should step down like the national site by letting the text card sit beneath the image instead of forcing a cramped overlay.
-- Default and boxed interior content pages with header images should use the national `about-us` banner treatment: a near-full-width rounded hero image with a separate pale-lilac title card beneath it rather than a side-by-side image/text split.
+- Default, boxed, and accordion interior content pages with header images should use the national `about-us` banner treatment: a near-full-width rounded hero image with a separate pale-lilac title card beneath it rather than a side-by-side image/text split.
 - On those banner pages, the first main content or intro block immediately under the hero should also sit in a pale-lilac rounded panel.
 - Keep the design bright, open, and lightweight rather than dense, boxed, or shadow-heavy.
 - Avoid reintroducing the old rotating carousel. The homepage should use a static hero plus supporting promo sections.
