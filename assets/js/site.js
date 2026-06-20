@@ -260,8 +260,13 @@
           const card = otherToggle.closest(".donation-card");
           const shouldOpen = otherToggle === toggle ? !isOpen : false;
 
+          const shouldOpenWide = Boolean(shouldOpen && panel && panel.querySelector("iframe"));
+
           otherToggle.setAttribute("aria-expanded", String(shouldOpen));
-          if (card) card.classList.toggle("donation-card--open", shouldOpen);
+          if (card) {
+            card.classList.toggle("donation-card--open", shouldOpen);
+            card.classList.toggle("donation-card--wide-open", shouldOpenWide);
+          }
           if (panel) panel.hidden = !shouldOpen;
         });
       });

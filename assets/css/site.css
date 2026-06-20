@@ -1789,16 +1789,19 @@ body.corporate-partners-page .prose a[href^="mailto:"]:focus-visible {
 }
 
 .donation-grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   align-items: start;
 }
 
 .donation-card--open {
-  grid-column: 1 / -1;
   background: var(--color-surface-muted);
 }
 
-.donation-card--open .donation-card__toggle {
+.donation-card--wide-open {
+  grid-column: 1 / -1;
+}
+
+.donation-card--wide-open .donation-card__toggle {
   display: grid;
   grid-template-columns: minmax(16rem, 0.45fr) 1fr;
   align-items: stretch;
@@ -2170,7 +2173,7 @@ body.corporate-partners-page .prose a[href^="mailto:"]:focus-visible {
     grid-template-columns: 1fr;
   }
 
-  .donation-card--open .donation-card__toggle {
+  .donation-card--wide-open .donation-card__toggle {
     grid-template-columns: 1fr;
   }
 
