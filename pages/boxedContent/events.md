@@ -6,6 +6,12 @@ pageImage: ""
 large: true
 
 boxedContent:
+  - title: Run for Home-Start Nottingham
+    image: /assets/img/marathon.png
+    link: /assets/img/marathon.png
+    alt: Run for Home-Start Nottingham
+    text: "We have discounted marathon places available for people willing to fundraise for us through JustGiving. If you know anyone who enjoys running and would like to support local families whilst taking on a challenge, please share this opportunity with them.<br>We'd be hugely grateful if you could screenshot or share the running poster far and wide – Facebook, local community groups, parent groups, WhatsApp chats, workplaces, family and friends. The more people who see it, the better our chance of finding committed fundraisers."
+    linkText: Sept 2024
   - title: Postcode Lottery funding
     link: https://www.postcodelottery.co.uk/lottery-winners/18-may-2024-ng16-2bl-newthorpe-ps1-million
     image: /assets/img/postcode.jpg

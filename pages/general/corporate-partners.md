@@ -3,6 +3,7 @@ title: Our corporate partners
 layout: default
 permalink: /corporatePartners
 pageImage: /assets/img/hs_group_top_img.jpg
+bodyClass: corporate-partners-page
 hasImpact: true
 ---
 
