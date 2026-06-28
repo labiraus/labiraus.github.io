@@ -10,13 +10,17 @@
     {% if display_title == nil or display_title == "" %}
       {% assign display_title = content.alt %}
     {% endif %}
+    {% assign fill_media = true %}
+    {% if content.fill == false %}
+      {% assign fill_media = false %}
+    {% endif %}
     <article class="content-card{% if has_link == false %} content-card--static{% endif %}">
       {% if has_link %}
-        <a class="content-card__media" href="{{ content.link }}">
+        <a class="content-card__media{% unless fill_media %} content-card__media--contain{% endunless %}" href="{{ content.link }}">
           <img src="{{ content.image }}" alt="{{ content.alt }}" loading="lazy">
         </a>
       {% else %}
-        <div class="content-card__media">
+        <div class="content-card__media{% unless fill_media %} content-card__media--contain{% endunless %}">
           <img src="{{ content.image }}" alt="{{ content.alt }}" loading="lazy">
         </div>
       {% endif %}

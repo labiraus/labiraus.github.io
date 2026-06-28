@@ -28,6 +28,7 @@ This repo should visually align with `https://www.home-start.org.uk/` while pres
 - The homepage hero should follow the national site pattern: a large inset rounded image with visible gap around it, plus an overlaid text card on desktop rather than a side-by-side split.
 - On tablet and mobile widths, the homepage hero should step down like the national site by letting the text card sit beneath the image instead of forcing a cramped overlay.
 - Default, boxed, and accordion interior content pages with header images should use the national `about-us` banner treatment: a near-full-width rounded hero image with a separate pale-lilac title card beneath it rather than a side-by-side image/text split.
+- Interior pages without a hero image should keep their hero text shell on `--page-width` so the left edge matches the section content below instead of using the wider banner media track.
 - On those banner pages, the first main content or intro block immediately under the hero should also sit in a pale-lilac rounded panel.
 - Keep the design bright, open, and lightweight rather than dense, boxed, or shadow-heavy.
 - Avoid reintroducing the old rotating carousel. The homepage should use a static hero plus supporting promo sections.
@@ -116,6 +117,7 @@ This repo should visually align with `https://www.home-start.org.uk/` while pres
 - Keep content in `pages/**`, collections, and `_data/**` rather than hardcoding copy into templates.
 - Keep the implementation maintainable: thin layouts, reusable includes, one main stylesheet, and one main script unless there is a strong reason to split further.
 - Prefer reusable component classes and CSS variables over page-specific exceptions.
+- Boxed content items should default to filled image cards; use `fill: false` on items such as supporter logos that must remain fully visible without cropping.
 - Keep `accordion` as the standard spelling in layouts, includes, and CMS config.
 
 ## Accessibility And Responsive Rules

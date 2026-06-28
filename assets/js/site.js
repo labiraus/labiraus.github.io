@@ -9,7 +9,7 @@
     const nav = document.querySelector(".site-nav");
     const actions = document.querySelector(".site-header__actions");
     const navGroups = document.querySelectorAll("[data-nav-group]");
-    const drawerBreakpoint = 1080;
+    const drawerBreakpoint = 1240;
 
     if (!header || !toggle || !panel || !nav) return;
 

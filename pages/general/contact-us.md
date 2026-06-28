@@ -6,7 +6,7 @@ pageImage:
 hasImpact: true
 ---
 
-If you would like to volunteer for Home-Start Nottingham, please take a look at our volunteering section here.
+If you would like to volunteer for Home-Start Nottingham, please take a look at our volunteering section <a href="/howToVolunteer">here</a>.
 
 If you want information about how to refer a family to Home-Start Nottingham, visit our referrers page.
 

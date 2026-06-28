@@ -10,8 +10,10 @@ boxedContent:
     image: /assets/img/marathon.png
     link: /assets/img/marathon.png
     alt: Run for Home-Start Nottingham
+    fill: false
     text: "We have discounted marathon places available for people willing to fundraise for us through JustGiving. If you know anyone who enjoys running and would like to support local families whilst taking on a challenge, please share this opportunity with them.<br>We'd be hugely grateful if you could screenshot or share the running poster far and wide – Facebook, local community groups, parent groups, WhatsApp chats, workplaces, family and friends. The more people who see it, the better our chance of finding committed fundraisers."
-    linkText: Sept 2024
+    linkText: Sept 2026
+
   - title: Postcode Lottery funding
     link: https://www.postcodelottery.co.uk/lottery-winners/18-may-2024-ng16-2bl-newthorpe-ps1-million
     image: /assets/img/postcode.jpg
@@ -23,6 +25,7 @@ boxedContent:
     link: 
     image: /assets/img/christmas.png
     alt: Christmas fair
+    fill: false
     text: "Please come along to our Christmas Fair on Friday, 17th November 2023 - 6pm-8pm.  There will be stalls, tombola and refreshments, together with the attached flyer if possible as the photo. All proceeds will got to Home-Start Nottingham."
     linkText: November 2023
     
@@ -30,6 +33,7 @@ boxedContent:
     link: https://www.justgiving.com/page/gail-tilley-1691057621488?utm_source=copyLink&utm_medium=one_page&utm_content=page/gail-tilley-1691057621488&utm_campaign=pfp-share&utm_term=ffe129fef8ff48b99691295bd7289816
     image: /assets/img/gailHS.jpg
     alt: Gail - Little John Challenge
+    fill: false
     text: Please support Gail, Co-ordinator from the office who, in September, is walking The Little John Challenge which is an amazing 28 miles through Sherwood Forest.<br>If you would like to sponsor Gail Click this link to donate
     linkText: September 2023
 
@@ -37,6 +41,7 @@ boxedContent:
     link: 
     image: /assets/img/MissGalaxyUK.jpg
     alt: Miss Galaxy UK
+    fill: false
     text: "Chloe-Rose Adkin, Miss Galaxy UK had adopted Home-Start Nottingham as her charity of the year and will be helping us to raise funds and helping to promote our Charity.<br>Chloe has already started by organising birthday bags which include everything needed for children to enjoy birthdays including party bags, hats, balloons, cakes and lots of other things.<br>These will be given out to families to enable families and children to enjoy any upcoming birthdays."
     linkText: August 2023
 
@@ -44,6 +49,7 @@ boxedContent:
     link: https://www.justgiving.com/fundraising/dee-mitchel-bryan
     image: /assets/img/stuart_bike.jpg
     alt: Stuart charity Thailand to Singapore cycle ride
+    fill: false
     text: "Stuart is cycling from Thailand to Singapore, approximately 2000km.  His journey has started and will finish mid-March.  He would like to make a difference to childrens’ lives in Nottingham so has chosen Home-Start Nottingham as his charity.<br>If you are able to help with a small donation, he will be absolutely thrilled.<br>Click this link to donate"
     linkText: February 2023
   
@@ -51,6 +57,7 @@ boxedContent:
     link: 
     image: /assets/img/Trustees_Peter_Grigg.jpg
     alt: Annual meeting with margaret and peter grigg
+    fill: false
     text: "We would like to thank everyone who attended our Annual Meeting this year and thank you to Peter Grigg from Home-Start UK for coming and talking to our guests, also thank you to the family and volunteers who also shared their experiences."
     linkText: October 2022
     
@@ -72,6 +79,7 @@ boxedContent:
     link: 
     image: /assets/img/henry_smith.png
     alt: Funding from Henry Smith
+    fill: false
     text: "Home-Start Nottingham are pleased to announce that we have been awarded £90,000 towards three years' running costs providing volunteering support to families with young children in Nottingham City and Nottinghamshire."
     linkText: January 2022
     
@@ -86,6 +94,7 @@ boxedContent:
     link: 
     image: /assets/img/John_Lewis_news.jpg
     alt: John Lewis gifts at xmas
+    fill: false
     text: "John Lewis are aiming to raise £4m for two charities: Home-Start, which works with parents who need support and FareShare, which helps those facing food poverty.<br> Thank you to John Lewis in Nottingham for their kind gifts at Christmas."
     linkText: December 2020
     
@@ -107,6 +116,7 @@ boxedContent:
     link: 
     image: /assets/img/white_stuff_small.png
     alt: White Stuff partnership
+    fill: false
     text: "We are very excited that Home-Start has launched a new partnership with White Stuff, White Stuff donates 1% of its profits to charity - and with its customers' support, the White Stuff Foundation has donated over £3.5 million to local charities around the UK since 2010."
     linkText: October 2020
     
@@ -135,6 +145,7 @@ boxedContent:
     link: 
     image: /assets/img/marathonChallenge.jpg
     alt: Marathon Challenge
+    fill: false
     text: "Sarah and Karl helped to raise money for Home-Start Nottingham. They took part in several half marathons, full marathons and as many 10k races as they could - from difficult trail races throughout the country to fast paced flats."
     linkText: 2018
     

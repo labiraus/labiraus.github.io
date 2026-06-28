@@ -2,18 +2,17 @@
 layout: base
 ---
 
-{% include page-hero.html image=page.pageImage %}
-
+{% include page-hero.html image=page.pageImage variant='banner' %}
 <section class="page-section">
-  <div class="content-shell">
-    <article class="prose prose--wide">
+  <div class="content-shell{% if page.hasImpact %} content-shell--with-aside{% endif %}">
+    <article class="prose">
       {{ content }}
     </article>
-  </div>
 
-  {% if page.boxedContent and page.boxedContent.size > 0 %}
+    {% if page.boxedContent and page.boxedContent.size > 0 %}
     <div class="content-shell">
       {% include boxedContent.html items=page.boxedContent large=page.large %}
     </div>
-  {% endif %}
+    {% endif %}
+  </div>
 </section>

@@ -17,8 +17,6 @@ menu:
     items:
       - text: "How to volunteer"
         href: "/howToVolunteer"
-      - text: "Trustee information"
-        href: "/trusteeInfo"
       - text: "Case Studies"
         href: "/volunteerCaseStudies"
   - parent: "Fundraising"
@@ -43,6 +41,8 @@ menu:
         href: "/aboutUs"
       - text: "Staff"
         href: "/staff"
+      - text: "Trustees"
+        href: "/trusteeInfo"
       - text: "History"
         href: "/history"
       - text: "Privacy notice"
